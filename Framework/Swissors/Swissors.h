@@ -15,5 +15,3 @@ FOUNDATION_EXPORT double SwissorsVersionNumber;
 FOUNDATION_EXPORT const unsigned char SwissorsVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <Swissors/PublicHeader.h>
-
-

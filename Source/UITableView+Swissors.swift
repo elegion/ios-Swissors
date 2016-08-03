@@ -8,13 +8,13 @@
 
 import UIKit
 
-extension UITableView {
+public extension UITableView {
     
     public func registerReusableCellOfType<T: UITableViewCell>(cellType: T.Type) {
         registerClass(cellType, forCellReuseIdentifier: String(cellType))
     }
     
-    public func registaerReusableCellNibOfType<T: UITableViewCell>(cellType: T.Type, bundle: NSBundle?) {
+    public func registerReusableCellNibOfType<T: UITableViewCell>(cellType: T.Type, bundle: NSBundle?) {
         let nib = UINib(nibName: String(cellType), bundle: bundle)
         
         registerNib(nib, forCellReuseIdentifier: String(cellType))

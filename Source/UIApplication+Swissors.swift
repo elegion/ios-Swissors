@@ -1,0 +1,35 @@
+//
+//  UIApplication+Swissors.swift
+//  Swissors
+//
+//  Created by Георгий Касапиди on 03.08.16.
+//  Copyright © 2016 e-Legion. All rights reserved.
+//
+
+import UIKit
+
+public extension UIApplication {
+    
+    public func topWindow() -> UIWindow? {
+        return self.windows.sort({ (w1, w2) -> Bool in
+            return w1.windowLevel > w2.windowLevel
+        }).first
+    }
+    
+    public func presentViewController(viewController: UIViewController, inNewWindowWithLevel windowLevel: UIWindowLevel, animated: Bool = true, setupHandler: (UIWindow -> Void)? = nil) {
+        let window = UIWindow.fullScreenInstanceWithRootViewController(UIViewController())
+        
+        window.windowLevel = windowLevel
+        window.rootViewController!.definesPresentationContext = true
+        
+        window.backgroundColor = UIColor.clearColor()
+        window.rootViewController!.view.backgroundColor = UIColor.clearColor()
+        
+        if let setupHandler = setupHandler {
+            setupHandler(window)
+        }
+        
+        window.makeKeyAndVisible()
+        window.rootViewController!.presentViewController(viewController, animated: animated, completion: nil)
+    }
+}
