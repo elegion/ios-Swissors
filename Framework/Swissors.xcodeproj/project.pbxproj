@@ -7,28 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE5545B01D52197800A6D6F8 /* UITableView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5545AF1D52197800A6D6F8 /* UITableView+Swissors.swift */; };
 		FE9CB33A1D52138900928A9F /* Swissors.h in Headers */ = {isa = PBXBuildFile; fileRef = FE9CB3391D52138900928A9F /* Swissors.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FE9CB3411D52138900928A9F /* Swissors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9CB3361D52138900928A9F /* Swissors.framework */; };
-		FE9CB3461D52138900928A9F /* SwissorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9CB3451D52138900928A9F /* SwissorsTests.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		FE9CB3421D52138900928A9F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FE9CB32D1D52138900928A9F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FE9CB3351D52138900928A9F;
-			remoteInfo = Swissors;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		FE5545AF1D52197800A6D6F8 /* UITableView+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Swissors.swift"; sourceTree = "<group>"; };
 		FE9CB3361D52138900928A9F /* Swissors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swissors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9CB3391D52138900928A9F /* Swissors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swissors.h; sourceTree = "<group>"; };
 		FE9CB33B1D52138900928A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FE9CB3401D52138900928A9F /* SwissorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwissorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE9CB3451D52138900928A9F /* SwissorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwissorsTests.swift; sourceTree = "<group>"; };
-		FE9CB3471D52138900928A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,22 +26,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE9CB33D1D52138900928A9F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FE9CB3411D52138900928A9F /* Swissors.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE5545AE1D5218DD00A6D6F8 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				FE5545AF1D52197800A6D6F8 /* UITableView+Swissors.swift */,
+			);
+			name = Source;
+			path = ../../Source;
+			sourceTree = "<group>";
+		};
 		FE9CB32C1D52138900928A9F = {
 			isa = PBXGroup;
 			children = (
 				FE9CB3381D52138900928A9F /* Swissors */,
-				FE9CB3441D52138900928A9F /* SwissorsTests */,
 				FE9CB3371D52138900928A9F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,7 +50,6 @@
 			isa = PBXGroup;
 			children = (
 				FE9CB3361D52138900928A9F /* Swissors.framework */,
-				FE9CB3401D52138900928A9F /* SwissorsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,19 +57,11 @@
 		FE9CB3381D52138900928A9F /* Swissors */ = {
 			isa = PBXGroup;
 			children = (
+				FE5545AE1D5218DD00A6D6F8 /* Source */,
 				FE9CB3391D52138900928A9F /* Swissors.h */,
 				FE9CB33B1D52138900928A9F /* Info.plist */,
 			);
 			path = Swissors;
-			sourceTree = "<group>";
-		};
-		FE9CB3441D52138900928A9F /* SwissorsTests */ = {
-			isa = PBXGroup;
-			children = (
-				FE9CB3451D52138900928A9F /* SwissorsTests.swift */,
-				FE9CB3471D52138900928A9F /* Info.plist */,
-			);
-			path = SwissorsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,24 +96,6 @@
 			productReference = FE9CB3361D52138900928A9F /* Swissors.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FE9CB33F1D52138900928A9F /* SwissorsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FE9CB34D1D52138900928A9F /* Build configuration list for PBXNativeTarget "SwissorsTests" */;
-			buildPhases = (
-				FE9CB33C1D52138900928A9F /* Sources */,
-				FE9CB33D1D52138900928A9F /* Frameworks */,
-				FE9CB33E1D52138900928A9F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FE9CB3431D52138900928A9F /* PBXTargetDependency */,
-			);
-			name = SwissorsTests;
-			productName = SwissorsTests;
-			productReference = FE9CB3401D52138900928A9F /* SwissorsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -147,9 +107,6 @@
 				ORGANIZATIONNAME = "e-Legion";
 				TargetAttributes = {
 					FE9CB3351D52138900928A9F = {
-						CreatedOnToolsVersion = 7.3.1;
-					};
-					FE9CB33F1D52138900928A9F = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
@@ -167,20 +124,12 @@
 			projectRoot = "";
 			targets = (
 				FE9CB3351D52138900928A9F /* Swissors */,
-				FE9CB33F1D52138900928A9F /* SwissorsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FE9CB3341D52138900928A9F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE9CB33E1D52138900928A9F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -194,26 +143,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE9CB33C1D52138900928A9F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FE9CB3461D52138900928A9F /* SwissorsTests.swift in Sources */,
+				FE5545B01D52197800A6D6F8 /* UITableView+Swissors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FE9CB3431D52138900928A9F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FE9CB3351D52138900928A9F /* Swissors */;
-			targetProxy = FE9CB3421D52138900928A9F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FE9CB3481D52138900928A9F /* Debug */ = {
@@ -254,7 +188,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -297,7 +231,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -310,6 +244,7 @@
 		FE9CB34B1D52138900928A9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -317,15 +252,17 @@
 				INFOPLIST_FILE = Swissors/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.e-legion.Swissors";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.e-legion.swissors";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		FE9CB34C1D52138900928A9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -333,29 +270,9 @@
 				INFOPLIST_FILE = Swissors/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.e-legion.Swissors";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.e-legion.swissors";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		FE9CB34E1D52138900928A9F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = SwissorsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.e-legion.SwissorsTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		FE9CB34F1D52138900928A9F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = SwissorsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.e-legion.SwissorsTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -376,15 +293,6 @@
 			buildConfigurations = (
 				FE9CB34B1D52138900928A9F /* Debug */,
 				FE9CB34C1D52138900928A9F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FE9CB34D1D52138900928A9F /* Build configuration list for PBXNativeTarget "SwissorsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FE9CB34E1D52138900928A9F /* Debug */,
-				FE9CB34F1D52138900928A9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
