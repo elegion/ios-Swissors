@@ -22,7 +22,8 @@ public extension UIApplication {
         emptyController.definesPresentationContext = true
         emptyController.view.backgroundColor = UIColor.clear
         
-        let window = UIWindow.fullScreenInstanceWithRootViewController(emptyController)
+        let window = UIWindow.init(frame: UIScreen.main.bounds)
+        window.rootViewController = emptyController;
         window.windowLevel = windowLevel
         window.backgroundColor = UIColor.clear
         if let setupHandler = setupHandler {
