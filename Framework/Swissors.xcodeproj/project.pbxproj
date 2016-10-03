@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8F3A85DD1D527733001A7E4D /* UIApplication+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A85DC1D527733001A7E4D /* UIApplication+Swissors.swift */; };
-		8F3A85DF1D5278B8001A7E4D /* UIWindow+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A85DE1D5278B8001A7E4D /* UIWindow+Swissors.swift */; };
 		8F3A85E11D52804C001A7E4D /* NSBundle+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A85E01D52804C001A7E4D /* NSBundle+Swissors.swift */; };
 		FE5545B01D52197800A6D6F8 /* UITableView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5545AF1D52197800A6D6F8 /* UITableView+Swissors.swift */; };
 		FE9CB33A1D52138900928A9F /* Swissors.h in Headers */ = {isa = PBXBuildFile; fileRef = FE9CB3391D52138900928A9F /* Swissors.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -16,7 +15,6 @@
 
 /* Begin PBXFileReference section */
 		8F3A85DC1D527733001A7E4D /* UIApplication+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Swissors.swift"; sourceTree = "<group>"; };
-		8F3A85DE1D5278B8001A7E4D /* UIWindow+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Swissors.swift"; sourceTree = "<group>"; };
 		8F3A85E01D52804C001A7E4D /* NSBundle+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBundle+Swissors.swift"; sourceTree = "<group>"; };
 		FE5545AF1D52197800A6D6F8 /* UITableView+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Swissors.swift"; sourceTree = "<group>"; };
 		FE9CB3361D52138900928A9F /* Swissors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swissors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,7 +39,6 @@
 				8F3A85E01D52804C001A7E4D /* NSBundle+Swissors.swift */,
 				8F3A85DC1D527733001A7E4D /* UIApplication+Swissors.swift */,
 				FE5545AF1D52197800A6D6F8 /* UITableView+Swissors.swift */,
-				8F3A85DE1D5278B8001A7E4D /* UIWindow+Swissors.swift */,
 			);
 			name = Source;
 			path = ../../Source;
@@ -154,7 +151,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F3A85E11D52804C001A7E4D /* NSBundle+Swissors.swift in Sources */,
-				8F3A85DF1D5278B8001A7E4D /* UIWindow+Swissors.swift in Sources */,
 				8F3A85DD1D527733001A7E4D /* UIApplication+Swissors.swift in Sources */,
 				FE5545B01D52197800A6D6F8 /* UITableView+Swissors.swift in Sources */,
 			);
