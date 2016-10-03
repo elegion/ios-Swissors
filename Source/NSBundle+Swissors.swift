@@ -8,11 +8,11 @@
 
 import Foundation
 
-public extension NSBundle {
+public extension Bundle {
     
     public subscript(key: String) -> AnyObject? {
         if let infoDictionary = infoDictionary {
-            return infoDictionary[key]
+            return infoDictionary[key] as AnyObject?
         }
         
         return nil

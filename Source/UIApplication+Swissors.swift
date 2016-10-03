@@ -11,25 +11,25 @@ import UIKit
 public extension UIApplication {
     
     public func topWindow() -> UIWindow? {
-        return self.windows.sort({ (w1, w2) -> Bool in
+        return self.windows.sorted(by: { (w1, w2) -> Bool in
             return w1.windowLevel > w2.windowLevel
         }).first
     }
     
-    public func presentViewController(viewController: UIViewController, inNewWindowWithLevel windowLevel: UIWindowLevel, animated: Bool = true, setupHandler: (UIWindow -> Void)? = nil) {
-        let window = UIWindow.fullScreenInstanceWithRootViewController(UIViewController())
+    public func presentViewController(_ viewController: UIViewController, inNewWindowWithLevel windowLevel: UIWindowLevel, animated: Bool = true, setupHandler: ((UIWindow) -> Void)? = nil) {
         
+        let emptyController = UIViewController()
+        emptyController.definesPresentationContext = true
+        emptyController.view.backgroundColor = UIColor.clear
+        
+        let window = UIWindow.fullScreenInstanceWithRootViewController(emptyController)
         window.windowLevel = windowLevel
-        window.rootViewController!.definesPresentationContext = true
-        
-        window.backgroundColor = UIColor.clearColor()
-        window.rootViewController!.view.backgroundColor = UIColor.clearColor()
-        
+        window.backgroundColor = UIColor.clear
         if let setupHandler = setupHandler {
             setupHandler(window)
         }
-        
         window.makeKeyAndVisible()
-        window.rootViewController!.presentViewController(viewController, animated: animated, completion: nil)
+        
+        emptyController.present(viewController, animated: animated, completion: nil)
     }
 }
