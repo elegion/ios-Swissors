@@ -11,16 +11,21 @@ import Foundation
 public extension Bundle {
     
     public subscript(key: String) -> AnyObject? {
-        if let infoDictionary = infoDictionary {
-            return infoDictionary[key] as AnyObject?
-        }
-        return nil
+        guard let infoDictionary = infoDictionary else { return nil }
+        return infoDictionary[key] as AnyObject?
     }
     
-    public func infoDictionaryStringForKey(key: String) -> String? {
-        if let infoDictionary = infoDictionary {
-            return infoDictionary[key] as! String?
+    public func infoDictionaryStringForKey(_ key: String) -> String? {
+        guard let infoDictionary = infoDictionary else { return nil }
+        return infoDictionary[key] as! String?
+    }
+
+    public func infoDictionaryBoolForKey(_ key: String) -> Bool? {
+        guard let infoDictionary = infoDictionary else { return nil }
+        if let value = infoDictionary[key] as? String {
+            return Bool(value)
+        } else {
+            return nil
         }
-        return nil
     }
 }
