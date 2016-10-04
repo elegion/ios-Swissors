@@ -14,7 +14,13 @@ public extension Bundle {
         if let infoDictionary = infoDictionary {
             return infoDictionary[key] as AnyObject?
         }
-        
+        return nil
+    }
+    
+    public func infoDictionaryStringForKey(key: String) -> String? {
+        if let infoDictionary = infoDictionary {
+            return infoDictionary[key] as! String?
+        }
         return nil
     }
 }
