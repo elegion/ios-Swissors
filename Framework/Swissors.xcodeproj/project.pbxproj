@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A647D301DA3E5A100275B57 /* UIColor+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A647D2F1DA3E5A100275B57 /* UIColor+Swissors.swift */; };
 		8F3A85DD1D527733001A7E4D /* UIApplication+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A85DC1D527733001A7E4D /* UIApplication+Swissors.swift */; };
 		8F3A85DF1D5278B8001A7E4D /* UIWindow+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A85DE1D5278B8001A7E4D /* UIWindow+Swissors.swift */; };
 		8F3A85E11D52804C001A7E4D /* NSBundle+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A85E01D52804C001A7E4D /* NSBundle+Swissors.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A647D2F1DA3E5A100275B57 /* UIColor+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Swissors.swift"; sourceTree = "<group>"; };
 		8F3A85DC1D527733001A7E4D /* UIApplication+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Swissors.swift"; sourceTree = "<group>"; };
 		8F3A85DE1D5278B8001A7E4D /* UIWindow+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Swissors.swift"; sourceTree = "<group>"; };
 		8F3A85E01D52804C001A7E4D /* NSBundle+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBundle+Swissors.swift"; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 				8F3A85DC1D527733001A7E4D /* UIApplication+Swissors.swift */,
 				FE5545AF1D52197800A6D6F8 /* UITableView+Swissors.swift */,
 				8F3A85DE1D5278B8001A7E4D /* UIWindow+Swissors.swift */,
+				7A647D2F1DA3E5A100275B57 /* UIColor+Swissors.swift */,
 			);
 			name = Source;
 			path = ../../Source;
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F3A85E11D52804C001A7E4D /* NSBundle+Swissors.swift in Sources */,
+				7A647D301DA3E5A100275B57 /* UIColor+Swissors.swift in Sources */,
 				8F3A85DF1D5278B8001A7E4D /* UIWindow+Swissors.swift in Sources */,
 				8F3A85DD1D527733001A7E4D /* UIApplication+Swissors.swift in Sources */,
 				FE5545B01D52197800A6D6F8 /* UITableView+Swissors.swift in Sources */,
