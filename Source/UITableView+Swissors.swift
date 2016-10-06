@@ -22,4 +22,18 @@ public extension UITableView {
     public func dequeueReusableCellOfType<T: UITableViewCell>(_ cellType: T.Type, forIndexPath indexPath: IndexPath) -> T {
         return dequeueReusableCell(withIdentifier: String(describing: cellType), for: indexPath) as! T
     }
+    
+    public func registerReusableHeaderFooterViewOfType<T: UITableViewHeaderFooterView>(_ viewType: T.Type) {
+        register(viewType, forHeaderFooterViewReuseIdentifier: String(describing: viewType))
+    }
+    
+    public func registerHeaderFooterViewNibOfType<T: UITableViewHeaderFooterView>(_ viewType: T.Type, bundle: Bundle?) {
+        let nib = UINib(nibName: String(describing: viewType), bundle: bundle)
+        register(nib, forHeaderFooterViewReuseIdentifier: String(describing: viewType))
+    }
+    
+    public func dequeueReusableHeaderFooterViewOfType<T: UITableViewHeaderFooterView>(_ viewType: T.Type, forIndexPath indexPath: IndexPath) -> T {
+        let identifier = String(describing: viewType)
+        return (dequeueReusableHeaderFooterView(withIdentifier: identifier) ?? T(reuseIdentifier: identifier)) as! T
+    }
 }
