@@ -32,8 +32,7 @@ public extension UITableView {
         register(nib, forHeaderFooterViewReuseIdentifier: String(describing: viewType))
     }
     
-    public func dequeueReusableHeaderFooterViewOfType<T: UITableViewHeaderFooterView>(_ viewType: T.Type, forIndexPath indexPath: IndexPath) -> T {
-        let identifier = String(describing: viewType)
-        return dequeueReusableHeaderFooterView(withIdentifier: identifier) as! T
+    public func dequeueReusableHeaderFooterViewOfType<T: UITableViewHeaderFooterView>(_ viewType: T.Type) -> T {
+        return dequeueReusableHeaderFooterView(withIdentifier: String(describing: viewType)) as! T
     }
 }

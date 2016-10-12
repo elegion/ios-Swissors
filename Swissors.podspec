@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                    = 'Swissors'
-  s.version                 = '1.2.1'
+  s.version                 = '1.3.0'
   s.summary                 = 'Swift utilities'
   s.homepage                = 'https://github.com/elegion/ios-Swissors'
   s.license                 = 'MIT'
