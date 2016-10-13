@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UIView {
-    class func sw_viewFromNib(bundle: Bundle = Bundle.main, owner: Any? = nil, options: [AnyHashable : Any]? = nil) -> Self? {
+public extension UIView {
+    public class func sw_viewFromNib(bundle: Bundle = Bundle.main, owner: Any? = nil, options: [AnyHashable : Any]? = nil) -> Self? {
         return sw_viewFromNibHelper(bundle: bundle, owner: owner, options: options)
     }
     
