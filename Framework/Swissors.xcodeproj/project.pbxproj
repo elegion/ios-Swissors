@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		372FA73C1DB0401800D1D855 /* UIView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372FA73B1DB0401800D1D855 /* UIView+Swissors.swift */; };
 		8F3A85DD1D527733001A7E4D /* UIApplication+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A85DC1D527733001A7E4D /* UIApplication+Swissors.swift */; };
 		8F3A85E11D52804C001A7E4D /* Bundle+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A85E01D52804C001A7E4D /* Bundle+Swissors.swift */; };
 		FE5545B01D52197800A6D6F8 /* UITableView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5545AF1D52197800A6D6F8 /* UITableView+Swissors.swift */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		372FA73B1DB0401800D1D855 /* UIView+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Swissors.swift"; sourceTree = "<group>"; };
 		8F3A85DC1D527733001A7E4D /* UIApplication+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Swissors.swift"; sourceTree = "<group>"; };
 		8F3A85E01D52804C001A7E4D /* Bundle+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Swissors.swift"; sourceTree = "<group>"; };
 		FE5545AF1D52197800A6D6F8 /* UITableView+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Swissors.swift"; sourceTree = "<group>"; };
@@ -39,6 +41,7 @@
 				8F3A85E01D52804C001A7E4D /* Bundle+Swissors.swift */,
 				8F3A85DC1D527733001A7E4D /* UIApplication+Swissors.swift */,
 				FE5545AF1D52197800A6D6F8 /* UITableView+Swissors.swift */,
+				372FA73B1DB0401800D1D855 /* UIView+Swissors.swift */,
 			);
 			name = Source;
 			path = ../../Source;
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F3A85E11D52804C001A7E4D /* Bundle+Swissors.swift in Sources */,
+				372FA73C1DB0401800D1D855 /* UIView+Swissors.swift in Sources */,
 				8F3A85DD1D527733001A7E4D /* UIApplication+Swissors.swift in Sources */,
 				FE5545B01D52197800A6D6F8 /* UITableView+Swissors.swift in Sources */,
 			);
