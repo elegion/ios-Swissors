@@ -10,13 +10,13 @@ import UIKit
 
 public extension UIApplication {
     
-    public func topWindow() -> UIWindow? {
+    public func sw_topWindow() -> UIWindow? {
         return self.windows.sorted(by: { (w1, w2) -> Bool in
             return w1.windowLevel > w2.windowLevel
         }).first
     }
     
-    public func presentViewController(_ viewController: UIViewController, inNewWindowWithLevel windowLevel: UIWindowLevel, animated: Bool = true, setupHandler: ((UIWindow) -> Void)? = nil) {
+    public func sw_presentViewController(_ viewController: UIViewController, inNewWindowWithLevel windowLevel: UIWindowLevel, animated: Bool = true, setupHandler: ((UIWindow) -> Void)? = nil) {
         
         let emptyController = UIViewController()
         emptyController.definesPresentationContext = true
