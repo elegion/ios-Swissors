@@ -2,7 +2,7 @@
 
 ## Requirements
 
-Swift 2.2, xCode 7.3
+Swift 3.0, xCode 8.0
 
 ## Installation
 
