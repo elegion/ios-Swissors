@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIViewController {
     
-    public func addSubViewController(_ subViewController: UIViewController, viewSetupClosure: ((_ superView: UIView, _ subView: UIView) -> Void)?) {
+    public func sw_addSubViewController(_ subViewController: UIViewController, viewSetupClosure: ((_ superView: UIView, _ subView: UIView) -> Void)?) {
         self.addChildViewController(subViewController)
         
         if let viewSetupClosure = viewSetupClosure {
@@ -20,8 +20,8 @@ public extension UIViewController {
         subViewController.didMove(toParentViewController: self)
     }
     
-    public func autoAddSubViewController(_ subViewController: UIViewController, constraintsSetupClosure: @escaping (_ superView: UIView, _ subView: UIView) -> [NSLayoutConstraint]) {
-        addSubViewController(subViewController) { (superView, subView) in
+    public func sw_autoAddSubViewController(_ subViewController: UIViewController, constraintsSetupClosure: @escaping (_ superView: UIView, _ subView: UIView) -> [NSLayoutConstraint]) {
+        sw_addSubViewController(subViewController) { (superView, subView) in
             superView.addSubview(subView)
             
             subView.autoresizingMask = UIViewAutoresizing()

@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIWindow {
     
-    public func changeRootViewControllerTo(_ viewController: UIViewController, withTransitionStyle transitionStyle: UIViewAnimationOptions = .transitionCrossDissolve, duration: TimeInterval = CATransaction.animationDuration()) {
+    public func sw_changeRootViewControllerTo(_ viewController: UIViewController, withTransitionStyle transitionStyle: UIViewAnimationOptions = .transitionCrossDissolve, duration: TimeInterval = CATransaction.animationDuration()) {
         if rootViewController == nil || transitionStyle == UIViewAnimationOptions() {
             rootViewController = viewController
             
