@@ -13,21 +13,15 @@ public extension Date {
         return dateLeft.compare(dateRight) == ComparisonResult.orderedSame
     }
     
-    public func numberOfUnits(until date: Date, calendarUnit: Calendar.Component, inTimeZone timeZone: TimeZone? = nil) -> Int {
-        var calendar = Calendar.current
-        if let timeZone = timeZone {
-            calendar.timeZone = timeZone
-        } else {
-            calendar.timeZone = TimeZone.autoupdatingCurrent
-        }
+    public func number(of unit: Calendar.Component, until date: Date, in calendar: Calendar) -> Int {
         
         var fromDate: Date = Date(), toDate: Date = Date()
         var interval : TimeInterval = 0
         
-        let _ = calendar.dateInterval(of: calendarUnit, start: &fromDate, interval: &interval, for: self)
-        let _ = calendar.dateInterval(of: calendarUnit, start: &toDate, interval: &interval, for: date)
+        let _ = calendar.dateInterval(of: unit, start: &fromDate, interval: &interval, for: self)
+        let _ = calendar.dateInterval(of: unit, start: &toDate, interval: &interval, for: date)
         
-        let difference = calendar.dateComponents([calendarUnit], from: fromDate, to: toDate)
-        return difference.value(for: calendarUnit) ?? -1
+        let difference = calendar.dateComponents([unit], from: fromDate, to: toDate)
+        return difference.value(for: unit) ?? -1
     }
 }
