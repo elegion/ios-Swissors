@@ -9,8 +9,8 @@
 import Foundation
 
 public extension Date {
-    public func isEqual(to date: Date) -> Bool {
-        return compare(date) == ComparisonResult.orderedSame
+    public static func ==(dateLeft: Date, dateRight: Date) -> Bool {
+        return dateLeft.compare(dateRight) == ComparisonResult.orderedSame
     }
     
     public func numberOfUnits(until date: Date, calendarUnit: Calendar.Component, inTimeZone timeZone: TimeZone? = nil) -> Int {
