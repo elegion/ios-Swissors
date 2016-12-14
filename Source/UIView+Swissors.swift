@@ -66,4 +66,9 @@ public extension UIView {
                 ]
         }
     }
+    
+    public func sw_setCornerRadius(_ radius: CGFloat) {
+        layer.cornerRadius = radius
+        layer.masksToBounds = radius > 0
+    }
 }
