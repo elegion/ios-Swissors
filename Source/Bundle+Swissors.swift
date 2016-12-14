@@ -20,9 +20,9 @@ public extension Bundle {
         return infoDictionary[key] as? String
     }
     
-    public func sw_infoDictionaryBool(for key: String) -> Bool {
-        guard let infoDictionary = infoDictionary else { return false }
-        guard let value = infoDictionary[key] as? String else { return false }
-        return Bool(value) == true
+    public func sw_infoDictionaryBool(for key: String, defaultValue: Bool = false) -> Bool {
+        guard let infoDictionary = infoDictionary else { return defaultValue }
+        guard let value = infoDictionary[key] as? String else { return defaultValue }
+        return Bool(value) ?? defaultValue
     }
 }
