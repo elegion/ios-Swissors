@@ -15,12 +15,12 @@ public extension Bundle {
         return infoDictionary[key]
     }
     
-    public func sw_infoDictionaryString(for key: String) -> String? {
+    public func sw_infoDictionaryValue<T>(for key: String) -> T? {
         guard let infoDictionary = infoDictionary else { return nil }
-        return infoDictionary[key] as? String
+        return infoDictionary[key] as? T
     }
     
-    public func sw_infoDictionaryBool(for key: String, defaultValue: Bool = false) -> Bool {
+    public func sw_infoDictionaryBool(for key: String, defaultValue: Bool = Bool()) -> Bool {
         guard let infoDictionary = infoDictionary else { return defaultValue }
         guard let value = infoDictionary[key] as? String else { return defaultValue }
         return Bool(value) ?? defaultValue
