@@ -10,6 +10,7 @@
 		372FA73C1DB0401800D1D855 /* UIView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372FA73B1DB0401800D1D855 /* UIView+Swissors.swift */; };
 		8F3A85DD1D527733001A7E4D /* UIApplication+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A85DC1D527733001A7E4D /* UIApplication+Swissors.swift */; };
 		8F3A85E11D52804C001A7E4D /* Bundle+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A85E01D52804C001A7E4D /* Bundle+Swissors.swift */; };
+		94CA3BAC1E0186EB005D263F /* UIViewController+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CA3BAB1E0186EB005D263F /* UIViewController+Swissors.swift */; };
 		FE5545B01D52197800A6D6F8 /* UITableView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5545AF1D52197800A6D6F8 /* UITableView+Swissors.swift */; };
 		FE9CB33A1D52138900928A9F /* Swissors.h in Headers */ = {isa = PBXBuildFile; fileRef = FE9CB3391D52138900928A9F /* Swissors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -18,6 +19,7 @@
 		372FA73B1DB0401800D1D855 /* UIView+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Swissors.swift"; sourceTree = "<group>"; };
 		8F3A85DC1D527733001A7E4D /* UIApplication+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Swissors.swift"; sourceTree = "<group>"; };
 		8F3A85E01D52804C001A7E4D /* Bundle+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Swissors.swift"; sourceTree = "<group>"; };
+		94CA3BAB1E0186EB005D263F /* UIViewController+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Swissors.swift"; sourceTree = "<group>"; };
 		FE5545AF1D52197800A6D6F8 /* UITableView+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Swissors.swift"; sourceTree = "<group>"; };
 		FE9CB3361D52138900928A9F /* Swissors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swissors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9CB3391D52138900928A9F /* Swissors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swissors.h; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 				8F3A85DC1D527733001A7E4D /* UIApplication+Swissors.swift */,
 				FE5545AF1D52197800A6D6F8 /* UITableView+Swissors.swift */,
 				372FA73B1DB0401800D1D855 /* UIView+Swissors.swift */,
+				94CA3BAB1E0186EB005D263F /* UIViewController+Swissors.swift */,
 			);
 			name = UIKit;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94CA3BAC1E0186EB005D263F /* UIViewController+Swissors.swift in Sources */,
 				8F3A85E11D52804C001A7E4D /* Bundle+Swissors.swift in Sources */,
 				372FA73C1DB0401800D1D855 /* UIView+Swissors.swift in Sources */,
 				8F3A85DD1D527733001A7E4D /* UIApplication+Swissors.swift in Sources */,
