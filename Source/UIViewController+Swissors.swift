@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
     
-    func addSubViewController(_ subViewController: UIViewController, viewSetupClosure: ((_ superView: UIView, _ subView: UIView) -> Void)?) {
+    public func addSubViewController(_ subViewController: UIViewController, viewSetupClosure: ((_ superView: UIView, _ subView: UIView) -> Void)?) {
         self.addChildViewController(subViewController)
         
         if let viewSetupClosure = viewSetupClosure {
@@ -20,7 +20,7 @@ extension UIViewController {
         subViewController.didMove(toParentViewController: self)
     }
     
-    func autoAddSubViewController(_ subViewController: UIViewController, constraintsSetupClosure: @escaping (_ superView: UIView, _ subView: UIView) -> [NSLayoutConstraint]) {
+    public func autoAddSubViewController(_ subViewController: UIViewController, constraintsSetupClosure: @escaping (_ superView: UIView, _ subView: UIView) -> [NSLayoutConstraint]) {
         addSubViewController(subViewController) { (superView, subView) in
             superView.addSubview(subView)
             
