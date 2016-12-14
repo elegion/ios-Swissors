@@ -19,15 +19,4 @@ public extension UIViewController {
         
         subViewController.didMove(toParentViewController: self)
     }
-    
-    public func sw_autoAddSubViewController(_ subViewController: UIViewController, constraintsSetupClosure: @escaping (_ superView: UIView, _ subView: UIView) -> [NSLayoutConstraint]) {
-        sw_addSubViewController(subViewController) { (superView, subView) in
-            superView.addSubview(subView)
-            
-            subView.autoresizingMask = UIViewAutoresizing()
-            subView.translatesAutoresizingMaskIntoConstraints = false
-            
-            NSLayoutConstraint.activate(constraintsSetupClosure(superView, subView))
-        }
-    }
 }
