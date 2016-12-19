@@ -7,17 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		372FA73C1DB0401800D1D855 /* UIView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372FA73B1DB0401800D1D855 /* UIView+Swissors.swift */; };
 		8F3A85DD1D527733001A7E4D /* UIApplication+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A85DC1D527733001A7E4D /* UIApplication+Swissors.swift */; };
-		8F3A85DF1D5278B8001A7E4D /* UIWindow+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A85DE1D5278B8001A7E4D /* UIWindow+Swissors.swift */; };
-		8F3A85E11D52804C001A7E4D /* NSBundle+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A85E01D52804C001A7E4D /* NSBundle+Swissors.swift */; };
+		8F3A85E11D52804C001A7E4D /* Bundle+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A85E01D52804C001A7E4D /* Bundle+Swissors.swift */; };
+		94CA3BAC1E0186EB005D263F /* UIViewController+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CA3BAB1E0186EB005D263F /* UIViewController+Swissors.swift */; };
+		94CA3BAE1E018750005D263F /* UIWindow+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CA3BAD1E018750005D263F /* UIWindow+Swissors.swift */; };
+		94CA3BB01E0187BF005D263F /* Date+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CA3BAF1E0187BF005D263F /* Date+Swissors.swift */; };
+		94CA3BB21E01A42C005D263F /* BaseTypes+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CA3BB11E01A42C005D263F /* BaseTypes+Swissors.swift */; };
+		94CA3BB51E01AEB4005D263F /* UICollectionView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CA3BB31E01AEB4005D263F /* UICollectionView+Swissors.swift */; };
+		94CA3BB61E01AEB4005D263F /* UIColor+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CA3BB41E01AEB4005D263F /* UIColor+Swissors.swift */; };
 		FE5545B01D52197800A6D6F8 /* UITableView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5545AF1D52197800A6D6F8 /* UITableView+Swissors.swift */; };
 		FE9CB33A1D52138900928A9F /* Swissors.h in Headers */ = {isa = PBXBuildFile; fileRef = FE9CB3391D52138900928A9F /* Swissors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		372FA73B1DB0401800D1D855 /* UIView+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Swissors.swift"; sourceTree = "<group>"; };
 		8F3A85DC1D527733001A7E4D /* UIApplication+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Swissors.swift"; sourceTree = "<group>"; };
-		8F3A85DE1D5278B8001A7E4D /* UIWindow+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Swissors.swift"; sourceTree = "<group>"; };
-		8F3A85E01D52804C001A7E4D /* NSBundle+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBundle+Swissors.swift"; sourceTree = "<group>"; };
+		8F3A85E01D52804C001A7E4D /* Bundle+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Swissors.swift"; sourceTree = "<group>"; };
+		94CA3BAB1E0186EB005D263F /* UIViewController+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Swissors.swift"; sourceTree = "<group>"; };
+		94CA3BAD1E018750005D263F /* UIWindow+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Swissors.swift"; sourceTree = "<group>"; };
+		94CA3BAF1E0187BF005D263F /* Date+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Swissors.swift"; sourceTree = "<group>"; };
+		94CA3BB11E01A42C005D263F /* BaseTypes+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BaseTypes+Swissors.swift"; sourceTree = "<group>"; };
+		94CA3BB31E01AEB4005D263F /* UICollectionView+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Swissors.swift"; sourceTree = "<group>"; };
+		94CA3BB41E01AEB4005D263F /* UIColor+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Swissors.swift"; sourceTree = "<group>"; };
 		FE5545AF1D52197800A6D6F8 /* UITableView+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Swissors.swift"; sourceTree = "<group>"; };
 		FE9CB3361D52138900928A9F /* Swissors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swissors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9CB3391D52138900928A9F /* Swissors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swissors.h; sourceTree = "<group>"; };
@@ -35,13 +47,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94CA3BA91E0183DB005D263F /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				94CA3BB31E01AEB4005D263F /* UICollectionView+Swissors.swift */,
+				94CA3BB41E01AEB4005D263F /* UIColor+Swissors.swift */,
+				8F3A85DC1D527733001A7E4D /* UIApplication+Swissors.swift */,
+				FE5545AF1D52197800A6D6F8 /* UITableView+Swissors.swift */,
+				372FA73B1DB0401800D1D855 /* UIView+Swissors.swift */,
+				94CA3BAB1E0186EB005D263F /* UIViewController+Swissors.swift */,
+				94CA3BAD1E018750005D263F /* UIWindow+Swissors.swift */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		94CA3BAA1E0183E4005D263F /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				8F3A85E01D52804C001A7E4D /* Bundle+Swissors.swift */,
+				94CA3BAF1E0187BF005D263F /* Date+Swissors.swift */,
+				94CA3BB11E01A42C005D263F /* BaseTypes+Swissors.swift */,
+			);
+			name = Foundation;
+			sourceTree = "<group>";
+		};
 		FE5545AE1D5218DD00A6D6F8 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				8F3A85E01D52804C001A7E4D /* NSBundle+Swissors.swift */,
-				8F3A85DC1D527733001A7E4D /* UIApplication+Swissors.swift */,
-				FE5545AF1D52197800A6D6F8 /* UITableView+Swissors.swift */,
-				8F3A85DE1D5278B8001A7E4D /* UIWindow+Swissors.swift */,
+				94CA3BAA1E0183E4005D263F /* Foundation */,
+				94CA3BA91E0183DB005D263F /* UIKit */,
 			);
 			name = Source;
 			path = ../../Source;
@@ -112,11 +146,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "e-Legion";
 				TargetAttributes = {
 					FE9CB3351D52138900928A9F = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -152,10 +187,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F3A85E11D52804C001A7E4D /* NSBundle+Swissors.swift in Sources */,
-				8F3A85DF1D5278B8001A7E4D /* UIWindow+Swissors.swift in Sources */,
+				94CA3BB01E0187BF005D263F /* Date+Swissors.swift in Sources */,
+				94CA3BAC1E0186EB005D263F /* UIViewController+Swissors.swift in Sources */,
+				8F3A85E11D52804C001A7E4D /* Bundle+Swissors.swift in Sources */,
+				94CA3BB21E01A42C005D263F /* BaseTypes+Swissors.swift in Sources */,
+				372FA73C1DB0401800D1D855 /* UIView+Swissors.swift in Sources */,
 				8F3A85DD1D527733001A7E4D /* UIApplication+Swissors.swift in Sources */,
+				94CA3BAE1E018750005D263F /* UIWindow+Swissors.swift in Sources */,
+				94CA3BB51E01AEB4005D263F /* UICollectionView+Swissors.swift in Sources */,
 				FE5545B01D52197800A6D6F8 /* UITableView+Swissors.swift in Sources */,
+				94CA3BB61E01AEB4005D263F /* UIColor+Swissors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,8 +217,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -225,8 +268,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -246,6 +291,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -257,6 +303,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -268,6 +315,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -275,6 +323,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -285,6 +334,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-legion.swissors";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
