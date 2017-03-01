@@ -13,7 +13,7 @@ public extension Date {
         return dateLeft.compare(dateRight) == ComparisonResult.orderedSame
     }
     
-    public func number(of unit: Calendar.Component, until date: Date, in calendar: Calendar) -> Int {
+    public func number(of unit: Calendar.Component, until date: Date, in calendar: Calendar = Calendar.current) -> Int {
         
         var fromDate: Date = Date(), toDate: Date = Date()
         var interval : TimeInterval = 0

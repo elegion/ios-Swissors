@@ -13,7 +13,7 @@ public extension UIView {
         return sw_viewFromNibHelper(in: bundle, owner: owner, options: options)
     }
     
-    private class func sw_viewFromNibHelper<T>(in bundle: Bundle, owner: Any?, options: [AnyHashable : Any]?) -> T {
+    private class func sw_viewFromNibHelper<T>(in bundle: Bundle, owner: Any?, options: [AnyHashable : Any]? = nil) -> T {
         let className = String(describing: self)
         let nib = UINib(nibName: className, bundle: bundle)
         return nib.instantiate(withOwner: owner, options: options).first as! T

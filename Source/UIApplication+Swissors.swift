@@ -34,7 +34,7 @@ public extension UIApplication {
         emptyController.present(viewController, animated: animated, completion: nil)
     }
     
-    public func sw_openURL(_ url: URL, completionHandler completion: ((Bool) -> Void)?) {
+    public func sw_openURL(_ url: URL, completionHandler completion: ((Bool) -> Void)? = nil) {
         if #available(iOS 10.0, *) {
             self.open(url, options: [:], completionHandler: completion)
         } else {

@@ -14,7 +14,7 @@ public extension UITableView {
         register(cellType, forCellReuseIdentifier: String(describing: cellType))
     }
     
-    public func sw_registerReusableCellNibOfType<T: UITableViewCell>(_ cellType: T.Type, bundle: Bundle?) {
+    public func sw_registerReusableCellNibOfType<T: UITableViewCell>(_ cellType: T.Type, bundle: Bundle? = nil) {
         let nib = UINib(nibName: String(describing: cellType), bundle: bundle)
         register(nib, forCellReuseIdentifier: String(describing: cellType))
     }
@@ -27,7 +27,7 @@ public extension UITableView {
         register(viewType, forHeaderFooterViewReuseIdentifier: String(describing: viewType))
     }
     
-    public func sw_registerHeaderFooterViewNibOfType<T: UITableViewHeaderFooterView>(_ viewType: T.Type, bundle: Bundle?) {
+    public func sw_registerHeaderFooterViewNibOfType<T: UITableViewHeaderFooterView>(_ viewType: T.Type, bundle: Bundle? = nil) {
         let nib = UINib(nibName: String(describing: viewType), bundle: bundle)
         register(nib, forHeaderFooterViewReuseIdentifier: String(describing: viewType))
     }
