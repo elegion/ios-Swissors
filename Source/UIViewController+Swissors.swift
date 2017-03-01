@@ -13,10 +13,9 @@ public extension UIViewController {
     public func sw_addSubViewController(_ subViewController: UIViewController, viewSetupClosure: ((_ superView: UIView, _ subView: UIView) -> Void)?) {
         self.addChildViewController(subViewController)
         
-        if let viewSetupClosure = viewSetupClosure {
-            viewSetupClosure(self.view, subViewController.view)
-        }
         
+        self.addChildViewController(subViewController)
+        viewSetupClosure?(self.view, subViewController.view)
         subViewController.didMove(toParentViewController: self)
     }
 }
