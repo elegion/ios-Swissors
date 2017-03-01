@@ -9,6 +9,7 @@
 import Foundation
 
 public extension Date {
+    
     public static func ==(dateLeft: Date, dateRight: Date) -> Bool {
         return dateLeft.compare(dateRight) == ComparisonResult.orderedSame
     }
