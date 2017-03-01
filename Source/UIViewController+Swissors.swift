@@ -10,12 +10,12 @@ import UIKit
 
 public extension UIViewController {
     
-    public func sw_addSubViewController(_ subViewController: UIViewController, viewSetupClosure: ((_ superView: UIView, _ subView: UIView) -> Void)?) {
-        self.addChildViewController(subViewController)
+    public typealias SWViewSetup = ((_ superView: UIView, _ subView: UIView) -> Void)?
+    
+    public func sw_addSubViewController(_ subViewController: UIViewController, viewSetup: SWViewSetup = nil) {
         
-        
         self.addChildViewController(subViewController)
-        viewSetupClosure?(self.view, subViewController.view)
+        viewSetup?(self.view, subViewController.view)
         subViewController.didMove(toParentViewController: self)
     }
 }
