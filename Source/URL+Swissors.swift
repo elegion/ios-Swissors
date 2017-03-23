@@ -13,7 +13,7 @@ extension URL {
         guard !self.isFileURL else { return nil }
         
         let separated = absoluteString.components(separatedBy: "?")
-        let stringToAppend = pair.key + "=" + pair.value
+        let stringToAppend = [pair.key, pair.value].joined(separator: "=")
         
         switch separated.count {
         case 1: return URL(string: [separated.first!, stringToAppend].joined(separator: "?"))
