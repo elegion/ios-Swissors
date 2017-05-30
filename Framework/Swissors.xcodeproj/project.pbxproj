@@ -25,6 +25,7 @@
 		FEB44A821EDD96AF00069FEB /* NSRange+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A811EDD96AF00069FEB /* NSRange+Swissors.swift */; };
 		FEB44A841EDD970500069FEB /* NSLayoutConstraint+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A831EDD970500069FEB /* NSLayoutConstraint+Swissors.swift */; };
 		FEB44A861EDD9D0100069FEB /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A851EDD9D0100069FEB /* Weak.swift */; };
+		FEB44A891EDD9D6000069FEB /* UIImage+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A881EDD9D6000069FEB /* UIImage+Swissors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		FEB44A811EDD96AF00069FEB /* NSRange+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSRange+Swissors.swift"; sourceTree = "<group>"; };
 		FEB44A831EDD970500069FEB /* NSLayoutConstraint+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Swissors.swift"; sourceTree = "<group>"; };
 		FEB44A851EDD9D0100069FEB /* Weak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
+		FEB44A881EDD9D6000069FEB /* UIImage+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Swissors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				94CA3BAB1E0186EB005D263F /* UIViewController+Swissors.swift */,
 				94CA3BAD1E018750005D263F /* UIWindow+Swissors.swift */,
 				FEB44A831EDD970500069FEB /* NSLayoutConstraint+Swissors.swift */,
+				FEB44A881EDD9D6000069FEB /* UIImage+Swissors.swift */,
 			);
 			name = UIKit;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				EA5DE7911E8AC3EB00CB737C /* UIViewAutoresizing+Swissors.swift in Sources */,
 				FEB44A861EDD9D0100069FEB /* Weak.swift in Sources */,
 				94CA3BAE1E018750005D263F /* UIWindow+Swissors.swift in Sources */,
+				FEB44A891EDD9D6000069FEB /* UIImage+Swissors.swift in Sources */,
 				94CA3BB51E01AEB4005D263F /* UICollectionView+Swissors.swift in Sources */,
 				FEB44A821EDD96AF00069FEB /* NSRange+Swissors.swift in Sources */,
 				FE5545B01D52197800A6D6F8 /* UITableView+Swissors.swift in Sources */,
