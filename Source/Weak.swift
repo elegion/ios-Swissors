@@ -6,8 +6,8 @@
 //  Copyright © 2017 e-Legion. All rights reserved.
 //
 
-struct Weak<T: AnyObject> {
-    weak var value: T?
+public struct Weak<T: AnyObject> {
+    public weak var value: T?
     
     init(_ value: T) {
         self.value = value

@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Collection {
+public extension Collection {
     
     func categorize<Category: Hashable>(where categorize: (Iterator.Element) throws -> Category) rethrows -> [Category: [Iterator.Element]] {
         var result: [Category: [Iterator.Element]] = [:]

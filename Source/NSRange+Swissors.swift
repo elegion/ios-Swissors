@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NSRange {
+public extension NSRange {
     
     func offset(by d: Int) -> NSRange {
         return NSRange(location: location + d, length: length)

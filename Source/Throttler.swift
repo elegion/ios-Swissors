@@ -8,22 +8,22 @@
 
 import Foundation
 
-class Throttler {
+public class Throttler {
     
-    let delay: TimeInterval
-    let executionQueue: DispatchQueue
+    public let delay: TimeInterval
+    public let executionQueue: DispatchQueue
     private var currentItem: DispatchWorkItem?
     
-    init(delay: TimeInterval, queue: DispatchQueue = .main) {
+    public init(delay: TimeInterval, queue: DispatchQueue = .main) {
         self.delay = delay
         self.executionQueue = queue
     }
     
-    func add(workItem: DispatchWorkItem, force: Bool) {
+    public func add(workItem: DispatchWorkItem, force: Bool) {
         add(workItem: workItem, force: force, delay: delay)
     }
     
-    func add(workItem: DispatchWorkItem, force: Bool, delay: TimeInterval) {
+    public func add(workItem: DispatchWorkItem, force: Bool, delay: TimeInterval) {
         currentItem?.cancel()
         currentItem = workItem
         
@@ -41,14 +41,14 @@ class Throttler {
         }
     }
     
-    func reset() {
+    public func reset() {
         currentItem?.cancel()
         currentItem = nil
     }
     
 }
 
-extension Throttler {
+public extension Throttler {
     
     func add(force: Bool, closure: @escaping () -> Void) {
         add(workItem: DispatchWorkItem(block: closure), force: force)
