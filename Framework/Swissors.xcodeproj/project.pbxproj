@@ -23,6 +23,7 @@
 		FEB44A7C1EDD952400069FEB /* Collection+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A7B1EDD952400069FEB /* Collection+Swissors.swift */; };
 		FEB44A801EDD95E300069FEB /* Throttler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A7F1EDD95E300069FEB /* Throttler.swift */; };
 		FEB44A821EDD96AF00069FEB /* NSRange+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A811EDD96AF00069FEB /* NSRange+Swissors.swift */; };
+		FEB44A841EDD970500069FEB /* NSLayoutConstraint+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A831EDD970500069FEB /* NSLayoutConstraint+Swissors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		FEB44A7B1EDD952400069FEB /* Collection+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Swissors.swift"; sourceTree = "<group>"; };
 		FEB44A7F1EDD95E300069FEB /* Throttler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Throttler.swift; sourceTree = "<group>"; };
 		FEB44A811EDD96AF00069FEB /* NSRange+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSRange+Swissors.swift"; sourceTree = "<group>"; };
+		FEB44A831EDD970500069FEB /* NSLayoutConstraint+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Swissors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				EA5DE7901E8AC3EB00CB737C /* UIViewAutoresizing+Swissors.swift */,
 				94CA3BAB1E0186EB005D263F /* UIViewController+Swissors.swift */,
 				94CA3BAD1E018750005D263F /* UIWindow+Swissors.swift */,
+				FEB44A831EDD970500069FEB /* NSLayoutConstraint+Swissors.swift */,
 			);
 			name = UIKit;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				94CA3BB21E01A42C005D263F /* BaseTypes+Swissors.swift in Sources */,
 				372FA73C1DB0401800D1D855 /* UIView+Swissors.swift in Sources */,
 				8F3A85DD1D527733001A7E4D /* UIApplication+Swissors.swift in Sources */,
+				FEB44A841EDD970500069FEB /* NSLayoutConstraint+Swissors.swift in Sources */,
 				EA5DE7911E8AC3EB00CB737C /* UIViewAutoresizing+Swissors.swift in Sources */,
 				94CA3BAE1E018750005D263F /* UIWindow+Swissors.swift in Sources */,
 				94CA3BB51E01AEB4005D263F /* UICollectionView+Swissors.swift in Sources */,
