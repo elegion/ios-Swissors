@@ -69,6 +69,40 @@ public extension UIView {
         layer.masksToBounds = radius > 0
     }
     
+    public func sw_descendants<TC: UIView>(of targetClass: TC.Type, avoiding avoidedViews: [UIView.Type] = []) -> [TC] {
+        
+        guard avoidedViews.first(where: { self.isKind(of: $0) }) == nil else {
+            return []
+        }
+        
+        var result: [TC] = []
+        
+        if self.isKind(of: targetClass) {
+            result.append(self as! TC)
+        }
+        
+        for view in self.subviews {
+            result.append(contentsOf: view.sw_descendants(of: targetClass, avoiding: avoidedViews))
+        }
+        
+        return result
+    }
+    
+    public var sw_descendantFirstResponder: UIView? {
+        
+        if self.isFirstResponder {
+            return self
+        }
+        
+        for subview in subviews {
+            if let responder = subview.sw_descendantFirstResponder {
+                return responder
+            }
+        }
+        
+        return nil
+    }
+    
     //MARK: - Private
     
     private class func sw_viewFromNibHelper<T>(in bundle: Bundle, owner: Any?, options: [AnyHashable : Any]? = nil) -> T {
