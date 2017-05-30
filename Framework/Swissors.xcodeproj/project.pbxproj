@@ -24,6 +24,7 @@
 		FEB44A801EDD95E300069FEB /* Throttler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A7F1EDD95E300069FEB /* Throttler.swift */; };
 		FEB44A821EDD96AF00069FEB /* NSRange+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A811EDD96AF00069FEB /* NSRange+Swissors.swift */; };
 		FEB44A841EDD970500069FEB /* NSLayoutConstraint+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A831EDD970500069FEB /* NSLayoutConstraint+Swissors.swift */; };
+		FEB44A861EDD9D0100069FEB /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A851EDD9D0100069FEB /* Weak.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		FEB44A7F1EDD95E300069FEB /* Throttler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Throttler.swift; sourceTree = "<group>"; };
 		FEB44A811EDD96AF00069FEB /* NSRange+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSRange+Swissors.swift"; sourceTree = "<group>"; };
 		FEB44A831EDD970500069FEB /* NSLayoutConstraint+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Swissors.swift"; sourceTree = "<group>"; };
+		FEB44A851EDD9D0100069FEB /* Weak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +93,7 @@
 		FE5545AE1D5218DD00A6D6F8 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				FEB44A7E1EDD95D900069FEB /* Classes */,
+				FEB44A7E1EDD95D900069FEB /* Types */,
 				FEB44A7D1EDD95CE00069FEB /* Extensions */,
 			);
 			name = Source;
@@ -133,12 +135,13 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		FEB44A7E1EDD95D900069FEB /* Classes */ = {
+		FEB44A7E1EDD95D900069FEB /* Types */ = {
 			isa = PBXGroup;
 			children = (
 				FEB44A7F1EDD95E300069FEB /* Throttler.swift */,
+				FEB44A851EDD9D0100069FEB /* Weak.swift */,
 			);
-			name = Classes;
+			name = Types;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +234,7 @@
 				8F3A85DD1D527733001A7E4D /* UIApplication+Swissors.swift in Sources */,
 				FEB44A841EDD970500069FEB /* NSLayoutConstraint+Swissors.swift in Sources */,
 				EA5DE7911E8AC3EB00CB737C /* UIViewAutoresizing+Swissors.swift in Sources */,
+				FEB44A861EDD9D0100069FEB /* Weak.swift in Sources */,
 				94CA3BAE1E018750005D263F /* UIWindow+Swissors.swift in Sources */,
 				94CA3BB51E01AEB4005D263F /* UICollectionView+Swissors.swift in Sources */,
 				FEB44A821EDD96AF00069FEB /* NSRange+Swissors.swift in Sources */,
