@@ -19,6 +19,7 @@
 		EA5DE7911E8AC3EB00CB737C /* UIViewAutoresizing+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DE7901E8AC3EB00CB737C /* UIViewAutoresizing+Swissors.swift */; };
 		FE5545B01D52197800A6D6F8 /* UITableView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5545AF1D52197800A6D6F8 /* UITableView+Swissors.swift */; };
 		FE9CB33A1D52138900928A9F /* Swissors.h in Headers */ = {isa = PBXBuildFile; fileRef = FE9CB3391D52138900928A9F /* Swissors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FEB44A7A1EDD92F400069FEB /* Dictionary+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A791EDD92F400069FEB /* Dictionary+Swissors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		FE9CB3361D52138900928A9F /* Swissors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swissors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9CB3391D52138900928A9F /* Swissors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swissors.h; sourceTree = "<group>"; };
 		FE9CB33B1D52138900928A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEB44A791EDD92F400069FEB /* Dictionary+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Swissors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				8F3A85E01D52804C001A7E4D /* Bundle+Swissors.swift */,
 				94CA3BAF1E0187BF005D263F /* Date+Swissors.swift */,
 				94CA3BB11E01A42C005D263F /* BaseTypes+Swissors.swift */,
+				FEB44A791EDD92F400069FEB /* Dictionary+Swissors.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			files = (
 				94CA3BB01E0187BF005D263F /* Date+Swissors.swift in Sources */,
 				94CA3BAC1E0186EB005D263F /* UIViewController+Swissors.swift in Sources */,
+				FEB44A7A1EDD92F400069FEB /* Dictionary+Swissors.swift in Sources */,
 				8F3A85E11D52804C001A7E4D /* Bundle+Swissors.swift in Sources */,
 				94CA3BB21E01A42C005D263F /* BaseTypes+Swissors.swift in Sources */,
 				372FA73C1DB0401800D1D855 /* UIView+Swissors.swift in Sources */,
