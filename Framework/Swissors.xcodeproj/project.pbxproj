@@ -20,6 +20,7 @@
 		FE5545B01D52197800A6D6F8 /* UITableView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5545AF1D52197800A6D6F8 /* UITableView+Swissors.swift */; };
 		FE9CB33A1D52138900928A9F /* Swissors.h in Headers */ = {isa = PBXBuildFile; fileRef = FE9CB3391D52138900928A9F /* Swissors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEB44A7A1EDD92F400069FEB /* Dictionary+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A791EDD92F400069FEB /* Dictionary+Swissors.swift */; };
+		FEB44A7C1EDD952400069FEB /* Collection+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A7B1EDD952400069FEB /* Collection+Swissors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FE9CB3391D52138900928A9F /* Swissors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swissors.h; sourceTree = "<group>"; };
 		FE9CB33B1D52138900928A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEB44A791EDD92F400069FEB /* Dictionary+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Swissors.swift"; sourceTree = "<group>"; };
+		FEB44A7B1EDD952400069FEB /* Collection+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Swissors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				94CA3BAF1E0187BF005D263F /* Date+Swissors.swift */,
 				94CA3BB11E01A42C005D263F /* BaseTypes+Swissors.swift */,
 				FEB44A791EDD92F400069FEB /* Dictionary+Swissors.swift */,
+				FEB44A7B1EDD952400069FEB /* Collection+Swissors.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				94CA3BAE1E018750005D263F /* UIWindow+Swissors.swift in Sources */,
 				94CA3BB51E01AEB4005D263F /* UICollectionView+Swissors.swift in Sources */,
 				FE5545B01D52197800A6D6F8 /* UITableView+Swissors.swift in Sources */,
+				FEB44A7C1EDD952400069FEB /* Collection+Swissors.swift in Sources */,
 				94CA3BB61E01AEB4005D263F /* UIColor+Swissors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
