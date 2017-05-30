@@ -21,6 +21,7 @@
 		FE9CB33A1D52138900928A9F /* Swissors.h in Headers */ = {isa = PBXBuildFile; fileRef = FE9CB3391D52138900928A9F /* Swissors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEB44A7A1EDD92F400069FEB /* Dictionary+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A791EDD92F400069FEB /* Dictionary+Swissors.swift */; };
 		FEB44A7C1EDD952400069FEB /* Collection+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A7B1EDD952400069FEB /* Collection+Swissors.swift */; };
+		FEB44A801EDD95E300069FEB /* Throttler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A7F1EDD95E300069FEB /* Throttler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FE9CB33B1D52138900928A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEB44A791EDD92F400069FEB /* Dictionary+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Swissors.swift"; sourceTree = "<group>"; };
 		FEB44A7B1EDD952400069FEB /* Collection+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Swissors.swift"; sourceTree = "<group>"; };
+		FEB44A7F1EDD95E300069FEB /* Throttler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Throttler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +85,8 @@
 		FE5545AE1D5218DD00A6D6F8 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				94CA3BAA1E0183E4005D263F /* Foundation */,
-				94CA3BA91E0183DB005D263F /* UIKit */,
+				FEB44A7E1EDD95D900069FEB /* Classes */,
+				FEB44A7D1EDD95CE00069FEB /* Extensions */,
 			);
 			name = Source;
 			path = ../../Source;
@@ -114,6 +116,23 @@
 				FE9CB33B1D52138900928A9F /* Info.plist */,
 			);
 			path = Swissors;
+			sourceTree = "<group>";
+		};
+		FEB44A7D1EDD95CE00069FEB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				94CA3BAA1E0183E4005D263F /* Foundation */,
+				94CA3BA91E0183DB005D263F /* UIKit */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		FEB44A7E1EDD95D900069FEB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FEB44A7F1EDD95E300069FEB /* Throttler.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +217,7 @@
 			files = (
 				94CA3BB01E0187BF005D263F /* Date+Swissors.swift in Sources */,
 				94CA3BAC1E0186EB005D263F /* UIViewController+Swissors.swift in Sources */,
+				FEB44A801EDD95E300069FEB /* Throttler.swift in Sources */,
 				FEB44A7A1EDD92F400069FEB /* Dictionary+Swissors.swift in Sources */,
 				8F3A85E11D52804C001A7E4D /* Bundle+Swissors.swift in Sources */,
 				94CA3BB21E01A42C005D263F /* BaseTypes+Swissors.swift in Sources */,
