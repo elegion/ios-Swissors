@@ -1,0 +1,125 @@
+//
+//  KeyboardObserver.swift
+//  Swissors
+//
+//  Created by Ilya Kulebyakin on 5/30/17.
+//  Copyright © 2017 e-Legion. All rights reserved.
+//
+
+import Foundation
+
+class KeyboardObserver {
+    
+    typealias ObservationInfo = (beginFrame: CGRect, endFrame: CGRect, animationDuration: TimeInterval, curve: UIViewAnimationCurve, isLocal: Bool)
+    typealias ObservationClosure = (ObservationInfo) -> Void
+    typealias ObservationTuple = (owner: Weak<AnyObject>, handler: ObservationClosure)
+    
+    static let shared = KeyboardObserver()
+    
+    var keyboardFrame: CGRect = .null
+    
+    fileprivate var observers: [ObservationTuple] = []
+    
+    private init() {
+        NotificationCenter.default.addObserver(self, selector: #selector(onFrameChange), name: .UIKeyboardWillChangeFrame, object: nil)
+    }
+    
+    func register(observer: AnyObject?, closure: @escaping ObservationClosure) {
+        observers.append((Weak(observer ?? self), closure))
+    }
+    
+    func unregister(observer: AnyObject) {
+        guard observer !== self else {
+            return
+        }
+        
+        observers = observers.filter { $0.owner.value != nil && $0.owner.value !== observer }
+    }
+    
+    func unregisterAll() {
+        observers = []
+    }
+    
+    @objc private func onFrameChange(notification: NSNotification) {
+        guard let userInfo = notification.userInfo,
+            let beginFrame = (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
+            let endFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue,
+            let animationDuration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval,
+            let curveInt = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? Int,
+            let curve = UIViewAnimationCurve(rawValue: curveInt) else {
+                return
+        }
+        
+        var isLocal: Bool? = nil
+        if #available(iOS 9.0, *) {
+            isLocal = userInfo[UIKeyboardIsLocalUserInfoKey] as? Bool
+        }
+        
+        keyboardFrame = endFrame
+        
+        let info: ObservationInfo = (beginFrame, endFrame, animationDuration, curve, isLocal ?? true)
+        notify(with: info)
+    }
+    
+    private func cleanupObservers() {
+        observers = observers.filter { $0.owner.value != nil }
+    }
+    
+    private func notify(with info: ObservationInfo) {
+        cleanupObservers()
+        
+        for observer in observers {
+            observer.handler(info)
+        }
+    }
+    
+}
+
+extension KeyboardObserver {
+    
+    typealias HeightInfo = (height: CGFloat, animationDuration: TimeInterval, curve: UIViewAnimationCurve)
+    
+    private func keyboardHeight(for rect: CGRect) -> CGFloat {
+        return UIScreen.main.bounds.height - rect.minY
+    }
+    
+    func registerForHeight(with owner: AnyObject? = nil, handler: @escaping (HeightInfo) -> Void) {
+        register(observer: owner) {
+            (info) in
+            
+            let result: HeightInfo
+            result.height = self.keyboardHeight(for: info.endFrame)
+            result.animationDuration = info.animationDuration
+            result.curve = info.curve
+            
+            handler(result)
+        }
+    }
+    
+    func register(with view: UIView, constraint: NSLayoutConstraint, constantAdjustment: CGFloat = 0.0, otherAnimatrions: (() -> Void)? = nil) {
+        registerForHeight(with: view) {
+            (info) in
+            
+            let option: UIViewAnimationOptions
+            switch info.curve {
+            case .easeIn:
+                option = .curveEaseIn
+            case .easeInOut:
+                option = .curveEaseInOut
+            case .easeOut:
+                option = .curveEaseOut
+            case .linear:
+                option = .curveLinear
+            }
+            
+            constraint.constant = info.height + constantAdjustment
+            
+            UIView.animate(withDuration: info.animationDuration, delay: 0.0, options: option, animations: {
+                otherAnimatrions?()
+                
+                view.layoutIfNeeded()
+            })
+        }
+    }
+    
+}

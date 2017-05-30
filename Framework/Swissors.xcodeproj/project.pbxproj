@@ -27,6 +27,7 @@
 		FEB44A861EDD9D0100069FEB /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A851EDD9D0100069FEB /* Weak.swift */; };
 		FEB44A891EDD9D6000069FEB /* UIImage+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A881EDD9D6000069FEB /* UIImage+Swissors.swift */; };
 		FEB44A8B1EDDA52900069FEB /* String+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A8A1EDDA52900069FEB /* String+Swissors.swift */; };
+		FEB44A8F1EDDF30C00069FEB /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A8E1EDDF30C00069FEB /* KeyboardObserver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		FEB44A851EDD9D0100069FEB /* Weak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
 		FEB44A881EDD9D6000069FEB /* UIImage+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Swissors.swift"; sourceTree = "<group>"; };
 		FEB44A8A1EDDA52900069FEB /* String+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Swissors.swift"; sourceTree = "<group>"; };
+		FEB44A8E1EDDF30C00069FEB /* KeyboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			children = (
 				FEB44A7F1EDD95E300069FEB /* Throttler.swift */,
 				FEB44A851EDD9D0100069FEB /* Weak.swift */,
+				FEB44A8E1EDDF30C00069FEB /* KeyboardObserver.swift */,
 			);
 			name = Types;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				372FA73C1DB0401800D1D855 /* UIView+Swissors.swift in Sources */,
 				8F3A85DD1D527733001A7E4D /* UIApplication+Swissors.swift in Sources */,
 				FEB44A841EDD970500069FEB /* NSLayoutConstraint+Swissors.swift in Sources */,
+				FEB44A8F1EDDF30C00069FEB /* KeyboardObserver.swift in Sources */,
 				EA5DE7911E8AC3EB00CB737C /* UIViewAutoresizing+Swissors.swift in Sources */,
 				FEB44A861EDD9D0100069FEB /* Weak.swift in Sources */,
 				94CA3BAE1E018750005D263F /* UIWindow+Swissors.swift in Sources */,
