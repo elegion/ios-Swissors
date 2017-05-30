@@ -22,6 +22,7 @@
 		FEB44A7A1EDD92F400069FEB /* Dictionary+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A791EDD92F400069FEB /* Dictionary+Swissors.swift */; };
 		FEB44A7C1EDD952400069FEB /* Collection+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A7B1EDD952400069FEB /* Collection+Swissors.swift */; };
 		FEB44A801EDD95E300069FEB /* Throttler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A7F1EDD95E300069FEB /* Throttler.swift */; };
+		FEB44A821EDD96AF00069FEB /* NSRange+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A811EDD96AF00069FEB /* NSRange+Swissors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		FEB44A791EDD92F400069FEB /* Dictionary+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Swissors.swift"; sourceTree = "<group>"; };
 		FEB44A7B1EDD952400069FEB /* Collection+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Swissors.swift"; sourceTree = "<group>"; };
 		FEB44A7F1EDD95E300069FEB /* Throttler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Throttler.swift; sourceTree = "<group>"; };
+		FEB44A811EDD96AF00069FEB /* NSRange+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSRange+Swissors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				94CA3BB11E01A42C005D263F /* BaseTypes+Swissors.swift */,
 				FEB44A791EDD92F400069FEB /* Dictionary+Swissors.swift */,
 				FEB44A7B1EDD952400069FEB /* Collection+Swissors.swift */,
+				FEB44A811EDD96AF00069FEB /* NSRange+Swissors.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				EA5DE7911E8AC3EB00CB737C /* UIViewAutoresizing+Swissors.swift in Sources */,
 				94CA3BAE1E018750005D263F /* UIWindow+Swissors.swift in Sources */,
 				94CA3BB51E01AEB4005D263F /* UICollectionView+Swissors.swift in Sources */,
+				FEB44A821EDD96AF00069FEB /* NSRange+Swissors.swift in Sources */,
 				FE5545B01D52197800A6D6F8 /* UITableView+Swissors.swift in Sources */,
 				FEB44A7C1EDD952400069FEB /* Collection+Swissors.swift in Sources */,
 				94CA3BB61E01AEB4005D263F /* UIColor+Swissors.swift in Sources */,
