@@ -26,6 +26,7 @@
 		FEB44A841EDD970500069FEB /* NSLayoutConstraint+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A831EDD970500069FEB /* NSLayoutConstraint+Swissors.swift */; };
 		FEB44A861EDD9D0100069FEB /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A851EDD9D0100069FEB /* Weak.swift */; };
 		FEB44A891EDD9D6000069FEB /* UIImage+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A881EDD9D6000069FEB /* UIImage+Swissors.swift */; };
+		FEB44A8B1EDDA52900069FEB /* String+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB44A8A1EDDA52900069FEB /* String+Swissors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		FEB44A831EDD970500069FEB /* NSLayoutConstraint+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Swissors.swift"; sourceTree = "<group>"; };
 		FEB44A851EDD9D0100069FEB /* Weak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
 		FEB44A881EDD9D6000069FEB /* UIImage+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Swissors.swift"; sourceTree = "<group>"; };
+		FEB44A8A1EDDA52900069FEB /* String+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Swissors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				FEB44A791EDD92F400069FEB /* Dictionary+Swissors.swift */,
 				FEB44A7B1EDD952400069FEB /* Collection+Swissors.swift */,
 				FEB44A811EDD96AF00069FEB /* NSRange+Swissors.swift */,
+				FEB44A8A1EDDA52900069FEB /* String+Swissors.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				94CA3BAC1E0186EB005D263F /* UIViewController+Swissors.swift in Sources */,
 				FEB44A801EDD95E300069FEB /* Throttler.swift in Sources */,
 				FEB44A7A1EDD92F400069FEB /* Dictionary+Swissors.swift in Sources */,
+				FEB44A8B1EDDA52900069FEB /* String+Swissors.swift in Sources */,
 				8F3A85E11D52804C001A7E4D /* Bundle+Swissors.swift in Sources */,
 				94CA3BB21E01A42C005D263F /* BaseTypes+Swissors.swift in Sources */,
 				372FA73C1DB0401800D1D855 /* UIView+Swissors.swift in Sources */,
