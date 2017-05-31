@@ -13,8 +13,8 @@ public extension UITableView {
     func sw_register<Cell: UITableViewCell>(cellType: Cell.Type, bundle: Bundle = .main, tryNib: Bool = true) {
         let reuseIdentifier = String(describing: cellType)
         
-        if tryNib && bundle.path(forResource: reuseIdentifier, ofType: "nib") != nil {
-            register(UINib(nibName: reuseIdentifier, bundle: bundle), forCellReuseIdentifier: reuseIdentifier)
+        if tryNib, let nib = UINib(safeWithName: reuseIdentifier, bundle: bundle) {
+            register(nib, forCellReuseIdentifier: reuseIdentifier)
         } else {
             register(cellType, forCellReuseIdentifier: reuseIdentifier)
         }
@@ -27,8 +27,8 @@ public extension UITableView {
     func sw_register<HeaderFooter: UITableViewHeaderFooterView>(headerFooterType: HeaderFooter.Type, bundle: Bundle = .main, tryNib: Bool = true) {
         let identifier = String(describing: headerFooterType)
         
-        if tryNib && bundle.path(forResource: identifier, ofType: "nib") != nil {
-            register(UINib(nibName: identifier, bundle: bundle), forHeaderFooterViewReuseIdentifier: identifier)
+        if tryNib, let nib = UINib(safeWithName: identifier, bundle: bundle) {
+            register(nib, forHeaderFooterViewReuseIdentifier: identifier)
         } else {
             register(headerFooterType, forHeaderFooterViewReuseIdentifier: identifier)
         }
