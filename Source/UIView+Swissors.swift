@@ -64,9 +64,14 @@ public extension UIView {
         NSLayoutConstraint.activate(constraints)
     }
     
-    public func sw_setCornerRadius(_ radius: CGFloat) {
-        layer.cornerRadius = radius
-        layer.masksToBounds = radius > 0
+    public func sw_round(corners: UIRectCorner, with radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.frame = bounds
+        shapeLayer.path = path.cgPath
+        
+        layer.mask = shapeLayer
     }
     
     public func sw_descendants<TC: UIView>(of targetClass: TC.Type, avoiding avoidedViews: [UIView.Type] = []) -> [TC] {
