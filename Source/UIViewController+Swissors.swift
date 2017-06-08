@@ -12,9 +12,15 @@ public extension UIViewController {
     
     public typealias SWViewSetup = ((_ superView: UIView, _ subView: UIView) -> Void)?
     
-    public func sw_addSubViewController(_ subViewController: UIViewController, viewSetup: SWViewSetup = nil) {
-        addChildViewController(subViewController)
-        viewSetup?(view, subViewController.view)
-        subViewController.didMove(toParentViewController: self)
+    public func sw_addChildViewController(_ childViewController: UIViewController, viewSetup: SWViewSetup = nil) {
+        addChildViewController(childViewController)
+        viewSetup?(view, childViewController.view)
+        childViewController.didMove(toParentViewController: self)
+    }
+    
+    public func sw_removeFromParentViewController() {
+        willMove(toParentViewController: nil)
+        view.removeFromSuperview()
+        removeFromParentViewController()
     }
 }
