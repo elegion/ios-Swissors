@@ -10,11 +10,11 @@ import UIKit
 
 public extension UIViewAutoresizing {
     
-    static var sw_flexibleMargins: UIViewAutoresizing {
+    public static var sw_flexibleMargins: UIViewAutoresizing {
         return [self.flexibleLeftMargin, self.flexibleTopMargin, self.flexibleRightMargin, self.flexibleBottomMargin]
     }
     
-    static var sw_flexibleSize: UIViewAutoresizing {
+    public static var sw_flexibleSize: UIViewAutoresizing {
         return [self.flexibleWidth, self.flexibleHeight]
     }
 }

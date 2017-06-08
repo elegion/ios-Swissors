@@ -114,7 +114,7 @@ public extension UIColor {
 
 public extension CGColor {
     
-    var sw_uiColor: UIColor? {
+    public var sw_uiColor: UIColor? {
         return UIColor(cgColor: self)
     }
     

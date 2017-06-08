@@ -50,11 +50,11 @@ public class Throttler {
 
 public extension Throttler {
     
-    func add(force: Bool, closure: @escaping () -> Void) {
+    public func add(force: Bool, closure: @escaping () -> Void) {
         add(workItem: DispatchWorkItem(block: closure), force: force)
     }
     
-    func add(force: Bool, delay: TimeInterval, closure: @escaping () -> Void) {
+    public func add(force: Bool, delay: TimeInterval, closure: @escaping () -> Void) {
         add(workItem: DispatchWorkItem(block: closure), force: force, delay: delay)
     }
     

@@ -9,7 +9,7 @@
 public struct Weak<T: AnyObject> {
     public weak var value: T?
     
-    init(_ value: T) {
+    public init(_ value: T) {
         self.value = value
     }
 }

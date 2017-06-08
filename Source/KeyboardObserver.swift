@@ -8,13 +8,13 @@
 
 import Foundation
 
-class KeyboardObserver {
+public class KeyboardObserver {
     
     typealias ObservationInfo = (beginFrame: CGRect, endFrame: CGRect, animationDuration: TimeInterval, curve: UIViewAnimationCurve, isLocal: Bool)
     typealias ObservationClosure = (ObservationInfo) -> Void
     typealias ObservationTuple = (owner: Weak<AnyObject>, handler: ObservationClosure)
     
-    static let shared = KeyboardObserver()
+    public static let shared = KeyboardObserver()
     
     var keyboardFrame: CGRect = .null
     
@@ -24,11 +24,11 @@ class KeyboardObserver {
         NotificationCenter.default.addObserver(self, selector: #selector(onFrameChange), name: .UIKeyboardWillChangeFrame, object: nil)
     }
     
-    func register(observer: AnyObject?, closure: @escaping ObservationClosure) {
+    public func register(observer: AnyObject?, closure: @escaping ObservationClosure) {
         observers.append((Weak(observer ?? self), closure))
     }
     
-    func unregister(observer: AnyObject) {
+    public func unregister(observer: AnyObject) {
         guard observer !== self else {
             return
         }
@@ -36,7 +36,7 @@ class KeyboardObserver {
         observers = observers.filter { $0.owner.value != nil && $0.owner.value !== observer }
     }
     
-    func unregisterAll() {
+    public func unregisterAll() {
         observers = []
     }
     
@@ -75,7 +75,7 @@ class KeyboardObserver {
     
 }
 
-extension KeyboardObserver {
+public extension KeyboardObserver {
     
     typealias HeightInfo = (height: CGFloat, animationDuration: TimeInterval, curve: UIViewAnimationCurve)
     
@@ -83,7 +83,7 @@ extension KeyboardObserver {
         return UIScreen.main.bounds.height - rect.minY
     }
     
-    func registerForHeight(with owner: AnyObject? = nil, handler: @escaping (HeightInfo) -> Void) {
+    public func registerForHeight(with owner: AnyObject? = nil, handler: @escaping (HeightInfo) -> Void) {
         register(observer: owner) {
             (info) in
             
@@ -96,7 +96,7 @@ extension KeyboardObserver {
         }
     }
     
-    func register(with view: UIView, constraint: NSLayoutConstraint, constantAdjustment: CGFloat = 0.0, otherAnimatrions: (() -> Void)? = nil) {
+    public func register(with view: UIView, constraint: NSLayoutConstraint, constantAdjustment: CGFloat = 0.0, otherAnimatrions: (() -> Void)? = nil) {
         registerForHeight(with: view) {
             (info) in
             

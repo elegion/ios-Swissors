@@ -10,13 +10,13 @@ import Foundation
 
 public extension Dictionary {
  
-    mutating func addValues(from dictionary: Dictionary<Key, Value>) {
+    public mutating func addValues(from dictionary: Dictionary<Key, Value>) {
         for element in dictionary {
             self[element.key] = element.value
         }
     }
     
-    func dictionaryByAddingValues(from dictionary: Dictionary<Key, Value>) -> Dictionary<Key, Value> {
+    public func dictionaryByAddingValues(from dictionary: Dictionary<Key, Value>) -> Dictionary<Key, Value> {
         var result = self
         
         result.addValues(from: dictionary)

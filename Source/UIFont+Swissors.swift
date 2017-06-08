@@ -18,15 +18,15 @@ public extension UIFont {
             self.rawValue = rawValue
         }
         
-        static let ultraLight  = Weight(rawValue: UIFontWeightUltraLight)
-        static let thin        = Weight(rawValue: UIFontWeightThin)
-        static let light       = Weight(rawValue: UIFontWeightLight)
-        static let regular     = Weight(rawValue: UIFontWeightRegular)
-        static let medium      = Weight(rawValue: UIFontWeightMedium)
-        static let semibold    = Weight(rawValue: UIFontWeightSemibold)
-        static let bold        = Weight(rawValue: UIFontWeightBold)
-        static let heavy       = Weight(rawValue: UIFontWeightHeavy)
-        static let black       = Weight(rawValue: UIFontWeightBlack)
+        public static let ultraLight  = Weight(rawValue: UIFontWeightUltraLight)
+        public static let thin        = Weight(rawValue: UIFontWeightThin)
+        public static let light       = Weight(rawValue: UIFontWeightLight)
+        public static let regular     = Weight(rawValue: UIFontWeightRegular)
+        public static let medium      = Weight(rawValue: UIFontWeightMedium)
+        public static let semibold    = Weight(rawValue: UIFontWeightSemibold)
+        public static let bold        = Weight(rawValue: UIFontWeightBold)
+        public static let heavy       = Weight(rawValue: UIFontWeightHeavy)
+        public static let black       = Weight(rawValue: UIFontWeightBlack)
     }
     
     public class func sw_systemFont(ofSize size: CGFloat, weight: Weight) -> UIFont {
