@@ -10,9 +10,9 @@ import Foundation
 
 public class KeyboardObserver {
     
-    typealias ObservationInfo = (beginFrame: CGRect, endFrame: CGRect, animationDuration: TimeInterval, curve: UIViewAnimationCurve, isLocal: Bool)
-    typealias ObservationClosure = (ObservationInfo) -> Void
-    typealias ObservationTuple = (owner: Weak<AnyObject>, handler: ObservationClosure)
+    public typealias ObservationInfo = (beginFrame: CGRect, endFrame: CGRect, animationDuration: TimeInterval, curve: UIViewAnimationCurve, isLocal: Bool)
+    public typealias ObservationClosure = (ObservationInfo) -> Void
+    public typealias ObservationTuple = (owner: Weak<AnyObject>, handler: ObservationClosure)
     
     public static let shared = KeyboardObserver()
     
