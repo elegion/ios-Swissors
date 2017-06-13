@@ -17,6 +17,7 @@
 		94CA3BB51E01AEB4005D263F /* UICollectionView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CA3BB31E01AEB4005D263F /* UICollectionView+Swissors.swift */; };
 		94CA3BB61E01AEB4005D263F /* UIColor+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CA3BB41E01AEB4005D263F /* UIColor+Swissors.swift */; };
 		EA5DE7911E8AC3EB00CB737C /* UIViewAutoresizing+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DE7901E8AC3EB00CB737C /* UIViewAutoresizing+Swissors.swift */; };
+		FE1D7A931EF0026F00E32E23 /* NSError+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D7A921EF0026F00E32E23 /* NSError+Swissors.swift */; };
 		FE5545B01D52197800A6D6F8 /* UITableView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5545AF1D52197800A6D6F8 /* UITableView+Swissors.swift */; };
 		FE9CB33A1D52138900928A9F /* Swissors.h in Headers */ = {isa = PBXBuildFile; fileRef = FE9CB3391D52138900928A9F /* Swissors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEAD9A1C1EE1A75100CB5686 /* UIFont+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD9A1B1EE1A75100CB5686 /* UIFont+Swissors.swift */; };
@@ -44,6 +45,7 @@
 		94CA3BB31E01AEB4005D263F /* UICollectionView+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Swissors.swift"; sourceTree = "<group>"; };
 		94CA3BB41E01AEB4005D263F /* UIColor+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Swissors.swift"; sourceTree = "<group>"; };
 		EA5DE7901E8AC3EB00CB737C /* UIViewAutoresizing+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewAutoresizing+Swissors.swift"; sourceTree = "<group>"; };
+		FE1D7A921EF0026F00E32E23 /* NSError+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+Swissors.swift"; sourceTree = "<group>"; };
 		FE5545AF1D52197800A6D6F8 /* UITableView+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Swissors.swift"; sourceTree = "<group>"; };
 		FE9CB3361D52138900928A9F /* Swissors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swissors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9CB3391D52138900928A9F /* Swissors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swissors.h; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				FEB44A7B1EDD952400069FEB /* Collection+Swissors.swift */,
 				FEB44A811EDD96AF00069FEB /* NSRange+Swissors.swift */,
 				FEB44A8A1EDDA52900069FEB /* String+Swissors.swift */,
+				FE1D7A921EF0026F00E32E23 /* NSError+Swissors.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				8F3A85DD1D527733001A7E4D /* UIApplication+Swissors.swift in Sources */,
 				FEB44A841EDD970500069FEB /* NSLayoutConstraint+Swissors.swift in Sources */,
 				FEB44A8F1EDDF30C00069FEB /* KeyboardObserver.swift in Sources */,
+				FE1D7A931EF0026F00E32E23 /* NSError+Swissors.swift in Sources */,
 				EA5DE7911E8AC3EB00CB737C /* UIViewAutoresizing+Swissors.swift in Sources */,
 				FEB44A861EDD9D0100069FEB /* Weak.swift in Sources */,
 				94CA3BAE1E018750005D263F /* UIWindow+Swissors.swift in Sources */,
