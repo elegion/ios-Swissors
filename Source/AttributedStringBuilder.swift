@@ -99,7 +99,6 @@ public struct AttributedStringBuilder {
         - range: Range on which attribute will be applied. Optional parameter. Defaults for full range.
      
      Don't forget about calling build() function after all attributes are set.
-     
      */
     
     public func with(underlineStyle: NSUnderlineStyle, range: NSRange? = nil) -> AttributedStringBuilder {
@@ -121,7 +120,6 @@ public struct AttributedStringBuilder {
         - range: Range on which attribute will be applied. Optional parameter. Defaults for full range.
      
      Don't forget about calling build() function after all attributes are set.
-     
      */
     
     public func with(kern: Double, range: NSRange? = nil) -> AttributedStringBuilder {
@@ -143,7 +141,6 @@ public struct AttributedStringBuilder {
         - range: Range on which attribute will be applied. Optional parameter. Defaults for full range.
      
      Don't forget about calling build() function after all attributes are set.
-     
      */
     
     public func with(strikethroughStyle: NSUnderlineStyle, range: NSRange? = nil) -> AttributedStringBuilder {
@@ -165,7 +162,6 @@ public struct AttributedStringBuilder {
         - range: Range on which attribute will be applied. Optional parameter. Defaults for full range.
      
      Don't forget about calling build() function after all attributes are set.
-     
      */
     
     public func with(foregroundColor: UIColor, range: NSRange? = nil) -> AttributedStringBuilder {
@@ -187,7 +183,6 @@ public struct AttributedStringBuilder {
         - range: Range on which attribute will be applied. Optional parameter. Defaults for full range.
      
      Don't forget about calling build() function after all attributes are set.
-     
      */
     
     public func with(backgroundColor: UIColor, range: NSRange? = nil) -> AttributedStringBuilder {
@@ -209,7 +204,6 @@ public struct AttributedStringBuilder {
      - range: Range on which attribute will be applied. Optional parameter. Defaults for full range.
      
      Don't forget about calling build() function after all attributes are set.
-     
      */
     
     public func with(font: UIFont, range: NSRange? = nil) -> AttributedStringBuilder {
@@ -231,7 +225,6 @@ public struct AttributedStringBuilder {
         - range: Range on which attribute will be applied. Optional parameter. Defaults for full range.
      
      Don't forget about calling build() function after all attributes are set.
-     
      */
     
     public func with(link: NSURL, range: NSRange? = nil) -> AttributedStringBuilder {
@@ -253,7 +246,6 @@ public struct AttributedStringBuilder {
         - range: Range on which attribute will be applied. Optional parameter. Defaults for full range.
      
      Don't forget about calling build() function after all attributes are set.
-     
      */
     
     public func with(strokeColor: UIColor, range: NSRange? = nil) -> AttributedStringBuilder {
@@ -275,7 +267,6 @@ public struct AttributedStringBuilder {
         - range: Range on which attribute will be applied. Optional parameter. Defaults for full range.
      
      Don't forget about calling build() function after all attributes are set.
-     
      */
     
     public func with(strokeWidth: CGFloat, range: NSRange? = nil) -> AttributedStringBuilder {
@@ -288,37 +279,176 @@ public struct AttributedStringBuilder {
     
     //MARK: Attribute removing
     
+    /**
+     Remove underline style attribute from attrubutes array of string builder.
+     
+     - returns:
+     Attributed string builder with modified attributes array.
+     
+     - throws:
+     An error of type `AttributedStringBuilderError`
+     
+     - parameters:
+        - range: Range on which attribute will be removed. Optional parameter. Defaults for full range.
+     
+     Don't forget about calling build() function after all attributes are set.
+     */
+    
     public func removeUnderlineStyle(range: NSRange? = nil) throws -> AttributedStringBuilder {
         return try removeAttribute(name: NSUnderlineStyleAttributeName, range: range)
     }
+    
+    /**
+     Remove kern attribute from attrubutes array of string builder.
+     
+     - returns:
+     Attributed string builder with modified attributes array.
+     
+     - throws:
+     An error of type `AttributedStringBuilderError`
+     
+     - parameters:
+        - range: Range on which attribute will be removed. Optional parameter. Defaults for full range.
+     
+     Don't forget about calling build() function after all attributes are set.
+     */
     
     public func removeKern(range: NSRange? = nil) throws -> AttributedStringBuilder {
         return try removeAttribute(name: NSKernAttributeName, range: range)
     }
     
+    /**
+     Remove strikethrough style attribute from attrubutes array of string builder.
+     
+     - returns:
+     Attributed string builder with modified attributes array.
+     
+     - throws:
+     An error of type `AttributedStringBuilderError`
+     
+     - parameters:
+        - range: Range on which attribute will be removed. Optional parameter. Defaults for full range.
+     
+     Don't forget about calling build() function after all attributes are set.
+     */
+    
     public func removeStrikethroughStyle(range: NSRange? = nil) throws -> AttributedStringBuilder {
         return try removeAttribute(name: NSStrikethroughStyleAttributeName, range: range)
     }
+    
+    /**
+     Remove foreground color attribute from attrubutes array of string builder.
+     
+     - returns:
+     Attributed string builder with modified attributes array.
+     
+     - throws:
+     An error of type `AttributedStringBuilderError`
+     
+     - parameters:
+        - range: Range on which attribute will be removed. Optional parameter. Defaults for full range.
+     
+     Don't forget about calling build() function after all attributes are set.
+     */
     
     public func removeForegroundColor(range: NSRange? = nil) throws -> AttributedStringBuilder {
         return try removeAttribute(name: NSForegroundColorAttributeName, range: range)
     }
     
+    /**
+     Remove background color attribute from attrubutes array of string builder.
+     
+     - returns:
+     Attributed string builder with modified attributes array.
+     
+     - throws:
+     An error of type `AttributedStringBuilderError`
+     
+     - parameters:
+        - range: Range on which attribute will be removed. Optional parameter. Defaults for full range.
+     
+     Don't forget about calling build() function after all attributes are set.
+     */
+    
     public func removeBackgroundColor(range: NSRange? = nil) throws -> AttributedStringBuilder {
         return try removeAttribute(name: NSBackgroundColorAttributeName, range: range)
     }
+    
+    /**
+     Remove font attribute from attrubutes array of string builder.
+     
+     - returns:
+     Attributed string builder with modified attributes array.
+     
+     - throws:
+     An error of type `AttributedStringBuilderError`
+     
+     - parameters:
+        - range: Range on which attribute will be removed. Optional parameter. Defaults for full range.
+     
+     Don't forget about calling build() function after all attributes are set.
+     
+     */
     
     public func removeFont(range: NSRange? = nil) throws -> AttributedStringBuilder {
         return try removeAttribute(name: NSFontAttributeName, range: range)
     }
     
+    /**
+     Remove link attribute from attrubutes array of string builder.
+     
+     - returns:
+     Attributed string builder with modified attributes array.
+     
+     - throws:
+     An error of type `AttributedStringBuilderError`
+     
+     - parameters:
+        - range: Range on which attribute will be removed. Optional parameter. Defaults for full range.
+     
+     Don't forget about calling build() function after all attributes are set.
+     
+     */
+    
     public func removeLink(range: NSRange? = nil) throws -> AttributedStringBuilder {
         return try removeAttribute(name: NSLinkAttributeName, range: range)
     }
     
+    /**
+     Remove stroke color attribute from attrubutes array of string builder.
+     
+     - returns:
+     Attributed string builder with modified attributes array.
+     
+     - throws:
+     An error of type `AttributedStringBuilderError`
+     
+     - parameters:
+        - range: Range on which attribute will be removed. Optional parameter. Defaults for full range.
+     
+     Don't forget about calling build() function after all attributes are set.
+     
+     */
+    
     public func removeStrokeColor(range: NSRange? = nil) throws -> AttributedStringBuilder {
         return try removeAttribute(name: NSStrokeColorAttributeName, range: range)
     }
+    
+    /**
+     Remove stroke width attribute from attrubutes array of string builder.
+     
+     - returns:
+     Attributed string builder with modified attributes array.
+     
+     - throws:
+     An error of type `AttributedStringBuilderError`
+     
+     - parameters:
+        - range: Range on which attribute will be removed. Optional parameter. Defaults for full range.
+     
+     Don't forget about calling build() function after all attributes are set.
+     
+     */
     
     public func removeStrokeWidth(range: NSRange? = nil) throws -> AttributedStringBuilder {
         return try removeAttribute(name: NSStrokeWidthAttributeName, range: range)
