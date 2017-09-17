@@ -12,7 +12,7 @@ public enum AttributedStringBuilderError: Swift.Error {
     case attributeNotFoundError
 }
 
-extension String {
+public extension String {
     
     public var attribute: AttributedStringBuilder {
         return AttributedStringBuilder(base: self, attributes: [])
@@ -26,19 +26,15 @@ extension String {
 
 fileprivate extension NSRange {
     
-    fileprivate func offset(_ by: Int) -> NSRange {
-        return NSRange.init(location: self.location + by, length: self.length)
-    }
-    
     fileprivate static func ==(left: NSRange, right: NSRange) -> Bool {
         return left.location == right.location && left.length == right.length
     }
     
 }
 
-extension NSAttributedString {
+public extension NSAttributedString {
     
-    public var builder: AttributedStringBuilder {
+    public var sw_builder: AttributedStringBuilder {
         var attributes: [AttributedStringBuilder.Attribute] = []
         
         enumerateAttributes(in: self.string.fullRange, options: []) {
@@ -188,7 +184,7 @@ public struct AttributedStringBuilder {
         
         let string = NSAttributedString(attachment: attachment)
         
-        return append(string.builder)
+        return append(string.sw_builder)
     }
     
     public func append(_ other: AttributedStringBuilder) -> AttributedStringBuilder {
@@ -197,7 +193,7 @@ public struct AttributedStringBuilder {
         let otherAttributes = other.attributes.map({
             (attribute) -> Attribute in
             
-            return (attribute.name, attribute.value, attribute.range.offset(offset))
+            return (attribute.name, attribute.value, attribute.range.sw_offset(by: offset))
         })
         
         var result = self
