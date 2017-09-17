@@ -14,6 +14,16 @@ public enum AttributedStringBuilderError: Swift.Error {
 
 public extension String {
     
+    /**
+     Used to access attributed string builder
+     
+     For example:
+     "test string"
+     .attribute
+     .with(strokeColor: .red)
+     .build()
+    */
+    
     public var attribute: AttributedStringBuilder {
         return AttributedStringBuilder(base: self, attributes: [])
     }
@@ -33,6 +43,19 @@ fileprivate extension NSRange {
 }
 
 public extension NSAttributedString {
+    
+    /**
+     Used to access attributed string builder
+     
+     For example:
+     "test string"
+     .attribute
+     .with(strokeColor: .red)
+     .build()
+     .sw_builder
+     .with(kern: 2.0)
+     .build()
+     */
     
     public var sw_builder: AttributedStringBuilder {
         var attributes: [AttributedStringBuilder.Attribute] = []
@@ -65,6 +88,20 @@ public struct AttributedStringBuilder {
     
     //MARK: Attribute Addition
     
+    /**
+     Adds underline style attribute to attrubutes array of string builder.
+     
+     - returns:
+     Attributed string builder with modified attributes array.
+     
+     - parameters:
+        - underlineStyle: Style attribute. Required parameter.
+        - range: Range on which attribute will be applied. Optional parameter. Defaults for full range.
+     
+     Don't forget about calling build() function after all attributes are set.
+     
+     */
+    
     public func with(underlineStyle: NSUnderlineStyle, range: NSRange? = nil) -> AttributedStringBuilder {
         var result = self
         
@@ -72,6 +109,20 @@ public struct AttributedStringBuilder {
         
         return result
     }
+    
+    /**
+     Adds kern attribute to attrubutes array of string builder.
+     
+     - returns:
+     Attributed string builder with modified attributes array.
+     
+     - parameters:
+        - kern: Value of kern attribute. Required parameter.
+        - range: Range on which attribute will be applied. Optional parameter. Defaults for full range.
+     
+     Don't forget about calling build() function after all attributes are set.
+     
+     */
     
     public func with(kern: Double, range: NSRange? = nil) -> AttributedStringBuilder {
         var result = self
@@ -81,6 +132,20 @@ public struct AttributedStringBuilder {
         return result
     }
     
+    /**
+     Adds strikethrough style attribute to attrubutes array of string builder.
+     
+     - returns:
+     Attributed string builder with modified attributes array.
+     
+     - parameters:
+        - strikethroughStyle: Style attribute. Required parameter.
+        - range: Range on which attribute will be applied. Optional parameter. Defaults for full range.
+     
+     Don't forget about calling build() function after all attributes are set.
+     
+     */
+    
     public func with(strikethroughStyle: NSUnderlineStyle, range: NSRange? = nil) -> AttributedStringBuilder {
         var result = self
         
@@ -88,6 +153,20 @@ public struct AttributedStringBuilder {
         
         return result
     }
+    
+    /**
+     Adds foreground color attribute to attrubutes array of string builder.
+     
+     - returns:
+     Attributed string builder with modified attributes array.
+     
+     - parameters:
+        - foregroundColor: Color attribute. Required parameter.
+        - range: Range on which attribute will be applied. Optional parameter. Defaults for full range.
+     
+     Don't forget about calling build() function after all attributes are set.
+     
+     */
     
     public func with(foregroundColor: UIColor, range: NSRange? = nil) -> AttributedStringBuilder {
         var result = self
@@ -97,6 +176,20 @@ public struct AttributedStringBuilder {
         return result
     }
     
+    /**
+     Adds background color attribute to attrubutes array of string builder.
+     
+     - returns:
+     Attributed string builder with modified attributes array.
+     
+     - parameters:
+        - backgroundColor: Color attribute. Required parameter.
+        - range: Range on which attribute will be applied. Optional parameter. Defaults for full range.
+     
+     Don't forget about calling build() function after all attributes are set.
+     
+     */
+    
     public func with(backgroundColor: UIColor, range: NSRange? = nil) -> AttributedStringBuilder {
         var result = self
         
@@ -104,6 +197,20 @@ public struct AttributedStringBuilder {
         
         return result
     }
+    
+    /**
+     Adds font attribute to attrubutes array of string builder.
+     
+     - returns:
+     Attributed string builder with modified attributes array.
+     
+     - parameters:
+     - font: Font attribute. Required parameter.
+     - range: Range on which attribute will be applied. Optional parameter. Defaults for full range.
+     
+     Don't forget about calling build() function after all attributes are set.
+     
+     */
     
     public func with(font: UIFont, range: NSRange? = nil) -> AttributedStringBuilder {
         var result = self
@@ -113,6 +220,20 @@ public struct AttributedStringBuilder {
         return result
     }
     
+    /**
+     Adds link attribute to attrubutes array of string builder.
+     
+     - returns:
+     Attributed string builder with modified attributes array.
+     
+     - parameters:
+        - link: URL to link with text. Required parameter.
+        - range: Range on which attribute will be applied. Optional parameter. Defaults for full range.
+     
+     Don't forget about calling build() function after all attributes are set.
+     
+     */
+    
     public func with(link: NSURL, range: NSRange? = nil) -> AttributedStringBuilder {
         var result = self
         
@@ -121,6 +242,20 @@ public struct AttributedStringBuilder {
         return result
     }
     
+    /**
+     Adds stroke color attribute to attrubutes array of string builder.
+     
+     - returns:
+     Attributed string builder with modified attributes array.
+     
+     - parameters:
+        - strokeColor: Color attribute. Required parameter.
+        - range: Range on which attribute will be applied. Optional parameter. Defaults for full range.
+     
+     Don't forget about calling build() function after all attributes are set.
+     
+     */
+    
     public func with(strokeColor: UIColor, range: NSRange? = nil) -> AttributedStringBuilder {
         var result = self
         
@@ -128,6 +263,20 @@ public struct AttributedStringBuilder {
         
         return result
     }
+    
+    /**
+     Adds stroke width attribute to attrubutes array of string builder.
+     
+     - returns:
+     Attributed string builder with modified attributes array.
+     
+     - parameters:
+        - strokeWidth: Stroke width attribute. Required parameter.
+        - range: Range on which attribute will be applied. Optional parameter. Defaults for full range.
+     
+     Don't forget about calling build() function after all attributes are set.
+     
+     */
     
     public func with(strokeWidth: CGFloat, range: NSRange? = nil) -> AttributedStringBuilder {
         var result = self
