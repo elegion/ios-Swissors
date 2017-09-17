@@ -14,7 +14,7 @@ public enum AttributedStringBuilderError: Swift.Error {
 
 extension String {
     
-    var attribute: AttributedStringBuilder {
+    public var attribute: AttributedStringBuilder {
         return AttributedStringBuilder(base: self, attributes: [])
     }
     
@@ -26,11 +26,11 @@ extension String {
 
 fileprivate extension NSRange {
     
-    func offset(_ by: Int) -> NSRange {
+    fileprivate func offset(_ by: Int) -> NSRange {
         return NSRange.init(location: self.location + by, length: self.length)
     }
     
-    static func ==(left: NSRange, right: NSRange) -> Bool {
+    fileprivate static func ==(left: NSRange, right: NSRange) -> Bool {
         return left.location == right.location && left.length == right.length
     }
     
@@ -38,7 +38,7 @@ fileprivate extension NSRange {
 
 extension NSAttributedString {
     
-    var builder: AttributedStringBuilder {
+    public var builder: AttributedStringBuilder {
         var attributes: [AttributedStringBuilder.Attribute] = []
         
         enumerateAttributes(in: self.string.fullRange, options: []) {
@@ -54,7 +54,7 @@ extension NSAttributedString {
     
 }
 
-struct AttributedStringBuilder {
+public struct AttributedStringBuilder {
     
     fileprivate typealias Attribute = (name: String, value: Any, range: NSRange)
     
@@ -69,7 +69,7 @@ struct AttributedStringBuilder {
     
     //MARK: Attribute Addition
     
-    func with(underlineStyle: NSUnderlineStyle, range: NSRange? = nil) -> AttributedStringBuilder {
+    public func with(underlineStyle: NSUnderlineStyle, range: NSRange? = nil) -> AttributedStringBuilder {
         var result = self
         
         result.attributes.append((NSUnderlineStyleAttributeName, underlineStyle.rawValue, range ?? base.fullRange))
@@ -77,7 +77,7 @@ struct AttributedStringBuilder {
         return result
     }
     
-    func with(kern: Double, range: NSRange? = nil) -> AttributedStringBuilder {
+    public func with(kern: Double, range: NSRange? = nil) -> AttributedStringBuilder {
         var result = self
         
         result.attributes.append((NSKernAttributeName, kern, range ?? base.fullRange))
@@ -85,7 +85,7 @@ struct AttributedStringBuilder {
         return result
     }
     
-    func with(strikethroughStyle: NSUnderlineStyle, range: NSRange? = nil) -> AttributedStringBuilder {
+    public func with(strikethroughStyle: NSUnderlineStyle, range: NSRange? = nil) -> AttributedStringBuilder {
         var result = self
         
         result.attributes.append((NSStrikethroughStyleAttributeName, strikethroughStyle.rawValue, range ?? base.fullRange))
@@ -93,7 +93,7 @@ struct AttributedStringBuilder {
         return result
     }
     
-    func with(foregroundColor: UIColor, range: NSRange? = nil) -> AttributedStringBuilder {
+    public func with(foregroundColor: UIColor, range: NSRange? = nil) -> AttributedStringBuilder {
         var result = self
         
         result.attributes.append((NSForegroundColorAttributeName, foregroundColor, range ?? base.fullRange))
@@ -101,7 +101,7 @@ struct AttributedStringBuilder {
         return result
     }
     
-    func with(backgroundColor: UIColor, range: NSRange? = nil) -> AttributedStringBuilder {
+    public func with(backgroundColor: UIColor, range: NSRange? = nil) -> AttributedStringBuilder {
         var result = self
         
         result.attributes.append((NSBackgroundColorAttributeName, backgroundColor, range ?? base.fullRange))
@@ -109,7 +109,7 @@ struct AttributedStringBuilder {
         return result
     }
     
-    func with(font: UIFont, range: NSRange? = nil) -> AttributedStringBuilder {
+    public func with(font: UIFont, range: NSRange? = nil) -> AttributedStringBuilder {
         var result = self
         
         result.attributes.append((NSFontAttributeName, font, range ?? base.fullRange))
@@ -117,7 +117,7 @@ struct AttributedStringBuilder {
         return result
     }
     
-    func with(link: NSURL, range: NSRange? = nil) -> AttributedStringBuilder {
+    public func with(link: NSURL, range: NSRange? = nil) -> AttributedStringBuilder {
         var result = self
         
         result.attributes.append((NSLinkAttributeName, link.absoluteString ?? "", range ?? base.fullRange))
@@ -125,7 +125,7 @@ struct AttributedStringBuilder {
         return result
     }
     
-    func with(strokeColor: UIColor, range: NSRange? = nil) -> AttributedStringBuilder {
+    public func with(strokeColor: UIColor, range: NSRange? = nil) -> AttributedStringBuilder {
         var result = self
         
         result.attributes.append((NSStrokeColorAttributeName, strokeColor, range ?? base.fullRange))
@@ -133,7 +133,7 @@ struct AttributedStringBuilder {
         return result
     }
     
-    func with(strokeWidth: CGFloat, range: NSRange? = nil) -> AttributedStringBuilder {
+    public func with(strokeWidth: CGFloat, range: NSRange? = nil) -> AttributedStringBuilder {
         var result = self
         
         result.attributes.append((NSStrokeWidthAttributeName, strokeWidth, range ?? base.fullRange))
@@ -143,45 +143,45 @@ struct AttributedStringBuilder {
     
     //MARK: Attribute removing
     
-    func removeUnderlineStyle(range: NSRange? = nil) throws -> AttributedStringBuilder {
+    public func removeUnderlineStyle(range: NSRange? = nil) throws -> AttributedStringBuilder {
         return try removeAttribute(name: NSUnderlineStyleAttributeName, range: range)
     }
     
-    func removeKern(range: NSRange? = nil) throws -> AttributedStringBuilder {
+    public func removeKern(range: NSRange? = nil) throws -> AttributedStringBuilder {
         return try removeAttribute(name: NSKernAttributeName, range: range)
     }
     
-    func removeStrikethroughStyle(range: NSRange? = nil) throws -> AttributedStringBuilder {
+    public func removeStrikethroughStyle(range: NSRange? = nil) throws -> AttributedStringBuilder {
         return try removeAttribute(name: NSStrikethroughStyleAttributeName, range: range)
     }
     
-    func removeForegroundColor(range: NSRange? = nil) throws -> AttributedStringBuilder {
+    public func removeForegroundColor(range: NSRange? = nil) throws -> AttributedStringBuilder {
         return try removeAttribute(name: NSForegroundColorAttributeName, range: range)
     }
     
-    func removeBackgroundColor(range: NSRange? = nil) throws -> AttributedStringBuilder {
+    public func removeBackgroundColor(range: NSRange? = nil) throws -> AttributedStringBuilder {
         return try removeAttribute(name: NSBackgroundColorAttributeName, range: range)
     }
     
-    func removeFont(range: NSRange? = nil) throws -> AttributedStringBuilder {
+    public func removeFont(range: NSRange? = nil) throws -> AttributedStringBuilder {
         return try removeAttribute(name: NSFontAttributeName, range: range)
     }
     
-    func removeLink(range: NSRange? = nil) throws -> AttributedStringBuilder {
+    public func removeLink(range: NSRange? = nil) throws -> AttributedStringBuilder {
         return try removeAttribute(name: NSLinkAttributeName, range: range)
     }
     
-    func removeStrokeColor(range: NSRange? = nil) throws -> AttributedStringBuilder {
+    public func removeStrokeColor(range: NSRange? = nil) throws -> AttributedStringBuilder {
         return try removeAttribute(name: NSStrokeColorAttributeName, range: range)
     }
     
-    func removeStrokeWidth(range: NSRange? = nil) throws -> AttributedStringBuilder {
+    public func removeStrokeWidth(range: NSRange? = nil) throws -> AttributedStringBuilder {
         return try removeAttribute(name: NSStrokeWidthAttributeName, range: range)
     }
     
     //MARK: String appending
     
-    func append(_ image: UIImage, size: CGSize, origin: CGPoint = .zero) -> AttributedStringBuilder {
+    public func append(_ image: UIImage, size: CGSize, origin: CGPoint = .zero) -> AttributedStringBuilder {
         let attachment = NSTextAttachment()
         attachment.image = image
         attachment.bounds = CGRect(origin: origin, size: size)
@@ -191,7 +191,7 @@ struct AttributedStringBuilder {
         return append(string.builder)
     }
     
-    func append(_ other: AttributedStringBuilder) -> AttributedStringBuilder {
+    public func append(_ other: AttributedStringBuilder) -> AttributedStringBuilder {
         let offset = base.characters.count
         
         let otherAttributes = other.attributes.map({
@@ -208,7 +208,7 @@ struct AttributedStringBuilder {
         return result
     }
     
-    func append(_ string: String) -> AttributedStringBuilder {
+    public func append(_ string: String) -> AttributedStringBuilder {
         var result = self
         
         result.base.append(string)
@@ -216,7 +216,7 @@ struct AttributedStringBuilder {
         return result
     }
     
-    func inCase(_ predicate: Bool,
+    public func inCase(_ predicate: Bool,
                 _ closure: (_ builder: AttributedStringBuilder) -> AttributedStringBuilder) -> AttributedStringBuilder {
         guard predicate else {
             return self
@@ -227,7 +227,7 @@ struct AttributedStringBuilder {
     
     //MARK: Builder
     
-    func build() -> NSAttributedString {
+    public func build() -> NSAttributedString {
         let mutable = NSMutableAttributedString(string: base)
         
         for attribute in attributes {
