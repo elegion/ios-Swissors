@@ -17,7 +17,7 @@ public extension String {
     /**
      Used to access attributed string builder
      
-     For example:
+     Example:
      "test string"
      .attribute
      .with(strokeColor: .red)
@@ -47,7 +47,7 @@ public extension NSAttributedString {
     /**
      Used to access attributed string builder
      
-     For example:
+     Example:
      "test string"
      .attribute
      .with(strokeColor: .red)
@@ -387,7 +387,6 @@ public struct AttributedStringBuilder {
         - range: Range on which attribute will be removed. Optional parameter. Defaults for full range.
      
      Don't forget about calling build() function after all attributes are set.
-     
      */
     
     public func removeFont(range: NSRange? = nil) throws -> AttributedStringBuilder {
@@ -407,7 +406,6 @@ public struct AttributedStringBuilder {
         - range: Range on which attribute will be removed. Optional parameter. Defaults for full range.
      
      Don't forget about calling build() function after all attributes are set.
-     
      */
     
     public func removeLink(range: NSRange? = nil) throws -> AttributedStringBuilder {
@@ -427,7 +425,6 @@ public struct AttributedStringBuilder {
         - range: Range on which attribute will be removed. Optional parameter. Defaults for full range.
      
      Don't forget about calling build() function after all attributes are set.
-     
      */
     
     public func removeStrokeColor(range: NSRange? = nil) throws -> AttributedStringBuilder {
@@ -447,7 +444,6 @@ public struct AttributedStringBuilder {
         - range: Range on which attribute will be removed. Optional parameter. Defaults for full range.
      
      Don't forget about calling build() function after all attributes are set.
-     
      */
     
     public func removeStrokeWidth(range: NSRange? = nil) throws -> AttributedStringBuilder {
@@ -455,6 +451,20 @@ public struct AttributedStringBuilder {
     }
     
     //MARK: String appending
+    
+    /**
+     Appends image to attributed string as text attachment
+     
+     - returns:
+     Attributed string builder with modified attributes array.
+     
+     - parameters:
+        - image: Image which be appended. Required parameter
+        - size: Size of image. Required parameter.
+        - origin: Origin of image. Optional parameter. Defaults for CGPoint.zero
+     
+     Don't forget about calling build() function after all attributes are set.
+     */
     
     public func append(_ image: UIImage, size: CGSize, origin: CGPoint = .zero) -> AttributedStringBuilder {
         let attachment = NSTextAttachment()
@@ -465,6 +475,18 @@ public struct AttributedStringBuilder {
         
         return append(string.sw_builder)
     }
+    
+    /**
+     Appends attributed string builder of other string to append.
+     
+     - returns:
+    Attributed string builder with modified attributes array.
+     
+     - parameters:
+        - other: Attributed string bulder of other string to append.
+     
+     Don't forget about calling build() function after all attributes are set.
+     */
     
     public func append(_ other: AttributedStringBuilder) -> AttributedStringBuilder {
         let offset = base.characters.count
@@ -483,6 +505,18 @@ public struct AttributedStringBuilder {
         return result
     }
     
+    /**
+     Appends string to attributed string builder.
+     
+     - returns:
+    Attributed string builder with modified attributes array.
+     
+     - parameters:
+        - string: String to append.
+     
+     Don't forget about calling build() function after all attributes are set.
+     */
+    
     public func append(_ string: String) -> AttributedStringBuilder {
         var result = self
         
@@ -490,6 +524,29 @@ public struct AttributedStringBuilder {
         
         return result
     }
+    
+    /**
+     Applies attributes from closure when predicate is true.
+     
+     - returns:
+     Attributed string builder with modified attributes array.
+     
+     - parameters:
+        - predicate: Condition when attributes should be applied.
+        - closure: Closure where attributes will be applied.
+     
+     Don't forget about calling build() function after all attributes are set.
+     
+     Example:
+     "test string"
+        .attribute
+        .with(kern: 5)
+        .with(backgroundColor: .red)
+        .inCase(true, {
+            $0.append("text string")
+            })
+        .build()
+     */
     
     public func inCase(_ predicate: Bool,
                 _ closure: (_ builder: AttributedStringBuilder) -> AttributedStringBuilder) -> AttributedStringBuilder {
@@ -502,6 +559,12 @@ public struct AttributedStringBuilder {
     
     //MARK: Builder
     
+    /**
+     Builds attributed string with stored attributes and base plain string.
+     
+     - returns:
+     Built attributed string.
+     */
     public func build() -> NSAttributedString {
         let mutable = NSMutableAttributedString(string: base)
         
