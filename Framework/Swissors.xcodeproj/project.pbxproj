@@ -16,6 +16,7 @@
 		94CA3BB21E01A42C005D263F /* BaseTypes+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CA3BB11E01A42C005D263F /* BaseTypes+Swissors.swift */; };
 		94CA3BB51E01AEB4005D263F /* UICollectionView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CA3BB31E01AEB4005D263F /* UICollectionView+Swissors.swift */; };
 		94CA3BB61E01AEB4005D263F /* UIColor+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CA3BB41E01AEB4005D263F /* UIColor+Swissors.swift */; };
+		BAE0E45E1F5F28B60034D4E0 /* AttributedStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE0E45D1F5F28B60034D4E0 /* AttributedStringBuilder.swift */; };
 		EA5DE7911E8AC3EB00CB737C /* UIViewAutoresizing+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DE7901E8AC3EB00CB737C /* UIViewAutoresizing+Swissors.swift */; };
 		FE1D7A931EF0026F00E32E23 /* NSError+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D7A921EF0026F00E32E23 /* NSError+Swissors.swift */; };
 		FE1D7A951EF002E900E32E23 /* FileManager+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D7A941EF002E900E32E23 /* FileManager+Swissors.swift */; };
@@ -45,6 +46,7 @@
 		94CA3BB11E01A42C005D263F /* BaseTypes+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BaseTypes+Swissors.swift"; sourceTree = "<group>"; };
 		94CA3BB31E01AEB4005D263F /* UICollectionView+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Swissors.swift"; sourceTree = "<group>"; };
 		94CA3BB41E01AEB4005D263F /* UIColor+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Swissors.swift"; sourceTree = "<group>"; };
+		BAE0E45D1F5F28B60034D4E0 /* AttributedStringBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringBuilder.swift; sourceTree = "<group>"; };
 		EA5DE7901E8AC3EB00CB737C /* UIViewAutoresizing+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewAutoresizing+Swissors.swift"; sourceTree = "<group>"; };
 		FE1D7A921EF0026F00E32E23 /* NSError+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+Swissors.swift"; sourceTree = "<group>"; };
 		FE1D7A941EF002E900E32E23 /* FileManager+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+Swissors.swift"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		FEB44A7E1EDD95D900069FEB /* Types */ = {
 			isa = PBXGroup;
 			children = (
+				BAE0E45D1F5F28B60034D4E0 /* AttributedStringBuilder.swift */,
 				FEB44A7F1EDD95E300069FEB /* Throttler.swift */,
 				FEB44A851EDD9D0100069FEB /* Weak.swift */,
 				FEB44A8E1EDDF30C00069FEB /* KeyboardObserver.swift */,
@@ -273,6 +276,7 @@
 				FEB44A7C1EDD952400069FEB /* Collection+Swissors.swift in Sources */,
 				FEF4CE5D1EDEACCC00998DB7 /* UIRectCorner+Swissors.swift in Sources */,
 				94CA3BB61E01AEB4005D263F /* UIColor+Swissors.swift in Sources */,
+				BAE0E45E1F5F28B60034D4E0 /* AttributedStringBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
