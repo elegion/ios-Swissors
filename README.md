@@ -2,7 +2,7 @@
 
 ## Requirements
 
-Swift 3.0, xCode 8.0
+Swift 4.0, xCode 9.0
 
 ## Installation
 
@@ -10,7 +10,6 @@ With CocoaPods:
 
 ```
 source 'https://github.com/elegion/ios-podspecs.git'
-source 'https://github.com/CocoaPods/Specs.git'
 
 pod 'Swissors'
 ```
