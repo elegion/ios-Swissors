@@ -71,11 +71,11 @@ public extension NSAttributedString {
 
 public struct AttributedStringBuilder {
     
-    fileprivate typealias Attribute = (key: NSAttributedStringKey, value: Any, range: NSRange)
+    public typealias Attribute = (key: NSAttributedStringKey, value: Any, range: NSRange)
     
     private var base: String
     
-    private var attributes: [Attribute]
+    public var attributes: [Attribute]
     
     fileprivate init(base: String, attributes: [Attribute]) {
         self.base = base
