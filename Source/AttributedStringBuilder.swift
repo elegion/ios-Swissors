@@ -82,7 +82,7 @@ public struct AttributedStringBuilder {
         self.attributes = attributes
     }
     
-    //MARK: Builder
+    //MARK: - Builder
     
     /**
      Builds attributed string with stored attributes and base plain string.
@@ -137,7 +137,7 @@ public struct AttributedStringBuilder {
     
 }
 
-//MARK: Attribute Addition
+//MARK: - Attribute Addition
 
 extension AttributedStringBuilder {
     
@@ -353,7 +353,7 @@ extension AttributedStringBuilder {
 
 }
 
-//MARK: Attribute removing
+//MARK: - Attribute removing
 
 extension AttributedStringBuilder {
     
@@ -552,7 +552,7 @@ extension AttributedStringBuilder {
     
 }
 
-//MARK: String appending
+//MARK: - String appending
 
 extension AttributedStringBuilder {
     
