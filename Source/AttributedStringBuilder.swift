@@ -350,7 +350,63 @@ extension AttributedStringBuilder {
         
         return result
     }
-
+    
+    /**
+     Adds paragraph style with your own properties to attrubutes array of string builder.
+     
+     - returns:
+     Attributed string builder with modified attributes array.
+     
+     - parameters:
+     - all properties of NSMutableParagraphStyle
+     - range: Range on which attribute will be applied. Optional parameter. Defaults to full range.
+     
+     Don't forget about calling build() function after all attributes are set.
+     */
+    
+    public func withParagraphStyle(with lineSpacing: CGFloat? = nil,
+                                   paragraphSpacing: CGFloat? = nil,
+                                   alignment: NSTextAlignment? = nil,
+                                   firstLineHeadIndent: CGFloat? = nil,
+                                   headIndent: CGFloat? = nil,
+                                   tailIndent: CGFloat? = nil,
+                                   lineBreakMode: NSLineBreakMode? = nil,
+                                   minimumLineHeight: CGFloat? = nil,
+                                   maximumLineHeight: CGFloat? = nil,
+                                   baseWritingDirection: NSWritingDirection? = nil,
+                                   lineHeightMultiple: CGFloat? = nil,
+                                   paragraphSpacingBefore: CGFloat? = nil,
+                                   hyphenationFactor: Float? = nil,
+                                   tabStops: [NSTextTab]? = nil,
+                                   defaultTabInterval: CGFloat? = nil,
+                                   allowsDefaultTighteningForTruncation: Bool? = nil,
+                                   range: NSRange? = nil) -> AttributedStringBuilder {
+        
+        let resultParagraphStyle = NSMutableParagraphStyle()
+        
+        resultParagraphStyle.lineSpacing = lineSpacing ?? resultParagraphStyle.lineSpacing
+        resultParagraphStyle.paragraphSpacing = paragraphSpacing ?? resultParagraphStyle.paragraphSpacing
+        resultParagraphStyle.alignment = alignment ?? resultParagraphStyle.alignment
+        resultParagraphStyle.firstLineHeadIndent = firstLineHeadIndent ?? resultParagraphStyle.firstLineHeadIndent
+        resultParagraphStyle.headIndent = headIndent ?? resultParagraphStyle.headIndent
+        resultParagraphStyle.tailIndent = tailIndent ?? resultParagraphStyle.tailIndent
+        resultParagraphStyle.lineBreakMode = lineBreakMode ?? resultParagraphStyle.lineBreakMode
+        resultParagraphStyle.minimumLineHeight = minimumLineHeight ?? resultParagraphStyle.minimumLineHeight
+        resultParagraphStyle.maximumLineHeight = maximumLineHeight ?? resultParagraphStyle.maximumLineHeight
+        resultParagraphStyle.baseWritingDirection = baseWritingDirection ?? resultParagraphStyle.baseWritingDirection
+        resultParagraphStyle.lineHeightMultiple = lineHeightMultiple ?? resultParagraphStyle.lineHeightMultiple
+        resultParagraphStyle.paragraphSpacingBefore = paragraphSpacingBefore ?? resultParagraphStyle.paragraphSpacingBefore
+        resultParagraphStyle.hyphenationFactor = hyphenationFactor ?? resultParagraphStyle.hyphenationFactor
+        resultParagraphStyle.tabStops = tabStops ?? resultParagraphStyle.tabStops
+        resultParagraphStyle.defaultTabInterval = defaultTabInterval ?? resultParagraphStyle.defaultTabInterval
+        
+        if #available(iOS 9, *) {
+            resultParagraphStyle.allowsDefaultTighteningForTruncation = allowsDefaultTighteningForTruncation ?? resultParagraphStyle.allowsDefaultTighteningForTruncation
+        }
+        
+        return with(paragraphStyle: resultParagraphStyle)
+    }
+    
 }
 
 //MARK: - Attribute removing
