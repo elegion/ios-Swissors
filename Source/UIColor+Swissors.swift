@@ -21,7 +21,9 @@ public extension UIColor {
     }
     
     public convenience init?(hexString: String) {
-        assert(hexString.characters.count == 6)
+        guard hexString.count == 6 else {
+            return nil
+        }
         
         let scanner = Scanner(string: hexString)
         var result: UInt32 = 0
