@@ -363,7 +363,8 @@ extension AttributedStringBuilder {
      
      Don't forget about calling build() function after all attributes are set.
      */
-    public func withParagraphStyle(with lineSpacing: CGFloat? = nil,
+    @available (iOS, obsoleted: 9.0)
+    public func withParagraphStyle(withLineSpacing lineSpacing: CGFloat? = nil,
                                    paragraphSpacing: CGFloat? = nil,
                                    alignment: NSTextAlignment? = nil,
                                    firstLineHeadIndent: CGFloat? = nil,
@@ -380,7 +381,7 @@ extension AttributedStringBuilder {
                                    defaultTabInterval: CGFloat? = nil,
                                    range: NSRange? = nil) -> AttributedStringBuilder {
         
-        let resultParagraphStyle = paragraphStyle(with: lineSpacing,
+        let resultParagraphStyle = paragraphStyle(withLineSpacing: lineSpacing,
                                                   paragraphSpacing: paragraphSpacing,
                                                   alignment: alignment,
                                                   firstLineHeadIndent: firstLineHeadIndent,
@@ -414,7 +415,7 @@ extension AttributedStringBuilder {
      */
     
     @available (iOS 9.0, *)
-    public func withParagraphStyle(with lineSpacing: CGFloat? = nil,
+    public func withParagraphStyle(withLineSpacing lineSpacing: CGFloat? = nil,
                                    paragraphSpacing: CGFloat? = nil,
                                    alignment: NSTextAlignment? = nil,
                                    firstLineHeadIndent: CGFloat? = nil,
@@ -432,7 +433,7 @@ extension AttributedStringBuilder {
                                    allowsDefaultTighteningForTruncation: Bool? = nil,
                                    range: NSRange? = nil) -> AttributedStringBuilder {
         
-        let resultParagraphStyle = paragraphStyle(with: lineSpacing,
+        let resultParagraphStyle = paragraphStyle(withLineSpacing: lineSpacing,
                                                   paragraphSpacing: paragraphSpacing,
                                                   alignment: alignment,
                                                   firstLineHeadIndent: firstLineHeadIndent,
@@ -733,7 +734,7 @@ extension AttributedStringBuilder {
     
     //MARK: - Private
     
-    private func paragraphStyle(with lineSpacing: CGFloat? = nil,
+    private func paragraphStyle(withLineSpacing lineSpacing: CGFloat? = nil,
                                 paragraphSpacing: CGFloat? = nil,
                                 alignment: NSTextAlignment? = nil,
                                 firstLineHeadIndent: CGFloat? = nil,
@@ -748,6 +749,7 @@ extension AttributedStringBuilder {
                                 hyphenationFactor: Float? = nil,
                                 tabStops: [NSTextTab]? = nil,
                                 defaultTabInterval: CGFloat? = nil,
+                                allowsDefaultTighteningForTruncation: Bool? = nil,
                                 range: NSRange? = nil) -> NSMutableParagraphStyle {
         let resultParagraphStyle = NSMutableParagraphStyle()
         
@@ -767,46 +769,9 @@ extension AttributedStringBuilder {
         resultParagraphStyle.tabStops = tabStops ?? resultParagraphStyle.tabStops
         resultParagraphStyle.defaultTabInterval = defaultTabInterval ?? resultParagraphStyle.defaultTabInterval
         
-        return resultParagraphStyle
-    }
-    
-    @available (iOS 9.0, *)
-    private func paragraphStyle(with lineSpacing: CGFloat? = nil,
-                                paragraphSpacing: CGFloat? = nil,
-                                alignment: NSTextAlignment? = nil,
-                                firstLineHeadIndent: CGFloat? = nil,
-                                headIndent: CGFloat? = nil,
-                                tailIndent: CGFloat? = nil,
-                                lineBreakMode: NSLineBreakMode? = nil,
-                                minimumLineHeight: CGFloat? = nil,
-                                maximumLineHeight: CGFloat? = nil,
-                                baseWritingDirection: NSWritingDirection? = nil,
-                                lineHeightMultiple: CGFloat? = nil,
-                                paragraphSpacingBefore: CGFloat? = nil,
-                                hyphenationFactor: Float? = nil,
-                                tabStops: [NSTextTab]? = nil,
-                                defaultTabInterval: CGFloat? = nil,
-                                allowsDefaultTighteningForTruncation: Bool? = nil,
-                                range: NSRange? = nil) -> NSMutableParagraphStyle {
-        
-        let resultParagraphStyle = paragraphStyle(with: lineSpacing,
-                                                  paragraphSpacing: paragraphSpacing,
-                                                  alignment: alignment,
-                                                  firstLineHeadIndent: firstLineHeadIndent,
-                                                  headIndent: headIndent,
-                                                  tailIndent: tailIndent,
-                                                  lineBreakMode: lineBreakMode,
-                                                  minimumLineHeight: minimumLineHeight,
-                                                  maximumLineHeight: maximumLineHeight,
-                                                  baseWritingDirection: baseWritingDirection,
-                                                  lineHeightMultiple: lineHeightMultiple,
-                                                  paragraphSpacingBefore: paragraphSpacing,
-                                                  hyphenationFactor: hyphenationFactor,
-                                                  tabStops: tabStops,
-                                                  defaultTabInterval: defaultTabInterval,
-                                                  range: range)
-        
-        resultParagraphStyle.allowsDefaultTighteningForTruncation = allowsDefaultTighteningForTruncation ?? resultParagraphStyle.allowsDefaultTighteningForTruncation
+        if #available(iOS 9, *) {
+            resultParagraphStyle.allowsDefaultTighteningForTruncation = allowsDefaultTighteningForTruncation ?? resultParagraphStyle.allowsDefaultTighteningForTruncation
+        }
         
         return resultParagraphStyle
     }
