@@ -9,6 +9,12 @@
 import UIKit
 
 public extension UIWindow {
+
+    public static var mainScreenKeyedVisible: UIWindow {
+        let w = UIWindow(frame: UIScreen.main.bounds)
+        w.makeKeyAndVisible()
+        return w
+    }
     
     public enum RootViewControllerTransitionAnimation {
         
