@@ -69,7 +69,7 @@ public extension UICollectionView {
     @available(*, deprecated, message: "Use sw_register<SupplementaryView: UICollectionReusableView>(supplementaryViewType: SupplementaryView.Type, kind: String, bundle: Bundle, tryNib: Bool) instead")
     public func sw_registerReusableSupplementaryViewNib<T: UICollectionReusableView>(ofType type: T.Type, kind: String, bundle: Bundle? = .main) {
         let nib = UINib(nibName: String(describing: type), bundle: bundle)
-        register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: String(describing: type))
+        register(nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: type))
     }
     
     @available(*, deprecated, message: "Use sw_dequeueHeaderFooter<SupplementaryView: UICollectionReusableView>(of viewType: SupplementaryView.Type, kind: String, for indexPath: IndexPath) instead")

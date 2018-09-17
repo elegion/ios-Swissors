@@ -71,7 +71,7 @@ public extension NSAttributedString {
 
 public struct AttributedStringBuilder {
     
-    public typealias Attribute = (key: NSAttributedStringKey, value: Any, range: NSRange)
+    public typealias Attribute = (key: NSAttributedString.Key, value: Any, range: NSRange)
     
     private var base: String
     
@@ -631,7 +631,7 @@ extension AttributedStringBuilder {
         return try removeAttribute(for: .strokeWidth, in: range)
     }
     
-    private func removeAttribute(for key: NSAttributedStringKey, in range: NSRange? = nil) throws -> AttributedStringBuilder {
+    private func removeAttribute(for key: NSAttributedString.Key, in range: NSRange? = nil) throws -> AttributedStringBuilder {
         var result = self
         
         guard let validRange = range else {

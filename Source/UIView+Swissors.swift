@@ -54,7 +54,7 @@ public extension UIView {
         }
     }
     
-    public class func sw_viewFromNib(in bundle: Bundle = Bundle.main, owner: Any? = nil, options: [AnyHashable : Any]? = nil) -> Self {
+    public class func sw_viewFromNib(in bundle: Bundle = Bundle.main, owner: Any? = nil, options: [UINib.OptionsKey: Any]? = nil) -> Self {
         return sw_viewFromNibHelper(in: bundle, owner: owner, options: options)
     }
     
@@ -110,7 +110,7 @@ public extension UIView {
     
     //MARK: - Private
     
-    private class func sw_viewFromNibHelper<T>(in bundle: Bundle, owner: Any?, options: [AnyHashable : Any]? = nil) -> T {
+    private class func sw_viewFromNibHelper<T>(in bundle: Bundle, owner: Any?, options: [UINib.OptionsKey: Any]? = nil) -> T {
         let className = String(describing: self)
         let nib = UINib(nibName: className, bundle: bundle)
         return nib.instantiate(withOwner: owner, options: options).first as! T
