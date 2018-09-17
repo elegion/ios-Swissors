@@ -16,7 +16,7 @@ public extension UIApplication {
         }).first
     }
     
-    public func sw_presentViewController(_ viewController: UIViewController, inNewWindowWithLevel windowLevel: UIWindowLevel, animated: Bool = true, setupHandler: ((UIWindow) -> Void)? = nil) {
+    public func sw_presentViewController(_ viewController: UIViewController, inNewWindowWithLevel windowLevel: UIWindow.Level, animated: Bool = true, setupHandler: ((UIWindow) -> Void)? = nil) {
         
         let emptyController = UIViewController()
         emptyController.definesPresentationContext = true

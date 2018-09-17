@@ -8,13 +8,13 @@
 
 import UIKit
 
-public extension UIViewAutoresizing {
+public extension UIView.AutoresizingMask {
     
-    public static var sw_flexibleMargins: UIViewAutoresizing {
-        return [self.flexibleLeftMargin, self.flexibleTopMargin, self.flexibleRightMargin, self.flexibleBottomMargin]
+    public static var sw_flexibleMargins: UIView.AutoresizingMask {
+        return [.flexibleLeftMargin, .flexibleTopMargin, .flexibleRightMargin, .flexibleBottomMargin]
     }
     
-    public static var sw_flexibleSize: UIViewAutoresizing {
-        return [self.flexibleWidth, self.flexibleHeight]
+    public static var sw_flexibleSize: UIView.AutoresizingMask {
+        return [.flexibleWidth, .flexibleHeight]
     }
 }

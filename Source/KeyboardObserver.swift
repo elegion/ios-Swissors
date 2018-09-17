@@ -10,7 +10,7 @@ import Foundation
 
 public class KeyboardObserver {
     
-    public typealias ObservationInfo = (beginFrame: CGRect, endFrame: CGRect, animationDuration: TimeInterval, curve: UIViewAnimationCurve, isLocal: Bool)
+    public typealias ObservationInfo = (beginFrame: CGRect, endFrame: CGRect, animationDuration: TimeInterval, curve: UIView.AnimationCurve, isLocal: Bool)
     public typealias ObservationClosure = (ObservationInfo) -> Void
     public typealias ObservationTuple = (owner: Weak<AnyObject>, handler: ObservationClosure)
     
@@ -21,7 +21,7 @@ public class KeyboardObserver {
     fileprivate var observers: [ObservationTuple] = []
     
     private init() {
-        NotificationCenter.default.addObserver(self, selector: #selector(onFrameChange), name: .UIKeyboardWillChangeFrame, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onFrameChange), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
     public func register(observer: AnyObject?, closure: @escaping ObservationClosure) {
@@ -42,17 +42,17 @@ public class KeyboardObserver {
     
     @objc private func onFrameChange(notification: NSNotification) {
         guard let userInfo = notification.userInfo,
-            let beginFrame = (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
-            let endFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue,
-            let animationDuration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval,
-            let curveInt = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? Int,
-            let curve = UIViewAnimationCurve(rawValue: curveInt) else {
+            let beginFrame = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
+            let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue,
+            let animationDuration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval,
+            let curveInt = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? Int,
+            let curve = UIView.AnimationCurve(rawValue: curveInt) else {
                 return
         }
         
         var isLocal: Bool? = nil
         if #available(iOS 9.0, *) {
-            isLocal = userInfo[UIKeyboardIsLocalUserInfoKey] as? Bool
+            isLocal = userInfo[UIResponder.keyboardIsLocalUserInfoKey] as? Bool
         }
         
         keyboardFrame = endFrame
@@ -77,7 +77,7 @@ public class KeyboardObserver {
 
 public extension KeyboardObserver {
     
-    typealias HeightInfo = (height: CGFloat, animationDuration: TimeInterval, curve: UIViewAnimationCurve)
+    typealias HeightInfo = (height: CGFloat, animationDuration: TimeInterval, curve: UIView.AnimationCurve)
     
     private func keyboardHeight(for rect: CGRect) -> CGFloat {
         return UIScreen.main.bounds.height - rect.minY
@@ -100,7 +100,7 @@ public extension KeyboardObserver {
         registerForHeight(with: view) {
             (info) in
             
-            let option: UIViewAnimationOptions
+            let option: UIView.AnimationOptions
             switch info.curve {
             case .easeIn:
                 option = .curveEaseIn

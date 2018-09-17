@@ -28,8 +28,8 @@ public extension UIWindow {
         
         case flipFromBottom
         
-        var animationOptions: UIViewAnimationOptions {
-            var options: UIViewAnimationOptions = [.allowAnimatedContent]
+        var animationOptions: UIView.AnimationOptions {
+            var options: UIView.AnimationOptions = [.allowAnimatedContent]
             switch self {
             case .none:
                 ()
