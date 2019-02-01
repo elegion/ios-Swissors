@@ -329,6 +329,27 @@ extension AttributedStringBuilder {
         
         return result
     }
+
+    /**
+     Adds baseline offset attribute to attributes array of string builder
+
+     - returns:
+     Attributed string builder with modified attributes array.
+
+     - parameters:
+        - baselineOffset: Baseline offset attribute. Required parameter.
+        - range: Range on which attribute will be applied. Optional parameter. Defaults to full range.
+
+     Don't forget about calling build() function after all attributes are set.
+     */
+
+    public func with(baselineOffset: CGFloat, range: NSRange? = nil) -> AttributedStringBuilder {
+        var result = self
+
+        result.attributes.append((.baselineOffset, baselineOffset, range ?? base.fullRange))
+
+        return result
+    }
     
     /**
      Adds paragraph style to attrubutes array of string builder.
@@ -629,6 +650,25 @@ extension AttributedStringBuilder {
     
     public func removeStrokeWidth(range: NSRange? = nil) throws -> AttributedStringBuilder {
         return try removeAttribute(for: .strokeWidth, in: range)
+    }
+
+    /**
+     Remove baseline offset attribute from attrubutes array of string builder.
+
+     - returns:
+     Attributed string builder with modified attributes array.
+
+     - throws:
+     An error of type `AttributedStringBuilderError`
+
+     - parameters:
+        - range: Range on which attribute will be removed. Optional parameter. Defaults to full range.
+
+     Don't forget about calling build() function after all attributes are set.
+     */
+
+    public func removeBaselineOffset(range: NSRange? = nil) throws -> AttributedStringBuilder {
+        return try removeAttribute(for: .baselineOffset, in: range)
     }
     
     private func removeAttribute(for key: NSAttributedString.Key, in range: NSRange? = nil) throws -> AttributedStringBuilder {
