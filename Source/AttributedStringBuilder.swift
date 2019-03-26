@@ -31,7 +31,7 @@ public extension String {
     }
     
     fileprivate var fullRange: NSRange {
-        return NSRange(location: 0, length: count)
+        return NSRange(startIndex ..< endIndex, in: self)
     }
     
 }
