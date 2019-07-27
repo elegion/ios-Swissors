@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIWindow {
     
-    public enum RootViewControllerTransitionAnimation {
+    enum RootViewControllerTransitionAnimation {
         
         case none
         
@@ -61,7 +61,7 @@ public extension UIWindow {
      Replaces root view controller with specified animation.
      Often used by the auth <-> main screens transition.
      */
-    public func sw_replaceRootViewController(with viewController: UIViewController, animation: RootViewControllerTransitionAnimation, completion: @escaping (Bool) -> Void) {
+    func sw_replaceRootViewController(with viewController: UIViewController, animation: RootViewControllerTransitionAnimation, completion: @escaping (Bool) -> Void) {
         guard let rootViewController = rootViewController, rootViewController.isViewLoaded, rootViewController.view.layer.presentation() != nil else {
             self.rootViewController = viewController
             return

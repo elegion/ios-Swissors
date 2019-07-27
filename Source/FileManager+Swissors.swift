@@ -10,7 +10,7 @@ import Foundation
 
 public extension FileManager {
     
-    public func URL(for directory: SearchPathDirectory, in domain: SearchPathDomainMask, append pathComponent: String?, create: Bool) throws -> URL {
+    func URL(for directory: SearchPathDirectory, in domain: SearchPathDomainMask, append pathComponent: String?, create: Bool) throws -> URL {
         var url = try self.url(for: directory, in: domain, appropriateFor: nil, create: create)
         
         if let pathComponent = pathComponent {

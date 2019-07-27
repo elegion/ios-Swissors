@@ -12,7 +12,7 @@ public extension UIView {
     
     //MARK: - Public
     
-    public static func sw_fullFrameConstraints(for superView: UIView, subView: UIView) -> [NSLayoutConstraint] {
+    static func sw_fullFrameConstraints(for superView: UIView, subView: UIView) -> [NSLayoutConstraint] {
         if #available(iOS 9.0, *) {
             return [subView.topAnchor.constraint(equalTo: superView.topAnchor),
                     subView.bottomAnchor.constraint(equalTo: superView.bottomAnchor),
@@ -54,17 +54,17 @@ public extension UIView {
         }
     }
     
-    public class func sw_viewFromNib(in bundle: Bundle = Bundle.main, owner: Any? = nil, options: [UINib.OptionsKey: Any]? = nil) -> Self {
+    class func sw_viewFromNib(in bundle: Bundle = Bundle.main, owner: Any? = nil, options: [UINib.OptionsKey: Any]? = nil) -> Self {
         return sw_viewFromNibHelper(in: bundle, owner: owner, options: options)
     }
     
-    public func sw_addSubview(_ subview: UIView, with constraints:[NSLayoutConstraint]) {
+    func sw_addSubview(_ subview: UIView, with constraints:[NSLayoutConstraint]) {
         subview.translatesAutoresizingMaskIntoConstraints = false
         addSubview(subview)
         NSLayoutConstraint.activate(constraints)
     }
     
-    public func sw_round(corners: UIRectCorner, with radius: CGFloat) {
+    func sw_round(corners: UIRectCorner, with radius: CGFloat) {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         
         let shapeLayer = CAShapeLayer()
@@ -74,7 +74,7 @@ public extension UIView {
         layer.mask = shapeLayer
     }
     
-    public func sw_descendants<TC: UIView>(of targetClass: TC.Type, avoiding avoidedViews: [UIView.Type] = []) -> [TC] {
+    func sw_descendants<TC: UIView>(of targetClass: TC.Type, avoiding avoidedViews: [UIView.Type] = []) -> [TC] {
         
         guard avoidedViews.first(where: { self.isKind(of: $0) }) == nil else {
             return []
@@ -93,7 +93,7 @@ public extension UIView {
         return result
     }
     
-    public var sw_descendantFirstResponder: UIView? {
+    var sw_descendantFirstResponder: UIView? {
         
         if self.isFirstResponder {
             return self

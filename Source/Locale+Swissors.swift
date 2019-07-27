@@ -10,7 +10,7 @@ import Foundation
 
 public extension Locale {
 
-    public static var forPreferredLocalization: Locale? {
+    static var forPreferredLocalization: Locale? {
         return Bundle.main.preferredLocalizations.first.map(Locale.init)
     }
 

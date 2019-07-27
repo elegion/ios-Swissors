@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UIImage {
-    public func sw_tintedImage(with color: UIColor) -> UIImage {
+    func sw_tintedImage(with color: UIColor) -> UIImage {
         
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
         
@@ -25,7 +25,7 @@ public extension UIImage {
         return tintedImage!
     }
     
-    public func sw_scaledImage(with size: CGSize) -> UIImage {
+    func sw_scaledImage(with size: CGSize) -> UIImage {
         guard size != self.size else {
             return self
         }
@@ -40,7 +40,7 @@ public extension UIImage {
         return result!
     }
     
-    public func sw_scaledImage(withSmallerDimension minDimension: CGFloat) -> UIImage {
+    func sw_scaledImage(withSmallerDimension minDimension: CGFloat) -> UIImage {
         var ratio: CGFloat
         if size.width > size.height {
             ratio = minDimension / size.height
@@ -52,7 +52,7 @@ public extension UIImage {
         return sw_scaledImage(with: CGSize(width: size.width * ratio, height: size.height * ratio))
     }
     
-    public class func sw_image(with size: CGSize, drawing: (_ context: CGContext, _ rect: CGRect) -> Void) -> UIImage? {
+    class func sw_image(with size: CGSize, drawing: (_ context: CGContext, _ rect: CGRect) -> Void) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
         let context = UIGraphicsGetCurrentContext()
         let drawingRect = CGRect(origin: .zero, size: size)
@@ -66,7 +66,7 @@ public extension UIImage {
         return image
     }
     
-    public class func sw_image(with color: UIColor) -> UIImage? {
+    class func sw_image(with color: UIColor) -> UIImage? {
         let size = CGSize(width: 1.0, height: 1.0)
         return self.sw_image(with: size, drawing: {
             (context, rect) in
@@ -76,7 +76,7 @@ public extension UIImage {
         })
     }
     
-    public class func sw_ovalImage(with size: CGSize, color: UIColor, fill: Bool) -> UIImage? {
+    class func sw_ovalImage(with size: CGSize, color: UIColor, fill: Bool) -> UIImage? {
         return self.sw_image(with: size, drawing: {
             (context, rect) in
             
@@ -95,7 +95,7 @@ public extension UIImage {
         })
     }
     
-    public func sw_alphaBlended(with color: UIColor) -> UIImage? {
+    func sw_alphaBlended(with color: UIColor) -> UIImage? {
         guard let cgImage = self.cgImage else {
             return nil
         }

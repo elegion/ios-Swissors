@@ -83,7 +83,7 @@ public extension KeyboardObserver {
         return UIScreen.main.bounds.height - rect.minY
     }
     
-    public func registerForHeight(with owner: AnyObject? = nil, handler: @escaping (HeightInfo) -> Void) {
+    func registerForHeight(with owner: AnyObject? = nil, handler: @escaping (HeightInfo) -> Void) {
         register(observer: owner) {
             (info) in
             
@@ -96,7 +96,7 @@ public extension KeyboardObserver {
         }
     }
     
-    public func register(with view: UIView, constraint: NSLayoutConstraint, constantAdjustment: CGFloat = 0.0, otherAnimatrions: (() -> Void)? = nil) {
+    func register(with view: UIView, constraint: NSLayoutConstraint, constantAdjustment: CGFloat = 0.0, otherAnimatrions: (() -> Void)? = nil) {
         registerForHeight(with: view) {
             (info) in
             

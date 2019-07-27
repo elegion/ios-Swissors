@@ -26,7 +26,7 @@ public extension String {
      ```
     */
     
-    public var attribute: AttributedStringBuilder {
+    var attribute: AttributedStringBuilder {
         return AttributedStringBuilder(base: self, attributes: [])
     }
     
@@ -53,7 +53,7 @@ public extension NSAttributedString {
      ```
      */
     
-    public var sw_builder: AttributedStringBuilder {
+    var sw_builder: AttributedStringBuilder {
         var attributes: [AttributedStringBuilder.Attribute] = []
         
         enumerateAttributes(in: self.string.fullRange, options: []) {

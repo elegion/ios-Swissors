@@ -10,7 +10,7 @@ import Foundation
 
 public extension String {
     
-    public func sw_byRemovingCharacters(from set: CharacterSet) -> String {
+    func sw_byRemovingCharacters(from set: CharacterSet) -> String {
         return self.components(separatedBy: set).joined()
     }
     
