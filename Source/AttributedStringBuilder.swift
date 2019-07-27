@@ -678,7 +678,7 @@ extension AttributedStringBuilder {
             throw AttributedStringBuilderError.attributeNotFoundError
         }
         
-        let index = result.attributes.index {
+        let index = result.attributes.firstIndex {
             (attribute: Attribute) -> Bool in
             
             return attribute.key == key && attribute.range == validRange

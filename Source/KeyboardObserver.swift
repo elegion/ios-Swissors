@@ -110,6 +110,8 @@ public extension KeyboardObserver {
                 option = .curveEaseOut
             case .linear:
                 option = .curveLinear
+            @unknown default:
+                option = []
             }
             
             constraint.constant = info.height + constantAdjustment
