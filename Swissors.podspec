@@ -1,14 +1,14 @@
 Pod::Spec.new do |s|
   s.name                    = 'Swissors'
-  s.version                 = '1.10.2'
+  s.version                 = '2.0.0'
   s.summary                 = 'Swift utilities'
   s.homepage                = 'https://github.com/elegion/ios-Swissors'
   s.license                 = 'MIT'
   s.author                  = { 'Ilya Kulebyakin' => 'ilya.kulebyakin@e-legion.com' }
   s.source                  = { :git => 'https://github.com/elegion/ios-Swissors.git', :tag => "v#{s.version}" }
-
+  s.swift_versions          = '5.0'
+  
   s.ios.deployment_target   = '8.0'
-  s.requires_arc            = true
 
   s.source_files            = 'Source'
 
