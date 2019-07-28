@@ -13,9 +13,9 @@ public extension UIColor {
     typealias RGBA = (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)
     
     convenience init(hex: UInt32) {
-        let r = CGFloat((hex & 0xFF0000) >> 16) / 255;
-        let g = CGFloat((hex & 0x00FF00) >> 8) / 255;
-        let b = CGFloat(hex & 0x0000FF) / 255;
+        let r = CGFloat((hex & 0xFF0000) >> 16) / 255
+        let g = CGFloat((hex & 0x00FF00) >> 8) / 255
+        let b = CGFloat(hex & 0x0000FF) / 255
         
         self.init(red: r, green: g, blue: b, alpha: 1)
     }
@@ -111,7 +111,6 @@ public extension UIColor {
         
         return UIColor(rgba: newRGBA)
     }
-    
 }
 
 public extension CGColor {
@@ -119,5 +118,4 @@ public extension CGColor {
     var sw_uiColor: UIColor? {
         return UIColor(cgColor: self)
     }
-    
 }

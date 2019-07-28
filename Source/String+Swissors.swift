@@ -13,5 +13,4 @@ public extension String {
     func sw_byRemovingCharacters(from set: CharacterSet) -> String {
         return self.components(separatedBy: set).joined()
     }
-    
 }

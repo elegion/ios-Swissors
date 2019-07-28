@@ -26,5 +26,4 @@ public extension Collection {
         
         return result
     }
-    
 }

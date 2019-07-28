@@ -45,7 +45,6 @@ public class Throttler {
         currentItem?.cancel()
         currentItem = nil
     }
-    
 }
 
 public extension Throttler {
@@ -57,5 +56,4 @@ public extension Throttler {
     func add(force: Bool, delay: TimeInterval, closure: @escaping () -> Void) {
         add(workItem: DispatchWorkItem(block: closure), force: force, delay: delay)
     }
-    
 }

@@ -54,20 +54,24 @@ public extension UIWindow {
         var isAnimated: Bool {
             return self != .none
         }
-        
     }
     
     /**
      Replaces root view controller with specified animation.
      Often used by the auth <-> main screens transition.
      */
-    func sw_replaceRootViewController(with viewController: UIViewController, animation: RootViewControllerTransitionAnimation, completion: @escaping (Bool) -> Void) {
+    func sw_replaceRootViewController(with viewController: UIViewController,
+                                      animation: RootViewControllerTransitionAnimation,
+                                      completion: @escaping (Bool) -> Void) {
+        
         guard let rootViewController = rootViewController, rootViewController.isViewLoaded, rootViewController.view.layer.presentation() != nil else {
             self.rootViewController = viewController
             return
         }
         
-        let completion_: (Bool) -> Void = { finished in
+        let completion_: (Bool) -> Void = {
+            finished in
+            
             // dismiss any previously presented modal view controllers
             if rootViewController.presentedViewController != nil {
                 self.sw_dismissPresentedViewControllers(for: rootViewController, completion: {
@@ -91,13 +95,15 @@ public extension UIWindow {
         }
     }
     
-    private func sw_dismissPresentedViewControllers(for viewController: UIViewController, completion: (() -> ())? = nil) {
+    private func sw_dismissPresentedViewControllers(for viewController: UIViewController, completion: (() -> Void)? = nil) {
         guard viewController.presentedViewController != nil else {
             completion?()
             return
         }
         
-        viewController.dismiss(animated: false) { [weak self, weak viewController] in
+        viewController.dismiss(animated: false) {
+            [weak self, weak viewController] in
+            
             guard let viewController = viewController else {
                 return
             }

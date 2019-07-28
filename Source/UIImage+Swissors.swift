@@ -9,6 +9,7 @@
 import UIKit
 
 public extension UIImage {
+    
     func sw_tintedImage(with color: UIColor) -> UIImage {
         
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
@@ -69,7 +70,7 @@ public extension UIImage {
     class func sw_image(with color: UIColor) -> UIImage? {
         let size = CGSize(width: 1.0, height: 1.0)
         return self.sw_image(with: size, drawing: {
-            (context, rect) in
+            _, rect in
             
             color.setFill()
             UIBezierPath(rect: rect).fill()
@@ -78,7 +79,7 @@ public extension UIImage {
     
     class func sw_ovalImage(with size: CGSize, color: UIColor, fill: Bool) -> UIImage? {
         return self.sw_image(with: size, drawing: {
-            (context, rect) in
+            _, rect in
             
             let px = 1.0 / UIScreen.main.scale
             
@@ -120,5 +121,4 @@ public extension UIImage {
         
         return result
     }
-    
 }

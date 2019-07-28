@@ -14,5 +14,4 @@ public extension NSLayoutConstraint {
         self.priority = priority
         return self
     }
-    
 }

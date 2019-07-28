@@ -17,5 +17,4 @@ public extension UINib {
         
         self.init(nibName: name, bundle: bundle)
     }
-    
 }

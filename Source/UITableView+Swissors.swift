@@ -37,5 +37,4 @@ public extension UITableView {
     func sw_dequeueHeaderFooter<HeaderFooter: UITableViewHeaderFooterView>(of viewType: HeaderFooter.Type) -> HeaderFooter {
         return dequeueReusableHeaderFooterView(withIdentifier: String(describing: viewType)) as! HeaderFooter
     }
-    
 }

@@ -13,5 +13,4 @@ public extension NSRange {
     func sw_offset(by d: Int) -> NSRange {
         return NSRange(location: location + d, length: length)
     }
-    
 }

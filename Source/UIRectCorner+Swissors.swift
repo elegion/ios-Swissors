@@ -12,5 +12,4 @@ public extension UIRectCorner {
     
     static let bottom: UIRectCorner  = [.bottomLeft, .bottomRight]
     static let top: UIRectCorner     = [.topLeft, .topRight]
-    
 }

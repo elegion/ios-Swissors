@@ -10,14 +10,16 @@ import UIKit
 
 public extension UIView {
     
-    //MARK: - Public
+    // MARK: - Public
     
     static func sw_fullFrameConstraints(for superView: UIView, subView: UIView) -> [NSLayoutConstraint] {
         if #available(iOS 9.0, *) {
-            return [subView.topAnchor.constraint(equalTo: superView.topAnchor),
-                    subView.bottomAnchor.constraint(equalTo: superView.bottomAnchor),
-                    subView.leadingAnchor.constraint(equalTo: superView.leadingAnchor),
-                    subView.trailingAnchor.constraint(equalTo: superView.trailingAnchor)]
+            return [
+                subView.topAnchor.constraint(equalTo: superView.topAnchor),
+                subView.bottomAnchor.constraint(equalTo: superView.bottomAnchor),
+                subView.leadingAnchor.constraint(equalTo: superView.leadingAnchor),
+                subView.trailingAnchor.constraint(equalTo: superView.trailingAnchor),
+            ]
         } else {
             return [NSLayoutConstraint(item: subView,
                                        attribute: .top,
@@ -28,7 +30,7 @@ public extension UIView {
                                        constant: 0),
                     
                     NSLayoutConstraint(item: subView,
-                                       attribute :.left,
+                                       attribute: .left,
                                        relatedBy: .equal,
                                        toItem: superView,
                                        attribute: .left,
@@ -49,7 +51,7 @@ public extension UIView {
                                        toItem: superView,
                                        attribute: .right,
                                        multiplier: 1,
-                                       constant: 0)
+                                       constant: 0),
             ]
         }
     }
@@ -58,7 +60,7 @@ public extension UIView {
         return sw_viewFromNibHelper(in: bundle, owner: owner, options: options)
     }
     
-    func sw_addSubview(_ subview: UIView, with constraints:[NSLayoutConstraint]) {
+    func sw_addSubview(_ subview: UIView, with constraints: [NSLayoutConstraint]) {
         subview.translatesAutoresizingMaskIntoConstraints = false
         addSubview(subview)
         NSLayoutConstraint.activate(constraints)
@@ -108,7 +110,7 @@ public extension UIView {
         return nil
     }
     
-    //MARK: - Private
+    // MARK: - Private
     
     private class func sw_viewFromNibHelper<T>(in bundle: Bundle, owner: Any?, options: [UINib.OptionsKey: Any]? = nil) -> T {
         let className = String(describing: self)

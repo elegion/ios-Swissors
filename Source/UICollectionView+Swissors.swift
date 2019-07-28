@@ -37,5 +37,4 @@ public extension UICollectionView {
     func sw_dequeueHeaderFooter<SupplementaryView: UICollectionReusableView>(of viewType: SupplementaryView.Type, kind: String, for indexPath: IndexPath) -> SupplementaryView {
         return dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: String(describing: viewType), for: indexPath) as! SupplementaryView
     }
-    
 }

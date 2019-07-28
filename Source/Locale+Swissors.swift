@@ -13,5 +13,4 @@ public extension Locale {
     static var forPreferredLocalization: Locale? {
         return Bundle.main.preferredLocalizations.first.map(Locale.init)
     }
-
 }
