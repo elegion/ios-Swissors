@@ -12,46 +12,46 @@ public extension UIView {
     
     // MARK: - Public
     
-    static func sw_fullFrameConstraints(for superView: UIView, subView: UIView) -> [NSLayoutConstraint] {
+    static func sw_fullFrameConstraints(for superView: UIView, subview: UIView, with insets: UIEdgeInsets = .zero) -> [NSLayoutConstraint] {
         if #available(iOS 9.0, *) {
             return [
-                subView.topAnchor.constraint(equalTo: superView.topAnchor),
-                subView.bottomAnchor.constraint(equalTo: superView.bottomAnchor),
-                subView.leadingAnchor.constraint(equalTo: superView.leadingAnchor),
-                subView.trailingAnchor.constraint(equalTo: superView.trailingAnchor),
+                subview.topAnchor.constraint(equalTo: superView.topAnchor, constant: insets.top),
+                subview.bottomAnchor.constraint(equalTo: superView.bottomAnchor, constant: -insets.bottom),
+                subview.leadingAnchor.constraint(equalTo: superView.leadingAnchor, constant: insets.left),
+                subview.trailingAnchor.constraint(equalTo: superView.trailingAnchor, constant: -insets.right),
             ]
         } else {
-            return [NSLayoutConstraint(item: subView,
+            return [NSLayoutConstraint(item: subview,
                                        attribute: .top,
                                        relatedBy: .equal,
                                        toItem: superView,
                                        attribute: .top,
                                        multiplier: 1.0,
-                                       constant: 0),
+                                       constant: insets.top),
                     
-                    NSLayoutConstraint(item: subView,
+                    NSLayoutConstraint(item: subview,
                                        attribute: .left,
                                        relatedBy: .equal,
                                        toItem: superView,
                                        attribute: .left,
                                        multiplier: 1.0,
-                                       constant: 0),
+                                       constant: insets.left),
                     
-                    NSLayoutConstraint(item: subView,
+                    NSLayoutConstraint(item: subview,
                                        attribute: .bottom,
                                        relatedBy: .equal,
                                        toItem: superView,
                                        attribute: .bottom,
                                        multiplier: 1.0,
-                                       constant: 0),
+                                       constant: -insets.bottom),
                     
-                    NSLayoutConstraint(item: subView,
+                    NSLayoutConstraint(item: subview,
                                        attribute: .right,
                                        relatedBy: .equal,
                                        toItem: superView,
                                        attribute: .right,
                                        multiplier: 1,
-                                       constant: 0),
+                                       constant: -insets.right),
             ]
         }
     }
@@ -66,6 +66,37 @@ public extension UIView {
         NSLayoutConstraint.activate(constraints)
     }
     
+    func sw_addSubviewWithFullFrameConstraints(_ subview: UIView,
+                                               insetBy insets: UIEdgeInsets = .zero) {
+        
+        sw_addSubview(subview,
+                      with: UIView.sw_fullFrameConstraints(for: self, subview: subview, with: insets))
+    }
+    
+    func sw_insertSubview(_ subview: UIView,
+                          at index: Int,
+                          with constraints: [NSLayoutConstraint]) {
+        
+        subview.translatesAutoresizingMaskIntoConstraints = false
+        insertSubview(subview, at: index)
+        NSLayoutConstraint.activate(constraints)
+    }
+    
+    func sw_insertSubviewWithFullFrameConstraints(_ subview: UIView,
+                                                  at index: Int,
+                                                  insetBy insets: UIEdgeInsets = .zero) {
+        
+        sw_insertSubview(subview,
+                         at: index,
+                         with: UIView.sw_fullFrameConstraints(for: self, subview: subview, with: insets))
+    }
+    
+    func sw_removeAllSubviews() {
+        for subview in subviews {
+            subview.removeFromSuperview()
+        }
+    }
+
     func sw_round(corners: UIRectCorner, with radius: CGFloat) {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         
@@ -110,6 +141,14 @@ public extension UIView {
         return nil
     }
     
+    func sizeThatFitsWidth(_ width: CGFloat) -> CGSize {
+        return sizeThatFits(CGSize(width: width, height: .greatestFiniteMagnitude))
+    }
+    
+    func sizeThatFitsHeight(_ height: CGFloat) -> CGSize {
+        return sizeThatFits(CGSize(width: .greatestFiniteMagnitude, height: height))
+    }
+
     // MARK: - Private
     
     private class func sw_viewFromNibHelper<T>(in bundle: Bundle, owner: Any?, options: [UINib.OptionsKey: Any]? = nil) -> T {
