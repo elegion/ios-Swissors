@@ -10,10 +10,6 @@ import Foundation
 
 public extension Date {
     
-    static func == (dateLeft: Date, dateRight: Date) -> Bool {
-        return dateLeft.compare(dateRight) == ComparisonResult.orderedSame
-    }
-    
     func number(of unit: Calendar.Component,
                 until date: Date,
                 in calendar: Calendar = Calendar.current) -> Int {
