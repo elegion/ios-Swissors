@@ -45,17 +45,15 @@ public class Throttler {
         currentItem?.cancel()
         currentItem = nil
     }
-    
 }
 
 public extension Throttler {
     
-    public func add(force: Bool, closure: @escaping () -> Void) {
+    func add(force: Bool, closure: @escaping () -> Void) {
         add(workItem: DispatchWorkItem(block: closure), force: force)
     }
     
-    public func add(force: Bool, delay: TimeInterval, closure: @escaping () -> Void) {
+    func add(force: Bool, delay: TimeInterval, closure: @escaping () -> Void) {
         add(workItem: DispatchWorkItem(block: closure), force: force, delay: delay)
     }
-    
 }

@@ -10,12 +10,11 @@ import Foundation
 
 public extension UINib {
     
-    public convenience init?(safeWithName name: String, bundle: Bundle = .main) {
+    convenience init?(safeWithName name: String, bundle: Bundle = .main) {
         guard bundle.path(forResource: name, ofType: "nib") != nil else {
             return nil
         }
         
         self.init(nibName: name, bundle: bundle)
     }
-    
 }

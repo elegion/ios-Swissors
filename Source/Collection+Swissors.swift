@@ -10,7 +10,7 @@ import Foundation
 
 public extension Collection {
     
-    public func categorize<Category: Hashable>(where categorize: (Iterator.Element) throws -> Category) rethrows -> [Category: [Iterator.Element]] {
+    func categorize<Category: Hashable>(where categorize: (Iterator.Element) throws -> Category) rethrows -> [Category: [Iterator.Element]] {
         var result: [Category: [Iterator.Element]] = [:]
         
         for element in self {
@@ -26,5 +26,4 @@ public extension Collection {
         
         return result
     }
-    
 }

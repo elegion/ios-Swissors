@@ -12,15 +12,15 @@ public extension UIColor {
     
     typealias RGBA = (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)
     
-    public convenience init(hex: UInt32) {
-        let r = CGFloat((hex & 0xFF0000) >> 16) / 255;
-        let g = CGFloat((hex & 0x00FF00) >> 8) / 255;
-        let b = CGFloat(hex & 0x0000FF) / 255;
+    convenience init(hex: UInt32) {
+        let r = CGFloat((hex & 0xFF0000) >> 16) / 255
+        let g = CGFloat((hex & 0x00FF00) >> 8) / 255
+        let b = CGFloat(hex & 0x0000FF) / 255
         
         self.init(red: r, green: g, blue: b, alpha: 1)
     }
     
-    public convenience init?(hexString: String) {
+    convenience init?(hexString: String) {
         guard hexString.count == 6 else {
             return nil
         }
@@ -34,15 +34,15 @@ public extension UIColor {
         }
     }
     
-    public convenience init(absoluteRed red: Int, green: Int, blue: Int, alpha: CGFloat = 1.0) {
+    convenience init(absoluteRed red: Int, green: Int, blue: Int, alpha: CGFloat = 1.0) {
         self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: alpha)
     }
     
-    public convenience init(rgba: RGBA) {
+    convenience init(rgba: RGBA) {
         self.init(red: rgba.red, green: rgba.green, blue: rgba.blue, alpha: rgba.alpha)
     }
     
-    public var sw_rgba: RGBA {
+    var sw_rgba: RGBA {
         var result: RGBA = (0.0, 0.0, 0.0, 0.0)
         
         getRed(&(result.red), green: &(result.green), blue: &(result.blue), alpha: &(result.alpha))
@@ -50,7 +50,7 @@ public extension UIColor {
         return result
     }
     
-    public var sw_hex: String? {
+    var sw_hex: String? {
         guard let colorSpace = cgColor.colorSpace?.model, let components = cgColor.components else {
             return nil
         }
@@ -69,7 +69,7 @@ public extension UIColor {
         return NSString(format: "%02lX%02lX%02lX", lround(Double(r) * 255), lround(Double(g) * 255), lround(Double(b) * 255)) as String
     }
     
-    public func sw_blend(with color: UIColor, alpha: CGFloat) -> UIColor {
+    func sw_blend(with color: UIColor, alpha: CGFloat) -> UIColor {
         let alpha = min(1, max(0, alpha))
         let beta = 1 - alpha
         
@@ -93,7 +93,7 @@ public extension UIColor {
         return UIColor(red: r, green: g, blue: b, alpha: a)
     }
     
-    public func sw_intermediate(to other: UIColor, atPercent percent: CGFloat) -> UIColor {
+    func sw_intermediate(to other: UIColor, atPercent percent: CGFloat) -> UIColor {
         
         let selfRGBA = sw_rgba
         let otherRGBA = other.sw_rgba
@@ -111,13 +111,11 @@ public extension UIColor {
         
         return UIColor(rgba: newRGBA)
     }
-    
 }
 
 public extension CGColor {
     
-    public var sw_uiColor: UIColor? {
+    var sw_uiColor: UIColor? {
         return UIColor(cgColor: self)
     }
-    
 }

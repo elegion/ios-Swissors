@@ -10,61 +10,94 @@ import UIKit
 
 public extension UIView {
     
-    //MARK: - Public
+    // MARK: - Public
     
-    public static func sw_fullFrameConstraints(for superView: UIView, subView: UIView) -> [NSLayoutConstraint] {
+    static func sw_fullFrameConstraints(for superView: UIView, subview: UIView, with insets: UIEdgeInsets = .zero) -> [NSLayoutConstraint] {
         if #available(iOS 9.0, *) {
-            return [subView.topAnchor.constraint(equalTo: superView.topAnchor),
-                    subView.bottomAnchor.constraint(equalTo: superView.bottomAnchor),
-                    subView.leadingAnchor.constraint(equalTo: superView.leadingAnchor),
-                    subView.trailingAnchor.constraint(equalTo: superView.trailingAnchor)]
+            return [
+                subview.topAnchor.constraint(equalTo: superView.topAnchor, constant: insets.top),
+                subview.bottomAnchor.constraint(equalTo: superView.bottomAnchor, constant: -insets.bottom),
+                subview.leadingAnchor.constraint(equalTo: superView.leadingAnchor, constant: insets.left),
+                subview.trailingAnchor.constraint(equalTo: superView.trailingAnchor, constant: -insets.right),
+            ]
         } else {
-            return [NSLayoutConstraint(item: subView,
+            return [NSLayoutConstraint(item: subview,
                                        attribute: .top,
                                        relatedBy: .equal,
                                        toItem: superView,
                                        attribute: .top,
                                        multiplier: 1.0,
-                                       constant: 0),
+                                       constant: insets.top),
                     
-                    NSLayoutConstraint(item: subView,
-                                       attribute :.left,
+                    NSLayoutConstraint(item: subview,
+                                       attribute: .left,
                                        relatedBy: .equal,
                                        toItem: superView,
                                        attribute: .left,
                                        multiplier: 1.0,
-                                       constant: 0),
+                                       constant: insets.left),
                     
-                    NSLayoutConstraint(item: subView,
+                    NSLayoutConstraint(item: subview,
                                        attribute: .bottom,
                                        relatedBy: .equal,
                                        toItem: superView,
                                        attribute: .bottom,
                                        multiplier: 1.0,
-                                       constant: 0),
+                                       constant: -insets.bottom),
                     
-                    NSLayoutConstraint(item: subView,
+                    NSLayoutConstraint(item: subview,
                                        attribute: .right,
                                        relatedBy: .equal,
                                        toItem: superView,
                                        attribute: .right,
                                        multiplier: 1,
-                                       constant: 0)
+                                       constant: -insets.right),
             ]
         }
     }
     
-    public class func sw_viewFromNib(in bundle: Bundle = Bundle.main, owner: Any? = nil, options: [UINib.OptionsKey: Any]? = nil) -> Self {
+    class func sw_viewFromNib(in bundle: Bundle = Bundle.main, owner: Any? = nil, options: [UINib.OptionsKey: Any]? = nil) -> Self {
         return sw_viewFromNibHelper(in: bundle, owner: owner, options: options)
     }
     
-    public func sw_addSubview(_ subview: UIView, with constraints:[NSLayoutConstraint]) {
+    func sw_addSubview(_ subview: UIView, with constraints: [NSLayoutConstraint]) {
         subview.translatesAutoresizingMaskIntoConstraints = false
         addSubview(subview)
         NSLayoutConstraint.activate(constraints)
     }
     
-    public func sw_round(corners: UIRectCorner, with radius: CGFloat) {
+    func sw_addSubviewWithFullFrameConstraints(_ subview: UIView,
+                                               insetBy insets: UIEdgeInsets = .zero) {
+        
+        sw_addSubview(subview,
+                      with: UIView.sw_fullFrameConstraints(for: self, subview: subview, with: insets))
+    }
+    
+    func sw_insertSubview(_ subview: UIView,
+                          at index: Int,
+                          with constraints: [NSLayoutConstraint]) {
+        
+        subview.translatesAutoresizingMaskIntoConstraints = false
+        insertSubview(subview, at: index)
+        NSLayoutConstraint.activate(constraints)
+    }
+    
+    func sw_insertSubviewWithFullFrameConstraints(_ subview: UIView,
+                                                  at index: Int,
+                                                  insetBy insets: UIEdgeInsets = .zero) {
+        
+        sw_insertSubview(subview,
+                         at: index,
+                         with: UIView.sw_fullFrameConstraints(for: self, subview: subview, with: insets))
+    }
+    
+    func sw_removeAllSubviews() {
+        for subview in subviews {
+            subview.removeFromSuperview()
+        }
+    }
+
+    func sw_round(corners: UIRectCorner, with radius: CGFloat) {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         
         let shapeLayer = CAShapeLayer()
@@ -74,7 +107,7 @@ public extension UIView {
         layer.mask = shapeLayer
     }
     
-    public func sw_descendants<TC: UIView>(of targetClass: TC.Type, avoiding avoidedViews: [UIView.Type] = []) -> [TC] {
+    func sw_descendants<TC: UIView>(of targetClass: TC.Type, avoiding avoidedViews: [UIView.Type] = []) -> [TC] {
         
         guard avoidedViews.first(where: { self.isKind(of: $0) }) == nil else {
             return []
@@ -93,7 +126,7 @@ public extension UIView {
         return result
     }
     
-    public var sw_descendantFirstResponder: UIView? {
+    var sw_descendantFirstResponder: UIView? {
         
         if self.isFirstResponder {
             return self
@@ -108,7 +141,15 @@ public extension UIView {
         return nil
     }
     
-    //MARK: - Private
+    func sizeThatFitsWidth(_ width: CGFloat) -> CGSize {
+        return sizeThatFits(CGSize(width: width, height: .greatestFiniteMagnitude))
+    }
+    
+    func sizeThatFitsHeight(_ height: CGFloat) -> CGSize {
+        return sizeThatFits(CGSize(width: .greatestFiniteMagnitude, height: height))
+    }
+
+    // MARK: - Private
     
     private class func sw_viewFromNibHelper<T>(in bundle: Bundle, owner: Any?, options: [UINib.OptionsKey: Any]? = nil) -> T {
         let className = String(describing: self)

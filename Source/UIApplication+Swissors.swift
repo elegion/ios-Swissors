@@ -10,20 +10,21 @@ import UIKit
 
 public extension UIApplication {
     
-    public func sw_topWindow() -> UIWindow? {
-        return self.windows.sorted(by: { (w1, w2) -> Bool in
-            return w1.windowLevel > w2.windowLevel
-        }).first
+    func sw_topWindow() -> UIWindow? {
+        return windows.max(by: { $0.windowLevel < $1.windowLevel })
     }
     
-    public func sw_presentViewController(_ viewController: UIViewController, inNewWindowWithLevel windowLevel: UIWindow.Level, animated: Bool = true, setupHandler: ((UIWindow) -> Void)? = nil) {
+    func sw_presentViewController(_ viewController: UIViewController,
+                                  inNewWindowWithLevel windowLevel: UIWindow.Level,
+                                  animated: Bool = true,
+                                  setupHandler: ((UIWindow) -> Void)? = nil) {
         
         let emptyController = UIViewController()
         emptyController.definesPresentationContext = true
         emptyController.view.backgroundColor = UIColor.clear
         
-        let window = UIWindow.init(frame: UIScreen.main.bounds)
-        window.rootViewController = emptyController;
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.rootViewController = emptyController
         window.windowLevel = windowLevel
         window.backgroundColor = UIColor.clear
         if let setupHandler = setupHandler {
@@ -34,7 +35,7 @@ public extension UIApplication {
         emptyController.present(viewController, animated: animated, completion: nil)
     }
     
-    public func sw_openURL(_ url: URL, completionHandler completion: ((Bool) -> Void)? = nil) {
+    func sw_openURL(_ url: URL, completionHandler completion: ((Bool) -> Void)? = nil) {
         if #available(iOS 10.0, *) {
             self.open(url, options: [:], completionHandler: completion)
         } else {

@@ -10,7 +10,11 @@ import Foundation
 
 public class KeyboardObserver {
     
-    public typealias ObservationInfo = (beginFrame: CGRect, endFrame: CGRect, animationDuration: TimeInterval, curve: UIView.AnimationCurve, isLocal: Bool)
+    public typealias ObservationInfo = (beginFrame: CGRect,
+                                        endFrame: CGRect,
+                                        animationDuration: TimeInterval,
+                                        curve: UIView.AnimationCurve,
+                                        isLocal: Bool)
     public typealias ObservationClosure = (ObservationInfo) -> Void
     public typealias ObservationTuple = (owner: Weak<AnyObject>, handler: ObservationClosure)
     
@@ -18,10 +22,13 @@ public class KeyboardObserver {
     
     var keyboardFrame: CGRect = .null
     
-    fileprivate var observers: [ObservationTuple] = []
+    private var observers: [ObservationTuple] = []
     
     private init() {
-        NotificationCenter.default.addObserver(self, selector: #selector(onFrameChange), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(onFrameChange),
+                                               name: UIResponder.keyboardWillChangeFrameNotification,
+                                               object: nil)
     }
     
     public func register(observer: AnyObject?, closure: @escaping ObservationClosure) {
@@ -50,7 +57,7 @@ public class KeyboardObserver {
                 return
         }
         
-        var isLocal: Bool? = nil
+        var isLocal: Bool?
         if #available(iOS 9.0, *) {
             isLocal = userInfo[UIResponder.keyboardIsLocalUserInfoKey] as? Bool
         }
@@ -72,7 +79,6 @@ public class KeyboardObserver {
             observer.handler(info)
         }
     }
-    
 }
 
 public extension KeyboardObserver {
@@ -83,9 +89,9 @@ public extension KeyboardObserver {
         return UIScreen.main.bounds.height - rect.minY
     }
     
-    public func registerForHeight(with owner: AnyObject? = nil, handler: @escaping (HeightInfo) -> Void) {
+    func registerForHeight(with owner: AnyObject? = nil, handler: @escaping (HeightInfo) -> Void) {
         register(observer: owner) {
-            (info) in
+            info in
             
             let result: HeightInfo
             result.height = self.keyboardHeight(for: info.endFrame)
@@ -96,9 +102,13 @@ public extension KeyboardObserver {
         }
     }
     
-    public func register(with view: UIView, constraint: NSLayoutConstraint, constantAdjustment: CGFloat = 0.0, otherAnimatrions: (() -> Void)? = nil) {
+    func register(with view: UIView,
+                  constraint: NSLayoutConstraint,
+                  constantAdjustment: CGFloat = 0.0,
+                  otherAnimatrions: (() -> Void)? = nil) {
+        
         registerForHeight(with: view) {
-            (info) in
+            info in
             
             let option: UIView.AnimationOptions
             switch info.curve {
@@ -110,6 +120,8 @@ public extension KeyboardObserver {
                 option = .curveEaseOut
             case .linear:
                 option = .curveLinear
+            @unknown default:
+                option = []
             }
             
             constraint.constant = info.height + constantAdjustment
@@ -121,5 +133,4 @@ public extension KeyboardObserver {
             })
         }
     }
-    
 }

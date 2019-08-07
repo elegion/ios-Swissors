@@ -26,14 +26,13 @@ public extension String {
      ```
     */
     
-    public var attribute: AttributedStringBuilder {
+    var attribute: AttributedStringBuilder {
         return AttributedStringBuilder(base: self, attributes: [])
     }
     
     fileprivate var fullRange: NSRange {
         return NSRange(startIndex ..< endIndex, in: self)
     }
-    
 }
 
 public extension NSAttributedString {
@@ -53,11 +52,11 @@ public extension NSAttributedString {
      ```
      */
     
-    public var sw_builder: AttributedStringBuilder {
+    var sw_builder: AttributedStringBuilder {
         var attributes: [AttributedStringBuilder.Attribute] = []
         
         enumerateAttributes(in: self.string.fullRange, options: []) {
-            (attributesBatch, range, _) in
+            attributesBatch, range, _ in
             
             for attribute in attributesBatch {
                 attributes.append((attribute.key, attribute.value, range))
@@ -66,7 +65,6 @@ public extension NSAttributedString {
         
         return AttributedStringBuilder(base: self.string, attributes: attributes)
     }
-    
 }
 
 public struct AttributedStringBuilder {
@@ -82,7 +80,7 @@ public struct AttributedStringBuilder {
         self.attributes = attributes
     }
     
-    //MARK: - Builder
+    // MARK: - Builder
     
     /**
      Builds attributed string with stored attributes and base plain string.
@@ -134,10 +132,9 @@ public struct AttributedStringBuilder {
         
         return closure(self)
     }
-    
 }
 
-//MARK: - Attribute Addition
+// MARK: - Attribute Addition
 
 extension AttributedStringBuilder {
     
@@ -474,10 +471,9 @@ extension AttributedStringBuilder {
         
         return with(paragraphStyle: resultParagraphStyle)
     }
-    
 }
 
-//MARK: - Attribute removing
+// MARK: - Attribute removing
 
 extension AttributedStringBuilder {
     
@@ -678,7 +674,7 @@ extension AttributedStringBuilder {
             throw AttributedStringBuilderError.attributeNotFoundError
         }
         
-        let index = result.attributes.index {
+        let index = result.attributes.firstIndex {
             (attribute: Attribute) -> Bool in
             
             return attribute.key == key && attribute.range == validRange
@@ -692,10 +688,9 @@ extension AttributedStringBuilder {
         
         return result
     }
-    
 }
 
-//MARK: - String appending
+// MARK: - String appending
 
 extension AttributedStringBuilder {
     
@@ -739,7 +734,7 @@ extension AttributedStringBuilder {
         let offset = base.count
         
         let otherAttributes = other.attributes.map({
-            (attribute) -> Attribute in
+            attribute -> Attribute in
             
             return (attribute.key, attribute.value, attribute.range.sw_offset(by: offset))
         })
@@ -772,7 +767,7 @@ extension AttributedStringBuilder {
         return result
     }
     
-    //MARK: - Private
+    // MARK: - Private
     
     private func paragraphStyle(withLineSpacing lineSpacing: CGFloat? = nil,
                                 paragraphSpacing: CGFloat? = nil,
@@ -815,5 +810,4 @@ extension AttributedStringBuilder {
         
         return resultParagraphStyle
     }
-    
 }
