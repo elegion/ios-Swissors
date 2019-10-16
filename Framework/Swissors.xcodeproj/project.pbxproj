@@ -36,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		115DF0F0233E48C20022A111 /* Swissors.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Swissors.podspec; path = ../Swissors.podspec; sourceTree = "<group>"; };
 		372FA73B1DB0401800D1D855 /* UIView+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Swissors.swift"; sourceTree = "<group>"; };
 		8F3A85DC1D527733001A7E4D /* UIApplication+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Swissors.swift"; sourceTree = "<group>"; };
 		8F3A85E01D52804C001A7E4D /* Bundle+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Swissors.swift"; sourceTree = "<group>"; };
@@ -125,8 +126,9 @@
 		FE9CB32C1D52138900928A9F = {
 			isa = PBXGroup;
 			children = (
-				FE9CB3381D52138900928A9F /* Swissors */,
 				FE9CB3371D52138900928A9F /* Products */,
+				FE9CB3381D52138900928A9F /* Swissors */,
+				115DF0F0233E48C20022A111 /* Swissors.podspec */,
 			);
 			sourceTree = "<group>";
 		};
