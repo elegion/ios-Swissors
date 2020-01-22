@@ -42,6 +42,29 @@ public extension UIColor {
         self.init(red: rgba.red, green: rgba.green, blue: rgba.blue, alpha: rgba.alpha)
     }
     
+    convenience init(hexa: UInt64) {
+        let r = CGFloat((hexa & 0xFF000000) >> 24) / 255.0
+        let g = CGFloat((hexa & 0x00FF0000) >> 16) / 255.0
+        let b = CGFloat((hexa & 0x0000FF00) >> 8) / 255.0
+        let a = CGFloat(hexa & 0x000000FF) / 255.0
+        
+        self.init(red: r, green: g, blue: b, alpha: a)
+    }
+    
+    convenience init?(hexaString: String) {
+        guard hexaString.count == 8 else {
+            return nil
+        }
+        
+        let scanner = Scanner(string: hexaString)
+        var result: UInt64 = 0
+        if scanner.scanHexInt64(&result) == true {
+            self.init(hexa: result)
+        } else {
+            return nil
+        }
+    }
+    
     var sw_rgba: RGBA {
         var result: RGBA = (0.0, 0.0, 0.0, 0.0)
         
