@@ -11,12 +11,6 @@ import Foundation
 public extension Comparable {
     
     func sw_bounded(_ low: Self, _ high: Self) -> Self {
-        if (self > high) {
-            return high
-        } else if (self < low) {
-            return low
-        }
-        
-        return self
+        return max(low, min(high, self))
     }
 }
