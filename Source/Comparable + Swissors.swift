@@ -10,7 +10,7 @@ import Foundation
 
 public extension Comparable {
     
-    func dw_closestValueWithinBounds(low: Self, high: Self) -> Self {
+    func sw_bounded(_ low: Self, _ high: Self) -> Self {
         if (self > high) {
             return high
         } else if (self < low) {
