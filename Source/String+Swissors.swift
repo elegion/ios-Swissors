@@ -16,6 +16,6 @@ public extension String {
     
     var sw_wordCount: Int {
         let regex = try? NSRegularExpression(pattern: "\\w+")
-        return regex?.numberOfMatches(in: self, range: NSRange(self.startIndex...self.endIndex, in: self)) ?? 0
+        return regex?.numberOfMatches(in: self, range: NSRange(self.startIndex..<self.endIndex, in: self)) ?? 0
     }
 }
