@@ -26,7 +26,7 @@ public extension Bundle {
         return Bool(value) ?? defaultValue
     }
     
-    func dw_decode<T: Decodable>(_ type: T.Type, from filename: String) -> T {
+    func sw_decodeJSON<T: Decodable>(_ type: T.Type, from filename: String) -> T {
         guard let json = url(forResource: filename, withExtension: nil) else {
             fatalError("Failed to locate \(filename) in app bundle.")
         }
