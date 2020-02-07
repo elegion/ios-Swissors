@@ -10,6 +10,8 @@ import UIKit
 
 public extension UIApplication {
     
+    typealias BoolClosure = (Bool) -> Void
+    
     func sw_topWindow() -> UIWindow? {
         return windows.max(by: { $0.windowLevel < $1.windowLevel })
     }
@@ -41,6 +43,18 @@ public extension UIApplication {
         } else {
             let result = self.openURL(url)
             completion?(result)
+        }
+    }
+    
+    @objc func sw_open(_ url: URL?,
+                       fallbackUrl: URL? = nil,
+                       urlCompletionHandler urlCompletion: BoolClosure? = nil,
+                       fallbackUrlCompletionHandler fallbackUrlCompletion: BoolClosure? = nil) {
+        
+        if let url = url, canOpenURL(url) {
+            UIApplication.shared.sw_openURL(url, completionHandler: urlCompletion)
+        } else if let fallbackUrl = fallbackUrl, canOpenURL(fallbackUrl) {
+            UIApplication.shared.sw_openURL(fallbackUrl, completionHandler: fallbackUrlCompletion)
         }
     }
 }
