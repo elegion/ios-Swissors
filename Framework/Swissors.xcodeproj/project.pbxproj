@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24837CEF23ED49A7006EA3DC /* DispatchQueue+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24837CEE23ED49A7006EA3DC /* DispatchQueue+Swissors.swift */; };
 		372FA73C1DB0401800D1D855 /* UIView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372FA73B1DB0401800D1D855 /* UIView+Swissors.swift */; };
+		6390161F23DE576A00E84E79 /* Comparable + Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6390161E23DE576A00E84E79 /* Comparable + Swissors.swift */; };
 		8F3A85DD1D527733001A7E4D /* UIApplication+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A85DC1D527733001A7E4D /* UIApplication+Swissors.swift */; };
 		8F3A85E11D52804C001A7E4D /* Bundle+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A85E01D52804C001A7E4D /* Bundle+Swissors.swift */; };
 		94CA3BAC1E0186EB005D263F /* UIViewController+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CA3BAB1E0186EB005D263F /* UIViewController+Swissors.swift */; };
@@ -37,7 +39,9 @@
 
 /* Begin PBXFileReference section */
 		115DF0F0233E48C20022A111 /* Swissors.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Swissors.podspec; path = ../Swissors.podspec; sourceTree = "<group>"; };
+		24837CEE23ED49A7006EA3DC /* DispatchQueue+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Swissors.swift"; sourceTree = "<group>"; };
 		372FA73B1DB0401800D1D855 /* UIView+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Swissors.swift"; sourceTree = "<group>"; };
+		6390161E23DE576A00E84E79 /* Comparable + Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comparable + Swissors.swift"; sourceTree = "<group>"; };
 		8F3A85DC1D527733001A7E4D /* UIApplication+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Swissors.swift"; sourceTree = "<group>"; };
 		8F3A85E01D52804C001A7E4D /* Bundle+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Swissors.swift"; sourceTree = "<group>"; };
 		94CA3BAB1E0186EB005D263F /* UIViewController+Swissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Swissors.swift"; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				FE1D7A921EF0026F00E32E23 /* NSError+Swissors.swift */,
 				FE1D7A941EF002E900E32E23 /* FileManager+Swissors.swift */,
 				FE1D7A961EF0038500E32E23 /* Locale+Swissors.swift */,
+				6390161E23DE576A00E84E79 /* Comparable + Swissors.swift */,
+				24837CEE23ED49A7006EA3DC /* DispatchQueue+Swissors.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -253,6 +259,7 @@
 			files = (
 				94CA3BB01E0187BF005D263F /* Date+Swissors.swift in Sources */,
 				94CA3BAC1E0186EB005D263F /* UIViewController+Swissors.swift in Sources */,
+				24837CEF23ED49A7006EA3DC /* DispatchQueue+Swissors.swift in Sources */,
 				FE1D7A971EF0038500E32E23 /* Locale+Swissors.swift in Sources */,
 				FEB44A801EDD95E300069FEB /* Throttler.swift in Sources */,
 				FEB44A8B1EDDA52900069FEB /* String+Swissors.swift in Sources */,
@@ -265,6 +272,7 @@
 				FE1D7A931EF0026F00E32E23 /* NSError+Swissors.swift in Sources */,
 				EA5DE7911E8AC3EB00CB737C /* UIViewAutoresizing+Swissors.swift in Sources */,
 				FEB44A861EDD9D0100069FEB /* Weak.swift in Sources */,
+				6390161F23DE576A00E84E79 /* Comparable + Swissors.swift in Sources */,
 				94CA3BAE1E018750005D263F /* UIWindow+Swissors.swift in Sources */,
 				FEB44A891EDD9D6000069FEB /* UIImage+Swissors.swift in Sources */,
 				94CA3BB51E01AEB4005D263F /* UICollectionView+Swissors.swift in Sources */,
