@@ -6,7 +6,7 @@
 //  Copyright © 2017 e-Legion. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public extension UINib {
     
