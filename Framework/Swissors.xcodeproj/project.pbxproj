@@ -82,6 +82,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55EE76AF2523597E00E81EB6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				55EE76B02523599800E81EB6 /* SwissorsPackage */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		55EE76B02523599800E81EB6 /* SwissorsPackage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SwissorsPackage;
+			sourceTree = "<group>";
+		};
+		55EE76B1252359BF00E81EB6 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				55EE76B2252359D100E81EB6 /* SwissorsTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		55EE76B2252359D100E81EB6 /* SwissorsTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SwissorsTests;
+			sourceTree = "<group>";
+		};
 		94CA3BA91E0183DB005D263F /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +162,8 @@
 		FE9CB32C1D52138900928A9F = {
 			isa = PBXGroup;
 			children = (
+				55EE76B1252359BF00E81EB6 /* Tests */,
+				55EE76AF2523597E00E81EB6 /* Sources */,
 				FE9CB3371D52138900928A9F /* Products */,
 				FE9CB3381D52138900928A9F /* Swissors */,
 				115DF0F0233E48C20022A111 /* Swissors.podspec */,
