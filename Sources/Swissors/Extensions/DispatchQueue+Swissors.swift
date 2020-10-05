@@ -9,6 +9,7 @@
 import Foundation
 
 extension DispatchQueue {
+    
     class var sw_currentLabel: String {
         return String(validatingUTF8: __dispatch_queue_get_label(nil)) ?? "unknown"
     }
