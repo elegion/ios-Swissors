@@ -6,19 +6,22 @@ import PackageDescription
 let package = Package(
     name: "Swissors",
     platforms: [
-        .iOS(.v8)
+        .iOS(.v9),
     ],
     products: [
         .library(
             name: "Swissors",
-            targets: ["Swissors"]),
+            targets: ["Swissors"]
+        ),
     ],
     targets: [
         .target(
             name: "Swissors",
-            dependencies: []),
+            dependencies: []
+        ),
         .testTarget(
             name: "SwissorsTests",
-            dependencies: ["Swissors"]),
+            dependencies: ["Swissors"]
+        ),
     ]
 )
