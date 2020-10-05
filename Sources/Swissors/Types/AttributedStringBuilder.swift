@@ -202,6 +202,27 @@ extension AttributedStringBuilder {
     }
     
     /**
+     Adds strikethrough color attribute to attrubutes array of string builder.
+     
+     - returns:
+     Attributed string builder with modified attributes array.
+     
+     - parameters:
+        - strikethroughColor: Color attribute. Required parameter.
+        - range: Range on which attribute will be applied. Optional parameter. Defaults to full range.
+     
+     Don't forget about calling build() function after all attributes are set.
+     */
+    
+    public func with(strikethroughColor: UIColor, range: NSRange? = nil) -> AttributedStringBuilder {
+        var result = self
+        
+        result.attributes.append((.strikethroughColor, strikethroughColor, range ?? base.fullRange))
+        
+        return result
+    }
+    
+    /**
      Adds foreground color attribute to attrubutes array of string builder.
      
      - returns:
