@@ -1,20 +1,17 @@
 # OS X
 .DS_Store
- 
+
 # Xcode
-*.xccheckout
 *.DS_Store
-*xcuserdata*
-**/build/
 .idea
- 
-!*/xcshareddata/*
-*.xccheckout
-*/xcuserdata/*
+.build/
+xcuserdata/
+xcshareddata/*
+.swiftpm
 
 # Carthage
 Carthage/Build
- 
+
 # fastlane
 fastlane/report.xml
 fastlane/*report*
