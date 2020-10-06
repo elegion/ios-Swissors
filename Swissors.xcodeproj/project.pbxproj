@@ -38,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11B5DD06252C8F0100CBB1C6 /* validations.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = validations.yml; sourceTree = "<group>"; };
+		11B5DD0C252C900800CBB1C6 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		OBJ_10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		OBJ_12 /* BaseTypes+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseTypes+Swissors.swift"; sourceTree = "<group>"; };
 		OBJ_13 /* Bundle+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Swissors.swift"; sourceTree = "<group>"; };
@@ -85,6 +87,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11B5DD04252C8F0100CBB1C6 /* .github */ = {
+			isa = PBXGroup;
+			children = (
+				11B5DD05252C8F0100CBB1C6 /* workflows */,
+			);
+			path = .github;
+			sourceTree = "<group>";
+		};
+		11B5DD05252C8F0100CBB1C6 /* workflows */ = {
+			isa = PBXGroup;
+			children = (
+				11B5DD06252C8F0100CBB1C6 /* validations.yml */,
+			);
+			path = workflows;
+			sourceTree = "<group>";
+		};
 		OBJ_11 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,9 +159,11 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
+				11B5DD0C252C900800CBB1C6 /* .swiftlint.yml */,
+				11B5DD04252C8F0100CBB1C6 /* .github */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_40 /* Tests */,
@@ -152,7 +172,6 @@
 				OBJ_44 /* README.md */,
 				OBJ_45 /* Swissors.podspec */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -198,6 +217,7 @@
 			buildPhases = (
 				OBJ_50 /* Sources */,
 				OBJ_78 /* Frameworks */,
+				11B5DD07252C8FAD00CBB1C6 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -224,7 +244,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_41 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,6 +254,27 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11B5DD07252C8FAD00CBB1C6 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		OBJ_50 /* Sources */ = {

@@ -1,0 +1,25 @@
+# By default, SwiftLint uses a set of sensible default rules you can adjust:
+
+disabled_rules: # rule identifiers turned on by default to exclude from running
+    - closure_parameter_position
+    - file_length
+    - identifier_name
+    - line_length
+    - todo
+    - trailing_comma
+    - trailing_whitespace
+  
+excluded:
+    - .bundle
+    - Carthage
+    - DerivedData
+    - Pods
+    - Generated
+    - Package.swift
+
+# Uncomment and configure this in project's branch
+deployment_target:
+    iOS_deployment_target: "8.0"
+#    macOS_deployment_target: "10.14"
+#    watchOS_deployment_target: "5.0"
+#    tvOS_deployment_target: "12.0"

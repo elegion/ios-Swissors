@@ -21,7 +21,7 @@ public extension UITableView {
     }
     
     func sw_dequeueCell<Cell: UITableViewCell>(of cellType: Cell.Type, for indexPath: IndexPath) -> Cell {
-        return dequeueReusableCell(withIdentifier: String(describing: cellType), for: indexPath) as! Cell
+        return dequeueReusableCell(withIdentifier: String(describing: cellType), for: indexPath) as! Cell // swiftlint:disable:this force_cast
     }
     
     func sw_register<HeaderFooter: UITableViewHeaderFooterView>(headerFooterType: HeaderFooter.Type, bundle: Bundle = .main, tryNib: Bool = true) {
@@ -35,6 +35,6 @@ public extension UITableView {
     }
     
     func sw_dequeueHeaderFooter<HeaderFooter: UITableViewHeaderFooterView>(of viewType: HeaderFooter.Type) -> HeaderFooter {
-        return dequeueReusableHeaderFooterView(withIdentifier: String(describing: viewType)) as! HeaderFooter
+        return dequeueReusableHeaderFooterView(withIdentifier: String(describing: viewType)) as! HeaderFooter // swiftlint:disable:this force_cast
     }
 }
