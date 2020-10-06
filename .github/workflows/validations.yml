@@ -10,7 +10,7 @@ jobs:
         with:
           fetch-depth: 200
           
-      - uses: norio-nomura/action-swiftlint
+      - uses: norio-nomura/action-swiftlint@3.1.0
         with:
           args: --strict
 
