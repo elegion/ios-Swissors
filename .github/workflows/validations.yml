@@ -1,5 +1,5 @@
-# Triggers the workflow on push or pull request events
-on: [push, pull_request]
+# Triggered when code is pushed to any branch in a repository
+on: push
 
 jobs:
   lint:
@@ -10,7 +10,7 @@ jobs:
         with:
           fetch-depth: 200
           
-      - uses: norio-nomura/action-swiftlint@3.1.0
+      - uses: norio-nomura/action-swiftlint
         with:
           args: --strict
 
@@ -27,14 +27,14 @@ jobs:
 
       - name: "xcodebuild"
         env:
-          XCODE_PROJECT_WORKSPACE: "Swissors.xcworkspace"
+          XCODE_PROJECT: "Swissors.xcproject"
           XCODE_PROJECT_SCHEME: "Swissors"
         run: |
             set -o pipefail
             xcodebuild -version
             xcodebuild -showsdks
-            env NSUnbufferedIO=YES xcodebuild test \
-            -workspace "${XCODE_PROJECT_WORKSPACE}" \
+            env NSUnbufferedIO=YES xcodebuild build \
+            -project "${XCODE_PROJECT}" \
             -scheme "${XCODE_PROJECT_SCHEME}" \
             -configuration Debug \
             -destination "platform=iOS Simulator,name=${SIMULATOR_NAME}" \
