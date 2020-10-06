@@ -116,7 +116,7 @@ public extension UIView {
         var result: [TC] = []
         
         if self.isKind(of: targetClass) {
-            result.append(self as! TC)
+            result.append(self as! TC) // swiftlint:disable:this force_cast
         }
         
         for view in self.subviews {
@@ -154,6 +154,6 @@ public extension UIView {
     private class func sw_viewFromNibHelper<T>(in bundle: Bundle, owner: Any?, options: [UINib.OptionsKey: Any]? = nil) -> T {
         let className = String(describing: self)
         let nib = UINib(nibName: className, bundle: bundle)
-        return nib.instantiate(withOwner: owner, options: options).first as! T
+        return nib.instantiate(withOwner: owner, options: options).first as! T // swiftlint:disable:this force_cast
     }
 }

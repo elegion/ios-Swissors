@@ -21,7 +21,7 @@ public extension UICollectionView {
     }
     
     func sw_dequeueCell<Cell: UICollectionViewCell>(of cellType: Cell.Type, for indexPath: IndexPath) -> Cell {
-        return dequeueReusableCell(withReuseIdentifier: String(describing: cellType), for: indexPath) as! Cell
+        return dequeueReusableCell(withReuseIdentifier: String(describing: cellType), for: indexPath) as! Cell // swiftlint:disable:this force_cast
     }
     
     func sw_register<SupplementaryView: UICollectionReusableView>(supplementaryViewType: SupplementaryView.Type, kind: String, bundle: Bundle = .main, tryNib: Bool = true) {
@@ -35,6 +35,6 @@ public extension UICollectionView {
     }
     
     func sw_dequeueHeaderFooter<SupplementaryView: UICollectionReusableView>(of viewType: SupplementaryView.Type, kind: String, for indexPath: IndexPath) -> SupplementaryView {
-        return dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: String(describing: viewType), for: indexPath) as! SupplementaryView
+        return dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: String(describing: viewType), for: indexPath) as! SupplementaryView // swiftlint:disable:this force_cast
     }
 }

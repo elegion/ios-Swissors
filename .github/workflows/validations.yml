@@ -1,0 +1,50 @@
+# Triggered when code is pushed to any branch in a repository
+on: push
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 200
+      
+      - uses: norio-nomura/action-swiftlint@3.1.0
+        with:
+          args: --strict
+      
+  build:
+    runs-on: macos-latest
+    needs: [lint]
+    
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 200
+      
+      - name: "Run xcodebuild"
+        env:
+          XCODE_PROJECT: "Swissors.xcodeproj"
+          XCODE_SCHEME: "Swissors"
+          SIMULATOR_NAME: "iPhone 11"
+        run: |
+          set -o pipefail
+          xcodebuild -version
+          xcodebuild -showsdks
+          env NSUnbufferedIO=YES xcodebuild build \
+          -project "${XCODE_PROJECT}" \
+          -scheme "${XCODE_SCHEME}" \
+          -configuration Debug \
+          -destination "platform=iOS Simulator,name=${SIMULATOR_NAME}" \
+          -derivedDataPath "DerivedData" \
+          COMPILER_INDEX_STORE_ENABLE=NO \
+          CODE_SIGN_IDENTITY="" \
+          CODE_SIGNING_REQUIRED=NO \
+          ONLY_ACTIVE_ARCH=YES \
+          ENABLE_TESTABILITY=YES \
+          DEBUG_INFORMATION_FORMAT="dwarf" \
+          GCC_OPTIMIZATION_LEVEL="0" \
+          SWIFT_COMPILATION_MODE="singlefile" \
+          SWIFT_OPTIMIZATION_LEVEL="-Onone" \
+          | xcpretty
