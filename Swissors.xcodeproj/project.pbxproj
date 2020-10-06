@@ -38,8 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		11B5DD06252C8F0100CBB1C6 /* validations.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = validations.yml; sourceTree = "<group>"; };
 		11B5DD0C252C900800CBB1C6 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		11B5DD14252C930A00CBB1C6 /* validations.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = validations.yml; sourceTree = "<group>"; };
 		OBJ_10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		OBJ_12 /* BaseTypes+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseTypes+Swissors.swift"; sourceTree = "<group>"; };
 		OBJ_13 /* Bundle+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Swissors.swift"; sourceTree = "<group>"; };
@@ -90,15 +90,15 @@
 		11B5DD04252C8F0100CBB1C6 /* .github */ = {
 			isa = PBXGroup;
 			children = (
-				11B5DD05252C8F0100CBB1C6 /* workflows */,
+				11B5DD13252C930A00CBB1C6 /* workflows */,
 			);
 			path = .github;
 			sourceTree = "<group>";
 		};
-		11B5DD05252C8F0100CBB1C6 /* workflows */ = {
+		11B5DD13252C930A00CBB1C6 /* workflows */ = {
 			isa = PBXGroup;
 			children = (
-				11B5DD06252C8F0100CBB1C6 /* validations.yml */,
+				11B5DD14252C930A00CBB1C6 /* validations.yml */,
 			);
 			path = workflows;
 			sourceTree = "<group>";
