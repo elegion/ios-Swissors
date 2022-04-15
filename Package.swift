@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "Swissors",
     platforms: [
-        .iOS(.v9),
+        .iOS(.v11),
     ],
     products: [
         .library(
@@ -14,14 +14,15 @@ let package = Package(
             targets: ["Swissors"]
         ),
     ],
+    dependencies: [
+        .package(url: "https://github.com/marksands/BetterCodable", "0.4.0"..."0.4.0")
+    ],
     targets: [
         .target(
             name: "Swissors",
-            dependencies: []
-        ),
-        .testTarget(
-            name: "SwissorsTests",
-            dependencies: ["Swissors"]
+            dependencies: [
+                "BetterCodable",
+            ]
         ),
     ]
 )
