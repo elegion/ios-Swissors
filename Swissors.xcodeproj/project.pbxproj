@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		09A5387D28099E040003D340 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A5387C28099E040003D340 /* UserDefault.swift */; };
 		556E05642809EC7C00748C90 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556E05632809EC7C00748C90 /* Closure.swift */; };
+		556E05CA2809F7B200748C90 /* UIEdgeInsets+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556E05C92809F7B200748C90 /* UIEdgeInsets+Swissors.swift */; };
 		OBJ_51 /* BaseTypes+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* BaseTypes+Swissors.swift */; };
 		OBJ_52 /* Bundle+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Bundle+Swissors.swift */; };
 		OBJ_53 /* Collection+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Collection+Swissors.swift */; };
@@ -44,6 +45,7 @@
 		11B5DD0C252C900800CBB1C6 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		11B5DD14252C930A00CBB1C6 /* validations.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text.yaml; path = validations.yml; sourceTree = "<group>"; tabWidth = 2; };
 		556E05632809EC7C00748C90 /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
+		556E05C92809F7B200748C90 /* UIEdgeInsets+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Swissors.swift"; sourceTree = "<group>"; };
 		OBJ_10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		OBJ_12 /* BaseTypes+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseTypes+Swissors.swift"; sourceTree = "<group>"; };
 		OBJ_13 /* Bundle+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Swissors.swift"; sourceTree = "<group>"; };
@@ -125,7 +127,9 @@
 		556E05622809EC6800748C90 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				OBJ_29 /* UIRectCorner+Swissors.swift */,
 				OBJ_26 /* UIColor+Swissors.swift */,
+				556E05C92809F7B200748C90 /* UIEdgeInsets+Swissors.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -151,7 +155,6 @@
 				OBJ_25 /* UICollectionView+Swissors.swift */,
 				OBJ_27 /* UIImage+Swissors.swift */,
 				OBJ_28 /* UINib+Swissors.swift */,
-				OBJ_29 /* UIRectCorner+Swissors.swift */,
 				OBJ_30 /* UITableView+Swissors.swift */,
 				OBJ_31 /* UIView+Swissors.swift */,
 				OBJ_32 /* UIViewAutoresizing+Swissors.swift */,
@@ -326,6 +329,7 @@
 				OBJ_62 /* String+Swissors.swift in Sources */,
 				OBJ_63 /* UIApplication+Swissors.swift in Sources */,
 				OBJ_64 /* UICollectionView+Swissors.swift in Sources */,
+				556E05CA2809F7B200748C90 /* UIEdgeInsets+Swissors.swift in Sources */,
 				OBJ_65 /* UIColor+Swissors.swift in Sources */,
 				OBJ_66 /* UIImage+Swissors.swift in Sources */,
 				OBJ_67 /* UINib+Swissors.swift in Sources */,
