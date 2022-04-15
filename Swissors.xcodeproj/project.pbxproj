@@ -125,6 +125,7 @@
 		556E05622809EC6800748C90 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				OBJ_26 /* UIColor+Swissors.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -148,7 +149,6 @@
 				OBJ_23 /* String+Swissors.swift */,
 				OBJ_24 /* UIApplication+Swissors.swift */,
 				OBJ_25 /* UICollectionView+Swissors.swift */,
-				OBJ_26 /* UIColor+Swissors.swift */,
 				OBJ_27 /* UIImage+Swissors.swift */,
 				OBJ_28 /* UINib+Swissors.swift */,
 				OBJ_29 /* UIRectCorner+Swissors.swift */,
