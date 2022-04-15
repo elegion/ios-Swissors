@@ -15,18 +15,18 @@ public extension Bundle {
         return infoDictionary[key]
     }
     
-    func sw_infoDictionaryValue<T>(for key: String) -> T? {
+    func infoDictionaryValue<T>(for key: String) -> T? {
         guard let infoDictionary = infoDictionary else { return nil }
         return infoDictionary[key] as? T
     }
     
-    func sw_infoDictionaryBool(for key: String, defaultValue: Bool = Bool()) -> Bool {
+    func infoDictionaryBool(for key: String, defaultValue: Bool = Bool()) -> Bool {
         guard let infoDictionary = infoDictionary else { return defaultValue }
         guard let value = infoDictionary[key] as? String else { return defaultValue }
         return Bool(value) ?? defaultValue
     }
     
-    func sw_decodeJSON<T: Decodable>(_ type: T.Type, from filename: String) -> T {
+    func decodeJSON<T: Decodable>(_ type: T.Type, from filename: String) -> T {
         guard let json = url(forResource: filename, withExtension: nil) else {
             fatalError("Failed to locate \(filename) in app bundle.")
         }
@@ -41,5 +41,22 @@ public extension Bundle {
         }
         
         return result
+    }
+    
+    // MARK: Deprecated
+    
+    @available(*, deprecated, renamed: "infoDictionaryValue")
+    func sw_infoDictionaryValue<T>(for key: String) -> T? {
+        infoDictionaryValue(for: key)
+    }
+    
+    @available(*, deprecated, renamed: "decodeJSON")
+    func sw_infoDictionaryBool(for key: String, defaultValue: Bool = Bool()) -> Bool {
+        infoDictionaryBool(for: key, defaultValue: defaultValue)
+    }
+    
+    @available(*, deprecated, renamed: "decodeJSON")
+    func sw_decodeJSON<T: Decodable>(_ type: T.Type, from filename: String) -> T {
+        decodeJSON(type, from: filename)
     }
 }
