@@ -10,8 +10,15 @@ import UIKit
 
 public extension NSLayoutConstraint {
     
-    func sw_with(priority: UILayoutPriority) -> NSLayoutConstraint {
+    func with(priority: UILayoutPriority) -> NSLayoutConstraint {
         self.priority = priority
         return self
+    }
+    
+    // MARK: Deprecated
+    
+    @available(*, deprecated, renamed: "with")
+    func sw_with(priority: UILayoutPriority) -> NSLayoutConstraint {
+        with(priority: priority)
     }
 }
