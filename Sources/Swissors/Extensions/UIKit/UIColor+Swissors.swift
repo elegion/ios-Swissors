@@ -187,7 +187,7 @@ public extension UIColor {
         fromColor.intermediate(to: toColor, atPercent: percentage)
     }
     
-    // MARK: Deprecated methods
+    // MARK: Deprecated
     
     @available(*, deprecated, renamed: "rgba")
     var sw_rgba: RGBA {
@@ -212,12 +212,14 @@ public extension UIColor {
 
 public extension CGColor {
     
+    var uiColor: UIColor? {
+        UIColor(cgColor: self)
+    }
+    
+    // MARK: Deprecated
+    
     @available(*, deprecated, renamed: "uiColor")
     var sw_uiColor: UIColor? {
         uiColor
-    }
-    
-    var uiColor: UIColor? {
-        UIColor(cgColor: self)
     }
 }

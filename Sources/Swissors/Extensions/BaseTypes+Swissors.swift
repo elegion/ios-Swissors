@@ -9,11 +9,11 @@
 import Foundation
 
 public extension FloatingPoint {
-    var degreesToRadians: Self { return self * .pi / 180 }
-    var radiansToDegrees: Self { return self * 180 / .pi }
+    var degreesToRadians: Self { self * .pi / 180 }
+    var radiansToDegrees: Self { self * 180 / .pi }
 }
 
 public extension Int {
-    var degreesToRadians: Double { return Double(self).degreesToRadians }
-    var radiansToDegrees: Double { return Double(self).radiansToDegrees }
+    var degreesToRadians: Double { Double(self).degreesToRadians }
+    var radiansToDegrees: Double { Double(self).radiansToDegrees }
 }

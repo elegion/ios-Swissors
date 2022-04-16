@@ -23,7 +23,6 @@ public extension Collection {
                 result[category] = [element]
             }
         }
-        
         return result
     }
 }

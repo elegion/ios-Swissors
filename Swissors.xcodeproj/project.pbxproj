@@ -122,6 +122,8 @@
 		556E05612809EC6200748C90 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				OBJ_23 /* String+Swissors.swift */,
+				OBJ_16 /* Date+Swissors.swift */,
 				OBJ_13 /* Bundle+Swissors.swift */,
 				OBJ_19 /* Locale+Swissors.swift */,
 			);
@@ -131,6 +133,7 @@
 		556E05622809EC6800748C90 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				OBJ_27 /* UIImage+Swissors.swift */,
 				OBJ_29 /* UIRectCorner+Swissors.swift */,
 				OBJ_26 /* UIColor+Swissors.swift */,
 				556E05C92809F7B200748C90 /* UIEdgeInsets+Swissors.swift */,
@@ -148,16 +151,13 @@
 				OBJ_12 /* BaseTypes+Swissors.swift */,
 				OBJ_14 /* Collection+Swissors.swift */,
 				OBJ_15 /* Comparable + Swissors.swift */,
-				OBJ_16 /* Date+Swissors.swift */,
 				OBJ_17 /* DispatchQueue+Swissors.swift */,
 				OBJ_18 /* FileManager+Swissors.swift */,
 				OBJ_20 /* NSError+Swissors.swift */,
 				OBJ_21 /* NSLayoutConstraint+Swissors.swift */,
 				OBJ_22 /* NSRange+Swissors.swift */,
-				OBJ_23 /* String+Swissors.swift */,
 				OBJ_24 /* UIApplication+Swissors.swift */,
 				OBJ_25 /* UICollectionView+Swissors.swift */,
-				OBJ_27 /* UIImage+Swissors.swift */,
 				OBJ_28 /* UINib+Swissors.swift */,
 				OBJ_30 /* UITableView+Swissors.swift */,
 				OBJ_31 /* UIView+Swissors.swift */,
