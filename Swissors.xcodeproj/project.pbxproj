@@ -122,6 +122,7 @@
 		556E05612809EC6200748C90 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				OBJ_20 /* NSError+Swissors.swift */,
 				OBJ_23 /* String+Swissors.swift */,
 				OBJ_16 /* Date+Swissors.swift */,
 				OBJ_13 /* Bundle+Swissors.swift */,
@@ -153,7 +154,6 @@
 				OBJ_15 /* Comparable + Swissors.swift */,
 				OBJ_17 /* DispatchQueue+Swissors.swift */,
 				OBJ_18 /* FileManager+Swissors.swift */,
-				OBJ_20 /* NSError+Swissors.swift */,
 				OBJ_21 /* NSLayoutConstraint+Swissors.swift */,
 				OBJ_22 /* NSRange+Swissors.swift */,
 				OBJ_24 /* UIApplication+Swissors.swift */,
