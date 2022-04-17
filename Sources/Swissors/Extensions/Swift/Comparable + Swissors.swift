@@ -6,8 +6,6 @@
 //  Copyright © 2020 e-Legion. All rights reserved.
 //
 
-import Foundation
-
 public extension Comparable {
     
     func bounded(_ low: Self, _ high: Self) -> Self {

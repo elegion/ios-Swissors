@@ -8,10 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		09A5387D28099E040003D340 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A5387C28099E040003D340 /* UserDefault.swift */; };
+		5529E9A1280C3E9C00ADBB03 /* CGSize+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529E9A0280C3E9C00ADBB03 /* CGSize+Swissors.swift */; };
+		5529E9A3280C3EDC00ADBB03 /* CGRect+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529E9A2280C3EDC00ADBB03 /* CGRect+Swissors.swift */; };
+		5529E9A5280C3F2100ADBB03 /* CGPoint+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529E9A4280C3F2100ADBB03 /* CGPoint+Swissors.swift */; };
+		5529E9A7280C3FBC00ADBB03 /* Decimal+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529E9A6280C3FBC00ADBB03 /* Decimal+Swissors.swift */; };
+		5529E9A9280C418E00ADBB03 /* Int+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529E9A8280C418E00ADBB03 /* Int+Swissors.swift */; };
+		5529E9AB280C41A500ADBB03 /* FloatingPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529E9AA280C41A500ADBB03 /* FloatingPoint.swift */; };
 		556E05642809EC7C00748C90 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556E05632809EC7C00748C90 /* Closure.swift */; };
 		556E05CA2809F7B200748C90 /* UIEdgeInsets+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556E05C92809F7B200748C90 /* UIEdgeInsets+Swissors.swift */; };
 		556E05CC2809F96100748C90 /* UIStackView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556E05CB2809F96100748C90 /* UIStackView+Swissors.swift */; };
-		OBJ_51 /* BaseTypes+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* BaseTypes+Swissors.swift */; };
 		OBJ_52 /* Bundle+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Bundle+Swissors.swift */; };
 		OBJ_53 /* Collection+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Collection+Swissors.swift */; };
 		OBJ_54 /* Comparable + Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Comparable + Swissors.swift */; };
@@ -45,11 +50,16 @@
 		09A5387C28099E040003D340 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		11B5DD0C252C900800CBB1C6 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		11B5DD14252C930A00CBB1C6 /* validations.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text.yaml; path = validations.yml; sourceTree = "<group>"; tabWidth = 2; };
+		5529E9A0280C3E9C00ADBB03 /* CGSize+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Swissors.swift"; sourceTree = "<group>"; };
+		5529E9A2280C3EDC00ADBB03 /* CGRect+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Swissors.swift"; sourceTree = "<group>"; };
+		5529E9A4280C3F2100ADBB03 /* CGPoint+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Swissors.swift"; sourceTree = "<group>"; };
+		5529E9A6280C3FBC00ADBB03 /* Decimal+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Swissors.swift"; sourceTree = "<group>"; };
+		5529E9A8280C418E00ADBB03 /* Int+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Swissors.swift"; sourceTree = "<group>"; };
+		5529E9AA280C41A500ADBB03 /* FloatingPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPoint.swift; sourceTree = "<group>"; };
 		556E05632809EC7C00748C90 /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
 		556E05C92809F7B200748C90 /* UIEdgeInsets+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Swissors.swift"; sourceTree = "<group>"; };
 		556E05CB2809F96100748C90 /* UIStackView+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Swissors.swift"; sourceTree = "<group>"; };
 		OBJ_10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		OBJ_12 /* BaseTypes+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseTypes+Swissors.swift"; sourceTree = "<group>"; };
 		OBJ_13 /* Bundle+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Swissors.swift"; sourceTree = "<group>"; };
 		OBJ_14 /* Collection+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Swissors.swift"; sourceTree = "<group>"; };
 		OBJ_15 /* Comparable + Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comparable + Swissors.swift"; sourceTree = "<group>"; };
@@ -128,6 +138,7 @@
 				OBJ_16 /* Date+Swissors.swift */,
 				OBJ_13 /* Bundle+Swissors.swift */,
 				OBJ_19 /* Locale+Swissors.swift */,
+				5529E9A6280C3FBC00ADBB03 /* Decimal+Swissors.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -157,9 +168,10 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_14 /* Collection+Swissors.swift */,
-				OBJ_12 /* BaseTypes+Swissors.swift */,
 				OBJ_15 /* Comparable + Swissors.swift */,
 				OBJ_23 /* String+Swissors.swift */,
+				5529E9A8280C418E00ADBB03 /* Int+Swissors.swift */,
+				5529E9AA280C41A500ADBB03 /* FloatingPoint.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -172,9 +184,20 @@
 			path = Dispatch;
 			sourceTree = "<group>";
 		};
+		556E05CF280C3D7900748C90 /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				5529E9A0280C3E9C00ADBB03 /* CGSize+Swissors.swift */,
+				5529E9A4280C3F2100ADBB03 /* CGPoint+Swissors.swift */,
+				5529E9A2280C3EDC00ADBB03 /* CGRect+Swissors.swift */,
+			);
+			path = CoreGraphics;
+			sourceTree = "<group>";
+		};
 		OBJ_11 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				556E05CF280C3D7900748C90 /* CoreGraphics */,
 				556E05CE280AE21E00748C90 /* Dispatch */,
 				556E05CD280ADE9700748C90 /* Swift */,
 				556E05622809EC6800748C90 /* UIKit */,
@@ -237,10 +260,10 @@
 			isa = PBXGroup;
 			children = (
 				09A5387B28099DF90003D340 /* Wrappers */,
-				OBJ_9 /* Swissors.h */,
-				OBJ_10 /* Info.plist */,
 				OBJ_11 /* Extensions */,
 				OBJ_35 /* Types */,
+				OBJ_9 /* Swissors.h */,
+				OBJ_10 /* Info.plist */,
 			);
 			name = Swissors;
 			path = Sources/Swissors;
@@ -333,7 +356,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_51 /* BaseTypes+Swissors.swift in Sources */,
+				5529E9AB280C41A500ADBB03 /* FloatingPoint.swift in Sources */,
+				5529E9A5280C3F2100ADBB03 /* CGPoint+Swissors.swift in Sources */,
+				5529E9A3280C3EDC00ADBB03 /* CGRect+Swissors.swift in Sources */,
 				OBJ_52 /* Bundle+Swissors.swift in Sources */,
 				556E05CC2809F96100748C90 /* UIStackView+Swissors.swift in Sources */,
 				OBJ_53 /* Collection+Swissors.swift in Sources */,
@@ -345,7 +370,9 @@
 				09A5387D28099E040003D340 /* UserDefault.swift in Sources */,
 				OBJ_59 /* NSError+Swissors.swift in Sources */,
 				OBJ_60 /* NSLayoutConstraint+Swissors.swift in Sources */,
+				5529E9A1280C3E9C00ADBB03 /* CGSize+Swissors.swift in Sources */,
 				OBJ_61 /* NSRange+Swissors.swift in Sources */,
+				5529E9A9280C418E00ADBB03 /* Int+Swissors.swift in Sources */,
 				OBJ_62 /* String+Swissors.swift in Sources */,
 				OBJ_63 /* UIApplication+Swissors.swift in Sources */,
 				OBJ_64 /* UICollectionView+Swissors.swift in Sources */,
@@ -364,6 +391,7 @@
 				OBJ_75 /* KeyboardObserver.swift in Sources */,
 				OBJ_76 /* Throttler.swift in Sources */,
 				OBJ_77 /* Weak.swift in Sources */,
+				5529E9A7280C3FBC00ADBB03 /* Decimal+Swissors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
