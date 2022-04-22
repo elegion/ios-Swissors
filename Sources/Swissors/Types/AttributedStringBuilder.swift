@@ -46,13 +46,13 @@ public extension NSAttributedString {
         .attribute
         .with(strokeColor: .red)
         .build()
-        .sw_builder
+        .builder
         .with(kern: 2.0)
         .build()
      ```
      */
     
-    var sw_builder: AttributedStringBuilder {
+    var builder: AttributedStringBuilder {
         var attributes: [AttributedStringBuilder.Attribute] = []
         
         enumerateAttributes(in: self.string.fullRange, options: []) {
@@ -64,6 +64,11 @@ public extension NSAttributedString {
         }
         
         return AttributedStringBuilder(base: self.string, attributes: attributes)
+    }
+    
+    @available(*, deprecated, renamed: "builder")
+    var sw_builder: AttributedStringBuilder {
+        builder
     }
 }
 
@@ -736,7 +741,7 @@ extension AttributedStringBuilder {
         
         let string = NSAttributedString(attachment: attachment)
         
-        return append(string.sw_builder)
+        return append(string.builder)
     }
     
     /**
@@ -757,7 +762,7 @@ extension AttributedStringBuilder {
         let otherAttributes = other.attributes.map({
             attribute -> Attribute in
             
-            return (attribute.key, attribute.value, attribute.range.sw_offset(by: offset))
+            return (attribute.key, attribute.value, attribute.range.offset(by: offset))
         })
         
         var result = self

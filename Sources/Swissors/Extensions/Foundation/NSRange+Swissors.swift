@@ -16,6 +16,7 @@ public extension NSRange {
     
     // MARK: Deprecated
     
+    @available(*, deprecated, renamed: "offset")
     func sw_offset(by d: Int) -> NSRange {
         offset(by: d)
     }
