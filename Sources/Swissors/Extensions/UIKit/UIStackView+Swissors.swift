@@ -33,13 +33,21 @@ public extension UIStackView {
     
     @discardableResult
     func removeAllArrangedSubviews() -> [UIView] {
-        let removedSubviews = arrangedSubviews.reduce(into: [UIView]()) {
+        removeAllArrangedSubviews(of: UIView.self)
+    }
+    
+    @discardableResult
+    func removeAllArrangedSubviews<T: UIView>(of type: T.Type) -> [T] {
+        let removedSubviews = arrangedSubviews.reduce(into: [T]()) {
             result, subview in
             
-            self.removeArrangedSubview(subview)
-            NSLayoutConstraint.deactivate(subview.constraints)
-            subview.removeFromSuperview()
-            result.append(subview)
+            guard let view = subview as? T else {
+                return
+            }
+            self.removeArrangedSubview(view)
+            NSLayoutConstraint.deactivate(view.constraints)
+            view.removeFromSuperview()
+            result.append(view)
         }
         return removedSubviews
     }
