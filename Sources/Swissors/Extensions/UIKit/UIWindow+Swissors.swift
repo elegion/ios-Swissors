@@ -60,9 +60,9 @@ public extension UIWindow {
      Replaces root view controller with specified animation.
      Often used by the auth <-> main screens transition.
      */
-    func sw_replaceRootViewController(with viewController: UIViewController,
-                                      animation: RootViewControllerTransitionAnimation,
-                                      completion: @escaping (Bool) -> Void) {
+    func replaceRootViewController(with viewController: UIViewController,
+                                   animation: RootViewControllerTransitionAnimation,
+                                   completion: @escaping (Bool) -> Void) {
         
         guard let rootViewController = rootViewController, rootViewController.isViewLoaded, rootViewController.view.layer.presentation() != nil else {
             self.rootViewController = viewController
@@ -74,7 +74,7 @@ public extension UIWindow {
             
             // dismiss any previously presented modal view controllers
             if rootViewController.presentedViewController != nil {
-                self.sw_dismissPresentedViewControllers(for: rootViewController, completion: {
+                self.dismissPresentedViewControllers(for: rootViewController, completion: {
                     rootViewController.view.removeFromSuperview()
                     completion(finished)
                 })
@@ -95,7 +95,7 @@ public extension UIWindow {
         }
     }
     
-    private func sw_dismissPresentedViewControllers(for viewController: UIViewController, completion: (() -> Void)? = nil) {
+    private func dismissPresentedViewControllers(for viewController: UIViewController, completion: (() -> Void)? = nil) {
         guard viewController.presentedViewController != nil else {
             completion?()
             return
@@ -108,7 +108,21 @@ public extension UIWindow {
                 return
             }
             
-            self?.sw_dismissPresentedViewControllers(for: viewController, completion: completion)
+            self?.dismissPresentedViewControllers(for: viewController, completion: completion)
         }
+    }
+    
+    // MARK: Deprecated
+    
+    @available(*, deprecated, renamed: "replaceRootViewController")
+    func sw_replaceRootViewController(with viewController: UIViewController,
+                                      animation: RootViewControllerTransitionAnimation,
+                                      completion: @escaping (Bool) -> Void) {
+        replaceRootViewController(with: viewController, animation: animation, completion: completion)
+    }
+    
+    @available(*, deprecated, renamed: "dismissPresentedViewControllers")
+    private func sw_dismissPresentedViewControllers(for viewController: UIViewController, completion: (() -> Void)? = nil) {
+        dismissPresentedViewControllers(for: viewController, completion: completion)
     }
 }

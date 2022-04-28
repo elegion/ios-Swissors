@@ -6,9 +6,11 @@
 //  Copyright © 2017 e-Legion. All rights reserved.
 //
 
-import Foundation
-
 public extension Collection {
+    
+    subscript(safe index: Index) -> Element? {
+        indices.contains(index) ? self[index] : nil
+    }
     
     func categorize<Category: Hashable>(where categorize: (Iterator.Element) throws -> Category) rethrows -> [Category: [Iterator.Element]] {
         var result: [Category: [Iterator.Element]] = [:]
@@ -23,7 +25,6 @@ public extension Collection {
                 result[category] = [element]
             }
         }
-        
         return result
     }
 }

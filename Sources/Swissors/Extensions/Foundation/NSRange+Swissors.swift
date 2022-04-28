@@ -10,7 +10,14 @@ import Foundation
 
 public extension NSRange {
     
+    func offset(by d: Int) -> NSRange {
+        NSRange(location: location + d, length: length)
+    }
+    
+    // MARK: Deprecated
+    
+    @available(*, deprecated, renamed: "offset")
     func sw_offset(by d: Int) -> NSRange {
-        return NSRange(location: location + d, length: length)
+        offset(by: d)
     }
 }
