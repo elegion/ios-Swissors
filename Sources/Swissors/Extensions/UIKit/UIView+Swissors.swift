@@ -143,6 +143,34 @@ public extension UIView {
         sizeThatFits(CGSize(width: .greatestFiniteMagnitude, height: height))
     }
     
+    func addShadow(color: UIColor = .gray,
+                   shadowRadius: CGFloat = 12,
+                   shadowOpacity: Float = 0.2,
+                   shadowOffset: CGSize? = nil,
+                   targetLayer: CALayer? = nil,
+                   shadowPath: UIBezierPath? = nil) {
+        let layer = targetLayer ?? self.layer
+        layer.shadowColor = color.cgColor
+        layer.shadowRadius = shadowRadius
+        layer.shadowOpacity = shadowOpacity
+        
+        layer.shadowPath = (shadowPath ?? UIBezierPath(roundedRect: bounds, cornerRadius: layer.cornerRadius)).cgPath
+        
+        if let shadowOffset = shadowOffset {
+            layer.shadowOffset = shadowOffset
+        } else {
+            layer.shadowOffset = CGSize(width: .zero, height: shadowRadius / 1.5)
+        }
+    }
+    
+    func removeShadow() {
+        layer.shadowColor = nil
+        layer.shadowRadius = .zero
+        layer.shadowOpacity = .zero
+        layer.shadowPath = nil
+        layer.shadowOffset = .zero
+    }
+    
     // MARK: - Private
     
     private class func viewFromNibHelper<T>(in bundle: Bundle, owner: Any?, options: [UINib.OptionsKey: Any]? = nil) -> T {
