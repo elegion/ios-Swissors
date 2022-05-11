@@ -163,7 +163,8 @@ public extension UIView {
         }
     }
     
-    func removeShadow() {
+    func removeShadow(targetLayer: CALayer? = nil) {
+        let layer = targetLayer ?? self.layer
         layer.shadowColor = nil
         layer.shadowRadius = .zero
         layer.shadowOpacity = .zero
