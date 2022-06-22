@@ -12,6 +12,7 @@ public protocol URLCodableStrategy {
     associatedtype RawValue: Codable
 
     static func decode(_ value: RawValue?) throws -> URL?
+    static func encode(_ url: URL?) -> String?
 }
 
 public class DefaultURLCodableStrategy: URLCodableStrategy {
@@ -21,5 +22,12 @@ public class DefaultURLCodableStrategy: URLCodableStrategy {
             return nil
         }
         return URL(string: value)
+    }
+    
+    public static func encode(_ url: URL?) -> String? {
+        guard let url = url else {
+            return nil
+        }
+        return url.absoluteString
     }
 }
