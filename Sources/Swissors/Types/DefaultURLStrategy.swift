@@ -14,7 +14,6 @@ public protocol URLCodableStrategy {
     static func decode(_ value: RawValue?) throws -> URL?
 }
 
-
 public class DefaultURLCodableStrategy: URLCodableStrategy {
     
     public static func decode(_ value: String?) throws -> URL? {
