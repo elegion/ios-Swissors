@@ -47,7 +47,7 @@
 		OBJ_147 /* UIWindow+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* UIWindow+Swissors.swift */; };
 		OBJ_148 /* AttributedStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* AttributedStringBuilder.swift */; };
 		OBJ_149 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* Closure.swift */; };
-		OBJ_150 /* DefaultDateStratery.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* DefaultDateStratery.swift */; };
+		OBJ_150 /* DefaultDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* DefaultDateFormatter.swift */; };
 		OBJ_151 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* KeyboardObserver.swift */; };
 		OBJ_152 /* Throttler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* Throttler.swift */; };
 		OBJ_153 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* Weak.swift */; };
@@ -112,7 +112,7 @@
 		OBJ_46 /* UIWindow+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Swissors.swift"; sourceTree = "<group>"; };
 		OBJ_48 /* AttributedStringBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringBuilder.swift; sourceTree = "<group>"; };
 		OBJ_49 /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
-		OBJ_50 /* DefaultDateStratery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDateStratery.swift; sourceTree = "<group>"; };
+		OBJ_50 /* DefaultDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDateFormatter.swift; sourceTree = "<group>"; };
 		OBJ_51 /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
 		OBJ_52 /* Throttler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throttler.swift; sourceTree = "<group>"; };
 		OBJ_53 /* Weak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
@@ -163,6 +163,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2F055D628643CFE004F58C9 /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_50 /* DefaultDateFormatter.swift */,
+				A25DED5928633CF20020E877 /* DefaultURLStrategy.swift */,
+			);
+			path = Codable;
+			sourceTree = "<group>";
+		};
 		OBJ_11 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,16 +254,14 @@
 			children = (
 				OBJ_48 /* AttributedStringBuilder.swift */,
 				OBJ_49 /* Closure.swift */,
-				OBJ_50 /* DefaultDateStratery.swift */,
 				OBJ_51 /* KeyboardObserver.swift */,
 				OBJ_52 /* Throttler.swift */,
 				OBJ_53 /* Weak.swift */,
-				A25DED5928633CF20020E877 /* DefaultURLStrategy.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -266,7 +273,6 @@
 				OBJ_82 /* README.md */,
 				OBJ_83 /* Swissors.podspec */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_54 /* Wrappers */ = {
@@ -346,6 +352,7 @@
 		OBJ_8 /* Swissors */ = {
 			isa = PBXGroup;
 			children = (
+				A2F055D628643CFE004F58C9 /* Codable */,
 				OBJ_9 /* Swissors.h */,
 				OBJ_10 /* Info.plist */,
 				OBJ_11 /* Extensions */,
@@ -436,7 +443,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_78 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -494,7 +501,7 @@
 				OBJ_147 /* UIWindow+Swissors.swift in Sources */,
 				OBJ_148 /* AttributedStringBuilder.swift in Sources */,
 				OBJ_149 /* Closure.swift in Sources */,
-				OBJ_150 /* DefaultDateStratery.swift in Sources */,
+				OBJ_150 /* DefaultDateFormatter.swift in Sources */,
 				OBJ_151 /* KeyboardObserver.swift in Sources */,
 				A25DED5A28633CF20020E877 /* DefaultURLStrategy.swift in Sources */,
 				OBJ_152 /* Throttler.swift in Sources */,

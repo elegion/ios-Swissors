@@ -7,7 +7,8 @@
 
 import Foundation
 
-public class DefaultDateStrategy: OptionalDateValueCodableStrategy {
+/// The default wrapper for the `DateValue` property, which allows you to encode and decode the date.
+public class DefaultDateFormatter: OptionalDateValueCodableFormatter {
     
     class var formatter: DateFormatter {
         fatalError("should be override")
@@ -28,7 +29,13 @@ public class DefaultDateStrategy: OptionalDateValueCodableStrategy {
     }
 }
 
-public protocol OptionalDateValueCodableStrategy {
+/// A protocol for providing a custom formatter for encoding and decoding dates.
+///
+/// `OptionalDateValueCodableFormatter` provides a generic formetter type that the `DateValue` property wrapper can use to inject
+///  custom strategies for encoding and decoding date values.
+///
+///  The difference between this formatter and the formatter from BetterCodable is the ability to work with optional data types.
+public protocol OptionalDateValueCodableFormatter {
     
     associatedtype RawValue: Codable
 
@@ -36,8 +43,11 @@ public protocol OptionalDateValueCodableStrategy {
     static func encode(_ date: Date?) -> RawValue?
 }
 
+/// Decodes and encodes dates using a strategy type.
+///
+/// `@DateValue` decodes dates using a `OptionalDateValueCodableFormatter` which provides custom decoding and encoding functionality.
 @propertyWrapper
-public struct DateValue<Formatter: OptionalDateValueCodableStrategy>: Codable {
+public struct DateValue<Formatter: OptionalDateValueCodableFormatter>: Codable {
     
     private let value: Formatter.RawValue?
     public var wrappedValue: Date?
