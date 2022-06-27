@@ -10,7 +10,7 @@ import Foundation
 /// The default wrapper for the `OptionalDateValue` property, which allows you to encode and decode the date.
 public class DefaultDateFormatter: OptionalDateValueCodableFormatter {
     
-    class var formatter: DateFormatter {
+    public class var formatter: DateFormatter {
         fatalError("should be override")
     }
     

@@ -44,3 +44,21 @@ class ServerDateFormatterTests: XCTestCase {
         XCTAssertEqual(fixure.date, nil)
     }
 }
+
+class ServerDataFormatter: DefaultDateFormatter {
+    
+    override class var formatter: DateFormatter {
+        let formatter = DateFormatter.serverDateFormat
+        return formatter
+    }
+}
+
+extension DateFormatter {
+    
+    static let serverDateFormat: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        return formatter
+    }()
+}
+
