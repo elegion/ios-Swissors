@@ -21,9 +21,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		A20D17A728699A1E00B3ADB5 /* DefaultDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* DefaultDateFormatter.swift */; };
-		A20D17A828699A5500B3ADB5 /* OptionalDateValueCodableFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* OptionalDateValueCodableFormatter.swift */; };
-		A20D17A928699A5A00B3ADB5 /* DefaultURLStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* DefaultURLStrategy.swift */; };
 		OBJ_100 /* DefaultTrue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* DefaultTrue.swift */; };
 		OBJ_101 /* ISO8601Strategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* ISO8601Strategy.swift */; };
 		OBJ_102 /* ISO8601WithFractionalSecondsStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* ISO8601WithFractionalSecondsStrategy.swift */; };
@@ -79,7 +76,7 @@
 		OBJ_164 /* BetterCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "bettercodable::BetterCodable::Product" /* BetterCodable.framework */; };
 		OBJ_171 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_182 /* DefaultURLFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* DefaultURLFormatterTests.swift */; };
-		OBJ_183 /* ServerDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* ServerDateFormatterTests.swift */; };
+		OBJ_183 /* DefaultDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* DefaultDateFormatterTests.swift */; };
 		OBJ_185 /* Swissors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ios-swissors::Swissors::Product" /* Swissors.framework */; };
 		OBJ_186 /* BetterCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "bettercodable::BetterCodable::Product" /* BetterCodable.framework */; };
 		OBJ_95 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* DateValue.swift */; };
@@ -163,7 +160,7 @@
 		OBJ_58 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_60 /* DefaultURLFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultURLFormatterTests.swift; sourceTree = "<group>"; };
-		OBJ_61 /* ServerDateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerDateFormatterTests.swift; sourceTree = "<group>"; };
+		OBJ_61 /* DefaultDateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDateFormatterTests.swift; sourceTree = "<group>"; };
 		OBJ_65 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
 		OBJ_66 /* DefaultCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCodable.swift; sourceTree = "<group>"; };
 		OBJ_67 /* DefaultEmptyArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultEmptyArray.swift; sourceTree = "<group>"; };
@@ -345,7 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_60 /* DefaultURLFormatterTests.swift */,
-				OBJ_61 /* ServerDateFormatterTests.swift */,
+				OBJ_61 /* DefaultDateFormatterTests.swift */,
 			);
 			path = Tests;
 			sourceTree = SOURCE_ROOT;
@@ -605,10 +602,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_182 /* DefaultURLFormatterTests.swift in Sources */,
-				A20D17A828699A5500B3ADB5 /* OptionalDateValueCodableFormatter.swift in Sources */,
-				A20D17A728699A1E00B3ADB5 /* DefaultDateFormatter.swift in Sources */,
-				OBJ_183 /* ServerDateFormatterTests.swift in Sources */,
-				A20D17A928699A5A00B3ADB5 /* DefaultURLStrategy.swift in Sources */,
+				OBJ_183 /* DefaultDateFormatterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
