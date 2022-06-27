@@ -8,6 +8,7 @@
 import XCTest
 import Swissors
 
+// swiftlint:disable nesting
 class ServerDateFormatterTests: XCTestCase {
     
     func testDecodingAndEncodingDefaultDateFormmater() throws {

@@ -8,6 +8,7 @@
 import XCTest
 import Swissors
 
+// swiftlint:disable nesting
 class DefaultURLFormatterTests: XCTestCase {
     
     func testDecodingAndEncodingDefaultURLFormmater() throws {
