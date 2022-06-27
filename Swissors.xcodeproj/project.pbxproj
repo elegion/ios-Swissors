@@ -6,327 +6,403 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		"ios-swissors::SwissorsPackageTests::ProductTarget" /* SwissorsPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_182 /* Build configuration list for PBXAggregateTarget "SwissorsPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_185 /* PBXTargetDependency */,
+			);
+			name = SwissorsPackageTests;
+			productName = SwissorsPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		A25DED5A28633CF20020E877 /* DefaultURLStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25DED5928633CF20020E877 /* DefaultURLStrategy.swift */; };
-		OBJ_100 /* LossyDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* LossyDictionary.swift */; };
-		OBJ_101 /* LossyOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* LossyOptional.swift */; };
-		OBJ_102 /* RFC2822Strategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* RFC2822Strategy.swift */; };
-		OBJ_103 /* RFC3339Strategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* RFC3339Strategy.swift */; };
-		OBJ_104 /* TimestampStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* TimestampStrategy.swift */; };
-		OBJ_105 /* YearMonthDayStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* YearMonthDayStrategy.swift */; };
-		OBJ_112 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* Package.swift */; };
-		OBJ_118 /* CGPoint+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* CGPoint+Swissors.swift */; };
-		OBJ_119 /* CGRect+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* CGRect+Swissors.swift */; };
-		OBJ_120 /* CGSize+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* CGSize+Swissors.swift */; };
-		OBJ_121 /* DispatchQueue+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* DispatchQueue+Swissors.swift */; };
-		OBJ_122 /* Bundle+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* Bundle+Swissors.swift */; };
-		OBJ_123 /* Date+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Date+Swissors.swift */; };
-		OBJ_124 /* Decimal+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* Decimal+Swissors.swift */; };
-		OBJ_125 /* FileManager+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* FileManager+Swissors.swift */; };
-		OBJ_126 /* Locale+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* Locale+Swissors.swift */; };
-		OBJ_127 /* NSError+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* NSError+Swissors.swift */; };
-		OBJ_128 /* NSRange+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* NSRange+Swissors.swift */; };
-		OBJ_129 /* Collection+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Collection+Swissors.swift */; };
-		OBJ_130 /* Comparable + Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* Comparable + Swissors.swift */; };
-		OBJ_131 /* FloatingPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* FloatingPoint.swift */; };
-		OBJ_132 /* Int+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* Int+Swissors.swift */; };
-		OBJ_133 /* String+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* String+Swissors.swift */; };
-		OBJ_134 /* NSLayoutConstraint+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* NSLayoutConstraint+Swissors.swift */; };
-		OBJ_135 /* UIApplication+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* UIApplication+Swissors.swift */; };
-		OBJ_136 /* UICollectionView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* UICollectionView+Swissors.swift */; };
-		OBJ_137 /* UIColor+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* UIColor+Swissors.swift */; };
-		OBJ_138 /* UIEdgeInsets+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* UIEdgeInsets+Swissors.swift */; };
-		OBJ_139 /* UIImage+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* UIImage+Swissors.swift */; };
-		OBJ_140 /* UINib+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* UINib+Swissors.swift */; };
-		OBJ_141 /* UIRectCorner+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* UIRectCorner+Swissors.swift */; };
-		OBJ_142 /* UIStackView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* UIStackView+Swissors.swift */; };
-		OBJ_143 /* UITableView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* UITableView+Swissors.swift */; };
-		OBJ_144 /* UIView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* UIView+Swissors.swift */; };
-		OBJ_145 /* UIViewAutoresizing+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* UIViewAutoresizing+Swissors.swift */; };
-		OBJ_146 /* UIViewController+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* UIViewController+Swissors.swift */; };
-		OBJ_147 /* UIWindow+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* UIWindow+Swissors.swift */; };
-		OBJ_148 /* AttributedStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* AttributedStringBuilder.swift */; };
-		OBJ_149 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* Closure.swift */; };
-		OBJ_150 /* DefaultDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* DefaultDateFormatter.swift */; };
-		OBJ_151 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* KeyboardObserver.swift */; };
-		OBJ_152 /* Throttler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* Throttler.swift */; };
-		OBJ_153 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* Weak.swift */; };
-		OBJ_154 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* UserDefault.swift */; };
-		OBJ_156 /* BetterCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "bettercodable::BetterCodable::Product" /* BetterCodable.framework */; };
-		OBJ_163 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_89 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* DateValue.swift */; };
-		OBJ_90 /* DefaultCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* DefaultCodable.swift */; };
-		OBJ_91 /* DefaultEmptyArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* DefaultEmptyArray.swift */; };
-		OBJ_92 /* DefaultEmptyDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* DefaultEmptyDictionary.swift */; };
-		OBJ_93 /* DefaultFalse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* DefaultFalse.swift */; };
-		OBJ_94 /* DefaultTrue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* DefaultTrue.swift */; };
-		OBJ_95 /* ISO8601Strategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* ISO8601Strategy.swift */; };
-		OBJ_96 /* ISO8601WithFractionalSecondsStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* ISO8601WithFractionalSecondsStrategy.swift */; };
-		OBJ_97 /* LosslessArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* LosslessArray.swift */; };
-		OBJ_98 /* LosslessValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* LosslessValue.swift */; };
-		OBJ_99 /* LossyArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* LossyArray.swift */; };
+		A2895D192869825F00EF92E0 /* TimeZoneFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2895D182869825F00EF92E0 /* TimeZoneFormatter.swift */; };
+		OBJ_100 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* DateValue.swift */; };
+		OBJ_101 /* DefaultCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* DefaultCodable.swift */; };
+		OBJ_102 /* DefaultEmptyArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* DefaultEmptyArray.swift */; };
+		OBJ_103 /* DefaultEmptyDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* DefaultEmptyDictionary.swift */; };
+		OBJ_104 /* DefaultFalse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* DefaultFalse.swift */; };
+		OBJ_105 /* DefaultTrue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* DefaultTrue.swift */; };
+		OBJ_106 /* ISO8601Strategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* ISO8601Strategy.swift */; };
+		OBJ_107 /* ISO8601WithFractionalSecondsStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* ISO8601WithFractionalSecondsStrategy.swift */; };
+		OBJ_108 /* LosslessArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* LosslessArray.swift */; };
+		OBJ_109 /* LosslessValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* LosslessValue.swift */; };
+		OBJ_110 /* LossyArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* LossyArray.swift */; };
+		OBJ_111 /* LossyDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* LossyDictionary.swift */; };
+		OBJ_112 /* LossyOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* LossyOptional.swift */; };
+		OBJ_113 /* RFC2822Strategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* RFC2822Strategy.swift */; };
+		OBJ_114 /* RFC3339Strategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* RFC3339Strategy.swift */; };
+		OBJ_115 /* TimestampStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* TimestampStrategy.swift */; };
+		OBJ_116 /* YearMonthDayStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_86 /* YearMonthDayStrategy.swift */; };
+		OBJ_123 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_87 /* Package.swift */; };
+		OBJ_129 /* DefaultURLStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* DefaultURLStrategy.swift */; };
+		OBJ_130 /* OptionalDateValueCodableFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* OptionalDateValueCodableFormatter.swift */; };
+		OBJ_131 /* CGPoint+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* CGPoint+Swissors.swift */; };
+		OBJ_132 /* CGRect+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* CGRect+Swissors.swift */; };
+		OBJ_133 /* CGSize+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* CGSize+Swissors.swift */; };
+		OBJ_134 /* DispatchQueue+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* DispatchQueue+Swissors.swift */; };
+		OBJ_135 /* Bundle+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* Bundle+Swissors.swift */; };
+		OBJ_136 /* Date+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* Date+Swissors.swift */; };
+		OBJ_137 /* DateFormatter+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* DateFormatter+Swissors.swift */; };
+		OBJ_138 /* Decimal+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Decimal+Swissors.swift */; };
+		OBJ_139 /* FileManager+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* FileManager+Swissors.swift */; };
+		OBJ_140 /* Locale+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Locale+Swissors.swift */; };
+		OBJ_141 /* NSError+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* NSError+Swissors.swift */; };
+		OBJ_142 /* NSRange+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* NSRange+Swissors.swift */; };
+		OBJ_143 /* Collection+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* Collection+Swissors.swift */; };
+		OBJ_144 /* Comparable + Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* Comparable + Swissors.swift */; };
+		OBJ_145 /* FloatingPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* FloatingPoint.swift */; };
+		OBJ_146 /* Int+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* Int+Swissors.swift */; };
+		OBJ_147 /* String+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* String+Swissors.swift */; };
+		OBJ_148 /* NSLayoutConstraint+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* NSLayoutConstraint+Swissors.swift */; };
+		OBJ_149 /* UIApplication+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* UIApplication+Swissors.swift */; };
+		OBJ_150 /* UICollectionView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* UICollectionView+Swissors.swift */; };
+		OBJ_151 /* UIColor+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* UIColor+Swissors.swift */; };
+		OBJ_152 /* UIEdgeInsets+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* UIEdgeInsets+Swissors.swift */; };
+		OBJ_153 /* UIImage+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* UIImage+Swissors.swift */; };
+		OBJ_154 /* UINib+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* UINib+Swissors.swift */; };
+		OBJ_155 /* UIRectCorner+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* UIRectCorner+Swissors.swift */; };
+		OBJ_156 /* UIStackView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* UIStackView+Swissors.swift */; };
+		OBJ_157 /* UITableView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* UITableView+Swissors.swift */; };
+		OBJ_158 /* UIView+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* UIView+Swissors.swift */; };
+		OBJ_159 /* UIViewAutoresizing+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* UIViewAutoresizing+Swissors.swift */; };
+		OBJ_160 /* UIViewController+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* UIViewController+Swissors.swift */; };
+		OBJ_161 /* UIWindow+Swissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* UIWindow+Swissors.swift */; };
+		OBJ_162 /* DefaultDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* DefaultDateFormatter.swift */; };
+		OBJ_163 /* ISO8601Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* ISO8601Formatter.swift */; };
+		OBJ_164 /* ServerDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* ServerDateFormatter.swift */; };
+		OBJ_166 /* AttributedStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* AttributedStringBuilder.swift */; };
+		OBJ_167 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* Closure.swift */; };
+		OBJ_168 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* KeyboardObserver.swift */; };
+		OBJ_169 /* Throttler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* Throttler.swift */; };
+		OBJ_170 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* Weak.swift */; };
+		OBJ_171 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* UserDefault.swift */; };
+		OBJ_173 /* BetterCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "bettercodable::BetterCodable::Product" /* BetterCodable.framework */; };
+		OBJ_180 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_191 /* DefaultURLFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* DefaultURLFormatterTests.swift */; };
+		OBJ_192 /* ServerDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* ServerDateFormatterTests.swift */; };
+		OBJ_194 /* Swissors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ios-swissors::Swissors::Product" /* Swissors.framework */; };
+		OBJ_195 /* BetterCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "bettercodable::BetterCodable::Product" /* BetterCodable.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A25DED5728632CE60020E877 /* PBXContainerItemProxy */ = {
+		A2895D142869823200EF92E0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "bettercodable::BetterCodable";
 			remoteInfo = BetterCodable;
 		};
+		A2895D152869823200EF92E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "ios-swissors::Swissors";
+			remoteInfo = Swissors;
+		};
+		A2895D162869823200EF92E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "bettercodable::BetterCodable";
+			remoteInfo = BetterCodable;
+		};
+		A2895D172869823200EF92E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "ios-swissors::SwissorsTests";
+			remoteInfo = SwissorsTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A25DED5928633CF20020E877 /* DefaultURLStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultURLStrategy.swift; sourceTree = "<group>"; };
+		A2895D182869825F00EF92E0 /* TimeZoneFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneFormatter.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		OBJ_13 /* CGPoint+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_14 /* CGRect+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_15 /* CGSize+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_17 /* DispatchQueue+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_19 /* Bundle+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_20 /* Date+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_21 /* Decimal+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_22 /* FileManager+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_23 /* Locale+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_24 /* NSError+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_25 /* NSRange+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRange+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_27 /* Collection+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_28 /* Comparable + Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comparable + Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_29 /* FloatingPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPoint.swift; sourceTree = "<group>"; };
-		OBJ_30 /* Int+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_31 /* String+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_33 /* NSLayoutConstraint+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_34 /* UIApplication+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_35 /* UICollectionView+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_36 /* UIColor+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_37 /* UIEdgeInsets+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_38 /* UIImage+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_39 /* UINib+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINib+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_40 /* UIRectCorner+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRectCorner+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_41 /* UIStackView+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_42 /* UITableView+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_43 /* UIView+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_44 /* UIViewAutoresizing+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewAutoresizing+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_45 /* UIViewController+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_46 /* UIWindow+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Swissors.swift"; sourceTree = "<group>"; };
-		OBJ_48 /* AttributedStringBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringBuilder.swift; sourceTree = "<group>"; };
-		OBJ_49 /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
-		OBJ_50 /* DefaultDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDateFormatter.swift; sourceTree = "<group>"; };
-		OBJ_51 /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
-		OBJ_52 /* Throttler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throttler.swift; sourceTree = "<group>"; };
-		OBJ_53 /* Weak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
-		OBJ_55 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		OBJ_12 /* DefaultURLStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultURLStrategy.swift; sourceTree = "<group>"; };
+		OBJ_13 /* OptionalDateValueCodableFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalDateValueCodableFormatter.swift; sourceTree = "<group>"; };
+		OBJ_16 /* CGPoint+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_17 /* CGRect+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_18 /* CGSize+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_20 /* DispatchQueue+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_22 /* Bundle+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_23 /* Date+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_24 /* DateFormatter+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_25 /* Decimal+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_26 /* FileManager+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_27 /* Locale+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_28 /* NSError+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_29 /* NSRange+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRange+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_31 /* Collection+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_32 /* Comparable + Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comparable + Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_33 /* FloatingPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPoint.swift; sourceTree = "<group>"; };
+		OBJ_34 /* Int+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_35 /* String+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_37 /* NSLayoutConstraint+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_38 /* UIApplication+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_39 /* UICollectionView+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_40 /* UIColor+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_41 /* UIEdgeInsets+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_42 /* UIImage+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_43 /* UINib+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINib+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_44 /* UIRectCorner+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRectCorner+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_45 /* UIStackView+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_46 /* UITableView+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_47 /* UIView+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_48 /* UIViewAutoresizing+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewAutoresizing+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_49 /* UIViewController+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_50 /* UIWindow+Swissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Swissors.swift"; sourceTree = "<group>"; };
+		OBJ_52 /* DefaultDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDateFormatter.swift; sourceTree = "<group>"; };
+		OBJ_53 /* ISO8601Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601Formatter.swift; sourceTree = "<group>"; };
+		OBJ_54 /* ServerDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerDateFormatter.swift; sourceTree = "<group>"; };
+		OBJ_57 /* AttributedStringBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringBuilder.swift; sourceTree = "<group>"; };
+		OBJ_58 /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
+		OBJ_59 /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_60 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
-		OBJ_61 /* DefaultCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCodable.swift; sourceTree = "<group>"; };
-		OBJ_62 /* DefaultEmptyArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultEmptyArray.swift; sourceTree = "<group>"; };
-		OBJ_63 /* DefaultEmptyDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultEmptyDictionary.swift; sourceTree = "<group>"; };
-		OBJ_64 /* DefaultFalse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFalse.swift; sourceTree = "<group>"; };
-		OBJ_65 /* DefaultTrue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTrue.swift; sourceTree = "<group>"; };
-		OBJ_66 /* ISO8601Strategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601Strategy.swift; sourceTree = "<group>"; };
-		OBJ_67 /* ISO8601WithFractionalSecondsStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601WithFractionalSecondsStrategy.swift; sourceTree = "<group>"; };
-		OBJ_68 /* LosslessArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LosslessArray.swift; sourceTree = "<group>"; };
-		OBJ_69 /* LosslessValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LosslessValue.swift; sourceTree = "<group>"; };
-		OBJ_70 /* LossyArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossyArray.swift; sourceTree = "<group>"; };
-		OBJ_71 /* LossyDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossyDictionary.swift; sourceTree = "<group>"; };
-		OBJ_72 /* LossyOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossyOptional.swift; sourceTree = "<group>"; };
-		OBJ_73 /* RFC2822Strategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RFC2822Strategy.swift; sourceTree = "<group>"; };
-		OBJ_74 /* RFC3339Strategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RFC3339Strategy.swift; sourceTree = "<group>"; };
-		OBJ_75 /* TimestampStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampStrategy.swift; sourceTree = "<group>"; };
-		OBJ_76 /* YearMonthDayStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearMonthDayStrategy.swift; sourceTree = "<group>"; };
-		OBJ_77 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/maximbutin/Documents/Job/ios-Swissors/.build/checkouts/BetterCodable/Package.swift"; sourceTree = "<group>"; };
-		OBJ_81 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		OBJ_82 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		OBJ_83 /* Swissors.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Swissors.podspec; sourceTree = "<group>"; };
+		OBJ_60 /* Throttler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throttler.swift; sourceTree = "<group>"; };
+		OBJ_61 /* Weak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
+		OBJ_63 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		OBJ_65 /* DefaultURLFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultURLFormatterTests.swift; sourceTree = "<group>"; };
+		OBJ_66 /* ServerDateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerDateFormatterTests.swift; sourceTree = "<group>"; };
+		OBJ_70 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
+		OBJ_71 /* DefaultCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCodable.swift; sourceTree = "<group>"; };
+		OBJ_72 /* DefaultEmptyArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultEmptyArray.swift; sourceTree = "<group>"; };
+		OBJ_73 /* DefaultEmptyDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultEmptyDictionary.swift; sourceTree = "<group>"; };
+		OBJ_74 /* DefaultFalse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFalse.swift; sourceTree = "<group>"; };
+		OBJ_75 /* DefaultTrue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTrue.swift; sourceTree = "<group>"; };
+		OBJ_76 /* ISO8601Strategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601Strategy.swift; sourceTree = "<group>"; };
+		OBJ_77 /* ISO8601WithFractionalSecondsStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601WithFractionalSecondsStrategy.swift; sourceTree = "<group>"; };
+		OBJ_78 /* LosslessArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LosslessArray.swift; sourceTree = "<group>"; };
+		OBJ_79 /* LosslessValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LosslessValue.swift; sourceTree = "<group>"; };
+		OBJ_80 /* LossyArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossyArray.swift; sourceTree = "<group>"; };
+		OBJ_81 /* LossyDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossyDictionary.swift; sourceTree = "<group>"; };
+		OBJ_82 /* LossyOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossyOptional.swift; sourceTree = "<group>"; };
+		OBJ_83 /* RFC2822Strategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RFC2822Strategy.swift; sourceTree = "<group>"; };
+		OBJ_84 /* RFC3339Strategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RFC3339Strategy.swift; sourceTree = "<group>"; };
+		OBJ_85 /* TimestampStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampStrategy.swift; sourceTree = "<group>"; };
+		OBJ_86 /* YearMonthDayStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearMonthDayStrategy.swift; sourceTree = "<group>"; };
+		OBJ_87 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/maximbutin/Documents/Job/ios-Swissors/.build/checkouts/BetterCodable/Package.swift"; sourceTree = "<group>"; };
 		OBJ_9 /* Swissors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swissors.h; sourceTree = "<group>"; };
+		OBJ_92 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		OBJ_93 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_94 /* Swissors.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Swissors.podspec; sourceTree = "<group>"; };
 		"bettercodable::BetterCodable::Product" /* BetterCodable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BetterCodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"ios-swissors::Swissors::Product" /* Swissors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Swissors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"ios-swissors::SwissorsTests::Product" /* SwissorsTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = SwissorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_106 /* Frameworks */ = {
+		OBJ_117 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_155 /* Frameworks */ = {
+		OBJ_172 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_156 /* BetterCodable.framework in Frameworks */,
+				OBJ_173 /* BetterCodable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_193 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_194 /* Swissors.framework in Frameworks */,
+				OBJ_195 /* BetterCodable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A2F055D628643CFE004F58C9 /* Codable */ = {
+		OBJ_11 /* Codable */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_50 /* DefaultDateFormatter.swift */,
-				A25DED5928633CF20020E877 /* DefaultURLStrategy.swift */,
+				OBJ_12 /* DefaultURLStrategy.swift */,
+				OBJ_13 /* OptionalDateValueCodableFormatter.swift */,
 			);
 			path = Codable;
 			sourceTree = "<group>";
 		};
-		OBJ_11 /* Extensions */ = {
+		OBJ_14 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_12 /* CoreGraphics */,
-				OBJ_16 /* Dispatch */,
-				OBJ_18 /* Foundation */,
-				OBJ_26 /* Swift */,
-				OBJ_32 /* UIKit */,
+				OBJ_15 /* CoreGraphics */,
+				OBJ_19 /* Dispatch */,
+				OBJ_21 /* Foundation */,
+				OBJ_30 /* Swift */,
+				OBJ_36 /* UIKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		OBJ_12 /* CoreGraphics */ = {
+		OBJ_15 /* CoreGraphics */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_13 /* CGPoint+Swissors.swift */,
-				OBJ_14 /* CGRect+Swissors.swift */,
-				OBJ_15 /* CGSize+Swissors.swift */,
+				OBJ_16 /* CGPoint+Swissors.swift */,
+				OBJ_17 /* CGRect+Swissors.swift */,
+				OBJ_18 /* CGSize+Swissors.swift */,
 			);
 			path = CoreGraphics;
 			sourceTree = "<group>";
 		};
-		OBJ_16 /* Dispatch */ = {
+		OBJ_19 /* Dispatch */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_17 /* DispatchQueue+Swissors.swift */,
+				OBJ_20 /* DispatchQueue+Swissors.swift */,
 			);
 			path = Dispatch;
 			sourceTree = "<group>";
 		};
-		OBJ_18 /* Foundation */ = {
+		OBJ_21 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_19 /* Bundle+Swissors.swift */,
-				OBJ_20 /* Date+Swissors.swift */,
-				OBJ_21 /* Decimal+Swissors.swift */,
-				OBJ_22 /* FileManager+Swissors.swift */,
-				OBJ_23 /* Locale+Swissors.swift */,
-				OBJ_24 /* NSError+Swissors.swift */,
-				OBJ_25 /* NSRange+Swissors.swift */,
+				OBJ_22 /* Bundle+Swissors.swift */,
+				OBJ_23 /* Date+Swissors.swift */,
+				OBJ_24 /* DateFormatter+Swissors.swift */,
+				OBJ_25 /* Decimal+Swissors.swift */,
+				OBJ_26 /* FileManager+Swissors.swift */,
+				OBJ_27 /* Locale+Swissors.swift */,
+				OBJ_28 /* NSError+Swissors.swift */,
+				OBJ_29 /* NSRange+Swissors.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
 		};
-		OBJ_26 /* Swift */ = {
+		OBJ_30 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_27 /* Collection+Swissors.swift */,
-				OBJ_28 /* Comparable + Swissors.swift */,
-				OBJ_29 /* FloatingPoint.swift */,
-				OBJ_30 /* Int+Swissors.swift */,
-				OBJ_31 /* String+Swissors.swift */,
+				OBJ_31 /* Collection+Swissors.swift */,
+				OBJ_32 /* Comparable + Swissors.swift */,
+				OBJ_33 /* FloatingPoint.swift */,
+				OBJ_34 /* Int+Swissors.swift */,
+				OBJ_35 /* String+Swissors.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
 		};
-		OBJ_32 /* UIKit */ = {
+		OBJ_36 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_33 /* NSLayoutConstraint+Swissors.swift */,
-				OBJ_34 /* UIApplication+Swissors.swift */,
-				OBJ_35 /* UICollectionView+Swissors.swift */,
-				OBJ_36 /* UIColor+Swissors.swift */,
-				OBJ_37 /* UIEdgeInsets+Swissors.swift */,
-				OBJ_38 /* UIImage+Swissors.swift */,
-				OBJ_39 /* UINib+Swissors.swift */,
-				OBJ_40 /* UIRectCorner+Swissors.swift */,
-				OBJ_41 /* UIStackView+Swissors.swift */,
-				OBJ_42 /* UITableView+Swissors.swift */,
-				OBJ_43 /* UIView+Swissors.swift */,
-				OBJ_44 /* UIViewAutoresizing+Swissors.swift */,
-				OBJ_45 /* UIViewController+Swissors.swift */,
-				OBJ_46 /* UIWindow+Swissors.swift */,
+				OBJ_37 /* NSLayoutConstraint+Swissors.swift */,
+				OBJ_38 /* UIApplication+Swissors.swift */,
+				OBJ_39 /* UICollectionView+Swissors.swift */,
+				OBJ_40 /* UIColor+Swissors.swift */,
+				OBJ_41 /* UIEdgeInsets+Swissors.swift */,
+				OBJ_42 /* UIImage+Swissors.swift */,
+				OBJ_43 /* UINib+Swissors.swift */,
+				OBJ_44 /* UIRectCorner+Swissors.swift */,
+				OBJ_45 /* UIStackView+Swissors.swift */,
+				OBJ_46 /* UITableView+Swissors.swift */,
+				OBJ_47 /* UIView+Swissors.swift */,
+				OBJ_48 /* UIViewAutoresizing+Swissors.swift */,
+				OBJ_49 /* UIViewController+Swissors.swift */,
+				OBJ_50 /* UIWindow+Swissors.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
 		};
-		OBJ_47 /* Types */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_48 /* AttributedStringBuilder.swift */,
-				OBJ_49 /* Closure.swift */,
-				OBJ_51 /* KeyboardObserver.swift */,
-				OBJ_52 /* Throttler.swift */,
-				OBJ_53 /* Weak.swift */,
-			);
-			path = Types;
-			sourceTree = "<group>";
-		};
-		OBJ_5 = {
+		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_56 /* Tests */,
-				OBJ_57 /* Dependencies */,
-				OBJ_78 /* Products */,
-				OBJ_81 /* LICENSE */,
-				OBJ_82 /* README.md */,
-				OBJ_83 /* Swissors.podspec */,
+				OBJ_64 /* Tests */,
+				OBJ_67 /* Dependencies */,
+				OBJ_88 /* Products */,
+				OBJ_92 /* LICENSE */,
+				OBJ_93 /* README.md */,
+				OBJ_94 /* Swissors.podspec */,
 			);
+			name = "";
 			sourceTree = "<group>";
 		};
-		OBJ_54 /* Wrappers */ = {
+		OBJ_51 /* Formatters */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_55 /* UserDefault.swift */,
+				OBJ_52 /* DefaultDateFormatter.swift */,
+				OBJ_53 /* ISO8601Formatter.swift */,
+				OBJ_54 /* ServerDateFormatter.swift */,
+				A2895D182869825F00EF92E0 /* TimeZoneFormatter.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
+		OBJ_56 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_57 /* AttributedStringBuilder.swift */,
+				OBJ_58 /* Closure.swift */,
+				OBJ_59 /* KeyboardObserver.swift */,
+				OBJ_60 /* Throttler.swift */,
+				OBJ_61 /* Weak.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		OBJ_62 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_63 /* UserDefault.swift */,
 			);
 			path = Wrappers;
 			sourceTree = "<group>";
 		};
-		OBJ_56 /* Tests */ = {
+		OBJ_64 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				OBJ_65 /* DefaultURLFormatterTests.swift */,
+				OBJ_66 /* ServerDateFormatterTests.swift */,
 			);
-			name = Tests;
+			path = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_57 /* Dependencies */ = {
+		OBJ_67 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_58 /* BetterCodable 0.4.0 */,
+				OBJ_68 /* BetterCodable 0.4.0 */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		OBJ_58 /* BetterCodable 0.4.0 */ = {
+		OBJ_68 /* BetterCodable 0.4.0 */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_59 /* BetterCodable */,
-				OBJ_77 /* Package.swift */,
+				OBJ_69 /* BetterCodable */,
+				OBJ_87 /* Package.swift */,
 			);
 			name = "BetterCodable 0.4.0";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_59 /* BetterCodable */ = {
+		OBJ_69 /* BetterCodable */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_60 /* DateValue.swift */,
-				OBJ_61 /* DefaultCodable.swift */,
-				OBJ_62 /* DefaultEmptyArray.swift */,
-				OBJ_63 /* DefaultEmptyDictionary.swift */,
-				OBJ_64 /* DefaultFalse.swift */,
-				OBJ_65 /* DefaultTrue.swift */,
-				OBJ_66 /* ISO8601Strategy.swift */,
-				OBJ_67 /* ISO8601WithFractionalSecondsStrategy.swift */,
-				OBJ_68 /* LosslessArray.swift */,
-				OBJ_69 /* LosslessValue.swift */,
-				OBJ_70 /* LossyArray.swift */,
-				OBJ_71 /* LossyDictionary.swift */,
-				OBJ_72 /* LossyOptional.swift */,
-				OBJ_73 /* RFC2822Strategy.swift */,
-				OBJ_74 /* RFC3339Strategy.swift */,
-				OBJ_75 /* TimestampStrategy.swift */,
-				OBJ_76 /* YearMonthDayStrategy.swift */,
+				OBJ_70 /* DateValue.swift */,
+				OBJ_71 /* DefaultCodable.swift */,
+				OBJ_72 /* DefaultEmptyArray.swift */,
+				OBJ_73 /* DefaultEmptyDictionary.swift */,
+				OBJ_74 /* DefaultFalse.swift */,
+				OBJ_75 /* DefaultTrue.swift */,
+				OBJ_76 /* ISO8601Strategy.swift */,
+				OBJ_77 /* ISO8601WithFractionalSecondsStrategy.swift */,
+				OBJ_78 /* LosslessArray.swift */,
+				OBJ_79 /* LosslessValue.swift */,
+				OBJ_80 /* LossyArray.swift */,
+				OBJ_81 /* LossyDictionary.swift */,
+				OBJ_82 /* LossyOptional.swift */,
+				OBJ_83 /* RFC2822Strategy.swift */,
+				OBJ_84 /* RFC3339Strategy.swift */,
+				OBJ_85 /* TimestampStrategy.swift */,
+				OBJ_86 /* YearMonthDayStrategy.swift */,
 			);
 			name = BetterCodable;
 			path = .build/checkouts/BetterCodable/Sources/BetterCodable;
@@ -340,38 +416,40 @@
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_78 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				"bettercodable::BetterCodable::Product" /* BetterCodable.framework */,
-				"ios-swissors::Swissors::Product" /* Swissors.framework */,
-			);
-			name = Products;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		OBJ_8 /* Swissors */ = {
 			isa = PBXGroup;
 			children = (
-				A2F055D628643CFE004F58C9 /* Codable */,
 				OBJ_9 /* Swissors.h */,
 				OBJ_10 /* Info.plist */,
-				OBJ_11 /* Extensions */,
-				OBJ_47 /* Types */,
-				OBJ_54 /* Wrappers */,
+				OBJ_11 /* Codable */,
+				OBJ_14 /* Extensions */,
+				OBJ_51 /* Formatters */,
+				OBJ_56 /* Types */,
+				OBJ_62 /* Wrappers */,
 			);
 			name = Swissors;
 			path = Sources/Swissors;
 			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"bettercodable::BetterCodable::Product" /* BetterCodable.framework */,
+				"ios-swissors::Swissors::Product" /* Swissors.framework */,
+				"ios-swissors::SwissorsTests::Product" /* SwissorsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
 		"bettercodable::BetterCodable" /* BetterCodable */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_85 /* Build configuration list for PBXNativeTarget "BetterCodable" */;
+			buildConfigurationList = OBJ_96 /* Build configuration list for PBXNativeTarget "BetterCodable" */;
 			buildPhases = (
-				OBJ_88 /* Sources */,
-				OBJ_106 /* Frameworks */,
+				OBJ_99 /* Sources */,
+				OBJ_117 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -384,9 +462,9 @@
 		};
 		"bettercodable::SwiftPMPackageDescription" /* BetterCodablePackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_108 /* Build configuration list for PBXNativeTarget "BetterCodablePackageDescription" */;
+			buildConfigurationList = OBJ_119 /* Build configuration list for PBXNativeTarget "BetterCodablePackageDescription" */;
 			buildPhases = (
-				OBJ_111 /* Sources */,
+				OBJ_122 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -398,9 +476,9 @@
 		};
 		"ios-swissors::SwiftPMPackageDescription" /* SwissorsPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_159 /* Build configuration list for PBXNativeTarget "SwissorsPackageDescription" */;
+			buildConfigurationList = OBJ_176 /* Build configuration list for PBXNativeTarget "SwissorsPackageDescription" */;
 			buildPhases = (
-				OBJ_162 /* Sources */,
+				OBJ_179 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -412,20 +490,38 @@
 		};
 		"ios-swissors::Swissors" /* Swissors */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_114 /* Build configuration list for PBXNativeTarget "Swissors" */;
+			buildConfigurationList = OBJ_125 /* Build configuration list for PBXNativeTarget "Swissors" */;
 			buildPhases = (
-				OBJ_117 /* Sources */,
-				OBJ_155 /* Frameworks */,
+				OBJ_128 /* Sources */,
+				OBJ_172 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_157 /* PBXTargetDependency */,
+				OBJ_174 /* PBXTargetDependency */,
 			);
 			name = Swissors;
 			productName = Swissors;
 			productReference = "ios-swissors::Swissors::Product" /* Swissors.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		"ios-swissors::SwissorsTests" /* SwissorsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_187 /* Build configuration list for PBXNativeTarget "SwissorsTests" */;
+			buildPhases = (
+				OBJ_190 /* Sources */,
+				OBJ_193 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_196 /* PBXTargetDependency */,
+				OBJ_197 /* PBXTargetDependency */,
+			);
+			name = SwissorsTests;
+			productName = SwissorsTests;
+			productReference = "ios-swissors::SwissorsTests::Product" /* SwissorsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -443,8 +539,8 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5;
-			productRefGroup = OBJ_78 /* Products */;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_88 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -452,108 +548,139 @@
 				"bettercodable::SwiftPMPackageDescription" /* BetterCodablePackageDescription */,
 				"ios-swissors::Swissors" /* Swissors */,
 				"ios-swissors::SwiftPMPackageDescription" /* SwissorsPackageDescription */,
+				"ios-swissors::SwissorsPackageTests::ProductTarget" /* SwissorsPackageTests */,
+				"ios-swissors::SwissorsTests" /* SwissorsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_111 /* Sources */ = {
+		OBJ_122 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_112 /* Package.swift in Sources */,
+				OBJ_123 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_117 /* Sources */ = {
+		OBJ_128 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_118 /* CGPoint+Swissors.swift in Sources */,
-				OBJ_119 /* CGRect+Swissors.swift in Sources */,
-				OBJ_120 /* CGSize+Swissors.swift in Sources */,
-				OBJ_121 /* DispatchQueue+Swissors.swift in Sources */,
-				OBJ_122 /* Bundle+Swissors.swift in Sources */,
-				OBJ_123 /* Date+Swissors.swift in Sources */,
-				OBJ_124 /* Decimal+Swissors.swift in Sources */,
-				OBJ_125 /* FileManager+Swissors.swift in Sources */,
-				OBJ_126 /* Locale+Swissors.swift in Sources */,
-				OBJ_127 /* NSError+Swissors.swift in Sources */,
-				OBJ_128 /* NSRange+Swissors.swift in Sources */,
-				OBJ_129 /* Collection+Swissors.swift in Sources */,
-				OBJ_130 /* Comparable + Swissors.swift in Sources */,
-				OBJ_131 /* FloatingPoint.swift in Sources */,
-				OBJ_132 /* Int+Swissors.swift in Sources */,
-				OBJ_133 /* String+Swissors.swift in Sources */,
-				OBJ_134 /* NSLayoutConstraint+Swissors.swift in Sources */,
-				OBJ_135 /* UIApplication+Swissors.swift in Sources */,
-				OBJ_136 /* UICollectionView+Swissors.swift in Sources */,
-				OBJ_137 /* UIColor+Swissors.swift in Sources */,
-				OBJ_138 /* UIEdgeInsets+Swissors.swift in Sources */,
-				OBJ_139 /* UIImage+Swissors.swift in Sources */,
-				OBJ_140 /* UINib+Swissors.swift in Sources */,
-				OBJ_141 /* UIRectCorner+Swissors.swift in Sources */,
-				OBJ_142 /* UIStackView+Swissors.swift in Sources */,
-				OBJ_143 /* UITableView+Swissors.swift in Sources */,
-				OBJ_144 /* UIView+Swissors.swift in Sources */,
-				OBJ_145 /* UIViewAutoresizing+Swissors.swift in Sources */,
-				OBJ_146 /* UIViewController+Swissors.swift in Sources */,
-				OBJ_147 /* UIWindow+Swissors.swift in Sources */,
-				OBJ_148 /* AttributedStringBuilder.swift in Sources */,
-				OBJ_149 /* Closure.swift in Sources */,
-				OBJ_150 /* DefaultDateFormatter.swift in Sources */,
-				OBJ_151 /* KeyboardObserver.swift in Sources */,
-				A25DED5A28633CF20020E877 /* DefaultURLStrategy.swift in Sources */,
-				OBJ_152 /* Throttler.swift in Sources */,
-				OBJ_153 /* Weak.swift in Sources */,
-				OBJ_154 /* UserDefault.swift in Sources */,
+				OBJ_129 /* DefaultURLStrategy.swift in Sources */,
+				OBJ_130 /* OptionalDateValueCodableFormatter.swift in Sources */,
+				OBJ_131 /* CGPoint+Swissors.swift in Sources */,
+				OBJ_132 /* CGRect+Swissors.swift in Sources */,
+				OBJ_133 /* CGSize+Swissors.swift in Sources */,
+				OBJ_134 /* DispatchQueue+Swissors.swift in Sources */,
+				OBJ_135 /* Bundle+Swissors.swift in Sources */,
+				A2895D192869825F00EF92E0 /* TimeZoneFormatter.swift in Sources */,
+				OBJ_136 /* Date+Swissors.swift in Sources */,
+				OBJ_137 /* DateFormatter+Swissors.swift in Sources */,
+				OBJ_138 /* Decimal+Swissors.swift in Sources */,
+				OBJ_139 /* FileManager+Swissors.swift in Sources */,
+				OBJ_140 /* Locale+Swissors.swift in Sources */,
+				OBJ_141 /* NSError+Swissors.swift in Sources */,
+				OBJ_142 /* NSRange+Swissors.swift in Sources */,
+				OBJ_143 /* Collection+Swissors.swift in Sources */,
+				OBJ_144 /* Comparable + Swissors.swift in Sources */,
+				OBJ_145 /* FloatingPoint.swift in Sources */,
+				OBJ_146 /* Int+Swissors.swift in Sources */,
+				OBJ_147 /* String+Swissors.swift in Sources */,
+				OBJ_148 /* NSLayoutConstraint+Swissors.swift in Sources */,
+				OBJ_149 /* UIApplication+Swissors.swift in Sources */,
+				OBJ_150 /* UICollectionView+Swissors.swift in Sources */,
+				OBJ_151 /* UIColor+Swissors.swift in Sources */,
+				OBJ_152 /* UIEdgeInsets+Swissors.swift in Sources */,
+				OBJ_153 /* UIImage+Swissors.swift in Sources */,
+				OBJ_154 /* UINib+Swissors.swift in Sources */,
+				OBJ_155 /* UIRectCorner+Swissors.swift in Sources */,
+				OBJ_156 /* UIStackView+Swissors.swift in Sources */,
+				OBJ_157 /* UITableView+Swissors.swift in Sources */,
+				OBJ_158 /* UIView+Swissors.swift in Sources */,
+				OBJ_159 /* UIViewAutoresizing+Swissors.swift in Sources */,
+				OBJ_160 /* UIViewController+Swissors.swift in Sources */,
+				OBJ_161 /* UIWindow+Swissors.swift in Sources */,
+				OBJ_162 /* DefaultDateFormatter.swift in Sources */,
+				OBJ_163 /* ISO8601Formatter.swift in Sources */,
+				OBJ_164 /* ServerDateFormatter.swift in Sources */,
+				OBJ_166 /* AttributedStringBuilder.swift in Sources */,
+				OBJ_167 /* Closure.swift in Sources */,
+				OBJ_168 /* KeyboardObserver.swift in Sources */,
+				OBJ_169 /* Throttler.swift in Sources */,
+				OBJ_170 /* Weak.swift in Sources */,
+				OBJ_171 /* UserDefault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_162 /* Sources */ = {
+		OBJ_179 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_163 /* Package.swift in Sources */,
+				OBJ_180 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_88 /* Sources */ = {
+		OBJ_190 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_89 /* DateValue.swift in Sources */,
-				OBJ_90 /* DefaultCodable.swift in Sources */,
-				OBJ_91 /* DefaultEmptyArray.swift in Sources */,
-				OBJ_92 /* DefaultEmptyDictionary.swift in Sources */,
-				OBJ_93 /* DefaultFalse.swift in Sources */,
-				OBJ_94 /* DefaultTrue.swift in Sources */,
-				OBJ_95 /* ISO8601Strategy.swift in Sources */,
-				OBJ_96 /* ISO8601WithFractionalSecondsStrategy.swift in Sources */,
-				OBJ_97 /* LosslessArray.swift in Sources */,
-				OBJ_98 /* LosslessValue.swift in Sources */,
-				OBJ_99 /* LossyArray.swift in Sources */,
-				OBJ_100 /* LossyDictionary.swift in Sources */,
-				OBJ_101 /* LossyOptional.swift in Sources */,
-				OBJ_102 /* RFC2822Strategy.swift in Sources */,
-				OBJ_103 /* RFC3339Strategy.swift in Sources */,
-				OBJ_104 /* TimestampStrategy.swift in Sources */,
-				OBJ_105 /* YearMonthDayStrategy.swift in Sources */,
+				OBJ_191 /* DefaultURLFormatterTests.swift in Sources */,
+				OBJ_192 /* ServerDateFormatterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_100 /* DateValue.swift in Sources */,
+				OBJ_101 /* DefaultCodable.swift in Sources */,
+				OBJ_102 /* DefaultEmptyArray.swift in Sources */,
+				OBJ_103 /* DefaultEmptyDictionary.swift in Sources */,
+				OBJ_104 /* DefaultFalse.swift in Sources */,
+				OBJ_105 /* DefaultTrue.swift in Sources */,
+				OBJ_106 /* ISO8601Strategy.swift in Sources */,
+				OBJ_107 /* ISO8601WithFractionalSecondsStrategy.swift in Sources */,
+				OBJ_108 /* LosslessArray.swift in Sources */,
+				OBJ_109 /* LosslessValue.swift in Sources */,
+				OBJ_110 /* LossyArray.swift in Sources */,
+				OBJ_111 /* LossyDictionary.swift in Sources */,
+				OBJ_112 /* LossyOptional.swift in Sources */,
+				OBJ_113 /* RFC2822Strategy.swift in Sources */,
+				OBJ_114 /* RFC3339Strategy.swift in Sources */,
+				OBJ_115 /* TimestampStrategy.swift in Sources */,
+				OBJ_116 /* YearMonthDayStrategy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_157 /* PBXTargetDependency */ = {
+		OBJ_174 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "bettercodable::BetterCodable" /* BetterCodable */;
-			targetProxy = A25DED5728632CE60020E877 /* PBXContainerItemProxy */;
+			targetProxy = A2895D142869823200EF92E0 /* PBXContainerItemProxy */;
+		};
+		OBJ_185 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "ios-swissors::SwissorsTests" /* SwissorsTests */;
+			targetProxy = A2895D172869823200EF92E0 /* PBXContainerItemProxy */;
+		};
+		OBJ_196 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "ios-swissors::Swissors" /* Swissors */;
+			targetProxy = A2895D152869823200EF92E0 /* PBXContainerItemProxy */;
+		};
+		OBJ_197 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "bettercodable::BetterCodable" /* BetterCodable */;
+			targetProxy = A2895D162869823200EF92E0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_109 /* Debug */ = {
+		OBJ_120 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -562,7 +689,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_110 /* Release */ = {
+		OBJ_121 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -571,7 +698,7 @@
 			};
 			name = Release;
 		};
-		OBJ_115 /* Debug */ = {
+		OBJ_126 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
@@ -601,7 +728,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_116 /* Release */ = {
+		OBJ_127 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
@@ -631,7 +758,7 @@
 			};
 			name = Release;
 		};
-		OBJ_160 /* Debug */ = {
+		OBJ_177 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -640,12 +767,78 @@
 			};
 			name = Debug;
 		};
-		OBJ_161 /* Release */ = {
+		OBJ_178 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/ManifestAPI -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -package-description-version 5.0.0";
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_183 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_184 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_188 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Swissors.xcodeproj/SwissorsTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = SwissorsTests;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Debug;
+		};
+		OBJ_189 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Swissors.xcodeproj/SwissorsTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = SwissorsTests;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
 			name = Release;
 		};
@@ -702,7 +895,7 @@
 			};
 			name = Release;
 		};
-		OBJ_86 /* Debug */ = {
+		OBJ_97 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
@@ -732,7 +925,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_87 /* Release */ = {
+		OBJ_98 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
@@ -765,29 +958,47 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_108 /* Build configuration list for PBXNativeTarget "BetterCodablePackageDescription" */ = {
+		OBJ_119 /* Build configuration list for PBXNativeTarget "BetterCodablePackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_109 /* Debug */,
-				OBJ_110 /* Release */,
+				OBJ_120 /* Debug */,
+				OBJ_121 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_114 /* Build configuration list for PBXNativeTarget "Swissors" */ = {
+		OBJ_125 /* Build configuration list for PBXNativeTarget "Swissors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_115 /* Debug */,
-				OBJ_116 /* Release */,
+				OBJ_126 /* Debug */,
+				OBJ_127 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_159 /* Build configuration list for PBXNativeTarget "SwissorsPackageDescription" */ = {
+		OBJ_176 /* Build configuration list for PBXNativeTarget "SwissorsPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_160 /* Debug */,
-				OBJ_161 /* Release */,
+				OBJ_177 /* Debug */,
+				OBJ_178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_182 /* Build configuration list for PBXAggregateTarget "SwissorsPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_183 /* Debug */,
+				OBJ_184 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_187 /* Build configuration list for PBXNativeTarget "SwissorsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_188 /* Debug */,
+				OBJ_189 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -801,11 +1012,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_85 /* Build configuration list for PBXNativeTarget "BetterCodable" */ = {
+		OBJ_96 /* Build configuration list for PBXNativeTarget "BetterCodable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_86 /* Debug */,
-				OBJ_87 /* Release */,
+				OBJ_97 /* Debug */,
+				OBJ_98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

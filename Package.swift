@@ -24,5 +24,13 @@ let package = Package(
                 "BetterCodable",
             ]
         ),
+        .testTarget(
+            name: "SwissorsTests",
+            dependencies: [
+                "Swissors",
+                "BetterCodable",
+            ],
+            path: "Tests"
+        )
     ]
 )
