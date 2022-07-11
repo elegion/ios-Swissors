@@ -240,9 +240,11 @@ extension AttributedStringBuilder {
      Don't forget about calling build() function after all attributes are set.
      */
     
-    public func with(foregroundColor: UIColor, range: NSRange? = nil) -> AttributedStringBuilder {
+    public func with(foregroundColor: UIColor?, range: NSRange? = nil) -> AttributedStringBuilder {
+        guard let foregroundColor = foregroundColor else {
+            return self
+        }
         var result = self
-        
         result.attributes.append((.foregroundColor, foregroundColor, range ?? base.fullRange))
         
         return result
