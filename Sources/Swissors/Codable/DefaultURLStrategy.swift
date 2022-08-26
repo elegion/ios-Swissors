@@ -60,6 +60,9 @@ public struct URLValue<Formatter: URLCodableStrategy>: Codable {
     }
 }
 
+extension URLValue: Equatable where Formatter.RawValue: Equatable { }
+extension URLValue: Hashable where Formatter.RawValue: Hashable { }
+
 public extension KeyedDecodingContainer {
 
     func decode<P>(_: URLValue<P>.Type, forKey key: Key) throws -> URLValue<P> {
