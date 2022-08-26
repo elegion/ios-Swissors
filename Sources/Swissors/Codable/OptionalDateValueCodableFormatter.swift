@@ -16,7 +16,7 @@ import Foundation
 public protocol OptionalDateValueCodableFormatter {
     
     associatedtype RawValue: Codable
-
+    
     static func decode(_ value: RawValue?) throws -> Date?
     static func encode(_ date: Date?) -> RawValue?
 }
@@ -29,7 +29,7 @@ public struct OptionalDateValue<Formatter: OptionalDateValueCodableFormatter>: C
     
     private let value: Formatter.RawValue?
     public var wrappedValue: Date?
-
+    
     public init(wrappedValue: Date?) {
         self.wrappedValue = wrappedValue
         self.value = Formatter.encode(wrappedValue)
@@ -49,7 +49,7 @@ extension OptionalDateValue: Equatable where Formatter.RawValue: Equatable { }
 extension OptionalDateValue: Hashable where Formatter.RawValue: Hashable { }
 
 public extension KeyedDecodingContainer {
-
+    
     func decode<P>(_: OptionalDateValue<P>.Type, forKey key: Key) throws -> OptionalDateValue<P> {
         if let value = try decodeIfPresent(OptionalDateValue<P>.self, forKey: key) {
             return value

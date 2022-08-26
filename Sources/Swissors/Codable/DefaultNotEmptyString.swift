@@ -47,9 +47,9 @@ extension DefaultNotEmptyString: Equatable where Default.DefaultValue: Equatable
 extension DefaultNotEmptyString: Hashable where Default.DefaultValue: Hashable { }
 
 public extension KeyedDecodingContainer {
-
+    
     func decode<P: StringCodableStrategy>(_: DefaultNotEmptyString<P>.Type,
-                   forKey key: Key) throws -> DefaultNotEmptyString<P> {
+                                          forKey key: Key) throws -> DefaultNotEmptyString<P> {
         if let value = try decodeIfPresent(DefaultNotEmptyString<P>.self, forKey: key) {
             return value
         } else {
