@@ -12,7 +12,7 @@ import BetterCodable
 // swiftlint:disable nesting
 class DefaultNotEmptyStringTests: XCTestCase {
     
-    func testDefaultNotEmptyStringNil() throws {
+    func testDefaultNotEmptyStringCorrupted() throws {
         
         struct Model: Codable {
             struct X2ValueStrategy: StringCodableStrategy {
@@ -24,6 +24,22 @@ class DefaultNotEmptyStringTests: XCTestCase {
         }
         
         let json = #"{}"#.data(using: .utf8)!
+        let model = try JSONDecoder().decode(Model.self, from: json)
+        XCTAssertEqual(model.name, Model.X2ValueStrategy.defaultValue)
+    }
+    
+    func testDefaultNotEmptyStringNil() throws {
+        
+        struct Model: Codable {
+            struct X2ValueStrategy: StringCodableStrategy {
+                static var defaultValue: String = "x2"
+            }
+            
+            @DefaultNotEmptyString<X2ValueStrategy>
+            private(set) var name: String
+        }
+        
+        let json = #"{"name": null}"#.data(using: .utf8)!
         let model = try JSONDecoder().decode(Model.self, from: json)
         XCTAssertEqual(model.name, Model.X2ValueStrategy.defaultValue)
     }
