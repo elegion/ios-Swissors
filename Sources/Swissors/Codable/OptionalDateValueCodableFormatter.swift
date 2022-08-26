@@ -25,7 +25,7 @@ public protocol OptionalDateValueCodableFormatter {
 ///
 /// `@DateValue` decodes dates using a `OptionalDateValueCodableFormatter` which provides custom decoding and encoding functionality.
 @propertyWrapper
-public struct OptionalDateValue<Formatter: OptionalDateValueCodableFormatter>: Codable, Equatable {
+public struct OptionalDateValue<Formatter: OptionalDateValueCodableFormatter>: Codable {
     
     private let value: Formatter.RawValue?
     public var wrappedValue: Date?
@@ -43,12 +43,10 @@ public struct OptionalDateValue<Formatter: OptionalDateValueCodableFormatter>: C
     public func encode(to encoder: Encoder) throws {
         try value.encode(to: encoder)
     }
-    
-    public static func == (lhs: OptionalDateValue,
-                           rhs: OptionalDateValue) -> Bool {
-        return lhs.wrappedValue == rhs.wrappedValue
-    }
 }
+
+extension OptionalDateValue: Equatable where Formatter.RawValue: Equatable { }
+extension OptionalDateValue: Hashable where Formatter.RawValue: Hashable { }
 
 public extension KeyedDecodingContainer {
 

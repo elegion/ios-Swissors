@@ -40,7 +40,7 @@ public protocol URLCodableStrategy {
 }
 
 @propertyWrapper
-public struct URLValue<Formatter: URLCodableStrategy>: Codable, Equatable {
+public struct URLValue<Formatter: URLCodableStrategy>: Codable {
     
     private let value: Formatter.RawValue?
     public var wrappedValue: URL?
@@ -58,11 +58,10 @@ public struct URLValue<Formatter: URLCodableStrategy>: Codable, Equatable {
     public func encode(to encoder: Encoder) throws {
         try value.encode(to: encoder)
     }
-    
-    public static func == (lhs: URLValue<Formatter>, rhs: URLValue<Formatter>) -> Bool {
-        lhs.wrappedValue == rhs.wrappedValue
-    }
 }
+
+extension URLValue: Equatable where Formatter.RawValue: Equatable { }
+extension URLValue: Hashable where Formatter.RawValue: Hashable { }
 
 public extension KeyedDecodingContainer {
 
