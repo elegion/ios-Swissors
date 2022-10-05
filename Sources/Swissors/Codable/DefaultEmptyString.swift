@@ -9,7 +9,7 @@ import Foundation
 import BetterCodable
 
 public struct DefaultEmptyStringStrategy: StringCodableStrategy {
-    public static var defaultValue: String { return String() }
+    public static var defaultValue: String { String() }
 }
 
 public typealias DefaultEmptyString = DefaultCodable<DefaultEmptyStringStrategy>
