@@ -84,7 +84,7 @@ public extension UIWindow {
         }
         
         if animation.isAnimated, let rootViewControllerView = rootViewController.view.snapshotView(afterScreenUpdates: false) {
-            self.rootViewController = rootViewController
+            self.rootViewController = viewController
             self.rootViewController?.view.addSubview(rootViewControllerView)
             UIView.transition(with: self, duration: 0.33, options: animation.animationOptions, animations: {
                 rootViewControllerView.removeFromSuperview()
