@@ -24,6 +24,8 @@ jobs:
           fetch-depth: 200
       
       - name: "Run xcodebuild"
+        with:
+          xcode-version: latest-stable
         env:
           XCODE_PROJECT: "Swissors.xcodeproj"
           XCODE_SCHEME: "Swissors"
