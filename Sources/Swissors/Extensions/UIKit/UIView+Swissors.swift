@@ -14,47 +14,12 @@ public extension UIView {
     // MARK: - Public
     
     static func fullFrameConstraints(for superView: UIView, subview: UIView, with insets: UIEdgeInsets = .zero) -> [NSLayoutConstraint] {
-        if #available(iOS 9.0, *) {
-            return [
-                subview.topAnchor.constraint(equalTo: superView.topAnchor, constant: insets.top),
-                subview.bottomAnchor.constraint(equalTo: superView.bottomAnchor, constant: -insets.bottom),
-                subview.leadingAnchor.constraint(equalTo: superView.leadingAnchor, constant: insets.left),
-                subview.trailingAnchor.constraint(equalTo: superView.trailingAnchor, constant: -insets.right),
-            ]
-        } else {
-            return [NSLayoutConstraint(item: subview,
-                                       attribute: .top,
-                                       relatedBy: .equal,
-                                       toItem: superView,
-                                       attribute: .top,
-                                       multiplier: 1.0,
-                                       constant: insets.top),
-                    
-                    NSLayoutConstraint(item: subview,
-                                       attribute: .left,
-                                       relatedBy: .equal,
-                                       toItem: superView,
-                                       attribute: .left,
-                                       multiplier: 1.0,
-                                       constant: insets.left),
-                    
-                    NSLayoutConstraint(item: subview,
-                                       attribute: .bottom,
-                                       relatedBy: .equal,
-                                       toItem: superView,
-                                       attribute: .bottom,
-                                       multiplier: 1.0,
-                                       constant: -insets.bottom),
-                    
-                    NSLayoutConstraint(item: subview,
-                                       attribute: .right,
-                                       relatedBy: .equal,
-                                       toItem: superView,
-                                       attribute: .right,
-                                       multiplier: 1,
-                                       constant: -insets.right),
-            ]
-        }
+		return [
+			subview.topAnchor.constraint(equalTo: superView.topAnchor, constant: insets.top),
+			subview.bottomAnchor.constraint(equalTo: superView.bottomAnchor, constant: -insets.bottom),
+			subview.leadingAnchor.constraint(equalTo: superView.leadingAnchor, constant: insets.left),
+			subview.trailingAnchor.constraint(equalTo: superView.trailingAnchor, constant: -insets.right),
+		]
     }
     
     class func viewFromNib(in bundle: Bundle = Bundle.main, owner: Any? = nil, options: [UINib.OptionsKey: Any]? = nil) -> Self {
