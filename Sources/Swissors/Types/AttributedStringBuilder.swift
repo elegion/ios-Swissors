@@ -409,7 +409,7 @@ extension AttributedStringBuilder {
      
      Don't forget about calling build() function after all attributes are set.
      */
-    @available (iOS, obsoleted: 9.0)
+    @available(iOS, obsoleted: 9.0)
     public func withParagraphStyle(withLineSpacing lineSpacing: CGFloat? = nil,
                                    paragraphSpacing: CGFloat? = nil,
                                    alignment: NSTextAlignment? = nil,
@@ -460,7 +460,7 @@ extension AttributedStringBuilder {
      Don't forget about calling build() function after all attributes are set.
      */
     
-    @available (iOS 9.0, *)
+    @available(iOS 9.0, *)
     public func withParagraphStyle(withLineSpacing lineSpacing: CGFloat? = nil,
                                    paragraphSpacing: CGFloat? = nil,
                                    alignment: NSTextAlignment? = nil,

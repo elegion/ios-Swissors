@@ -82,6 +82,7 @@ public extension UIImage {
         }
     }
     
+	@MainActor
     class func ovalImage(with size: CGSize, color: UIColor, fill: Bool) -> UIImage? {
         image(with: size) {
             _, rect in
@@ -155,6 +156,7 @@ public extension UIImage {
     }
     
     @available(*, deprecated, renamed: "ovalImage")
+	@MainActor
     class func sw_ovalImage(with size: CGSize, color: UIColor, fill: Bool) -> UIImage? {
         ovalImage(with: size, color: color, fill: fill)
     }

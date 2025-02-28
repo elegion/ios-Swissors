@@ -35,13 +35,8 @@ public extension UIApplication {
         emptyController.present(viewController, animated: animated, completion: nil)
     }
     
-    func openURL(_ url: URL, completionHandler completion: ((Bool) -> Void)? = nil) {
-        if #available(iOS 10.0, *) {
-            self.open(url, options: [:], completionHandler: completion)
-        } else {
-            let result = self.openURL(url)
-            completion?(result)
-        }
+	func openURL(_ url: URL, completionHandler completion: (@MainActor @Sendable (Bool) -> Void)? = nil) {
+		self.open(url, options: [:], completionHandler: completion)
     }
     
     // MARK: Deprecated

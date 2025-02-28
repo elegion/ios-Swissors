@@ -16,7 +16,7 @@ class DefaultNotEmptyStringTests: XCTestCase {
         
         struct Model: Codable {
             struct X2ValueStrategy: StringCodableStrategy {
-                static var defaultValue: String = "x2"
+                static let defaultValue: String = "x2"
             }
             
             @DefaultNotEmptyString<X2ValueStrategy>
@@ -32,7 +32,7 @@ class DefaultNotEmptyStringTests: XCTestCase {
         
         struct Model: Codable {
             struct X2ValueStrategy: StringCodableStrategy {
-                static var defaultValue: String = "x2"
+                static let defaultValue: String = "x2"
             }
             
             @DefaultNotEmptyString<X2ValueStrategy>
@@ -48,7 +48,7 @@ class DefaultNotEmptyStringTests: XCTestCase {
         
         struct Model: Codable {
             struct X2ValueStrategy: StringCodableStrategy {
-                static var defaultValue: String = "x2"
+                static let defaultValue: String = "x2"
             }
             
             @DefaultNotEmptyString<X2ValueStrategy>
@@ -64,7 +64,7 @@ class DefaultNotEmptyStringTests: XCTestCase {
         
         struct Model: Codable {
             struct X2ValueStrategy: StringCodableStrategy {
-                static var defaultValue: String = "x2"
+                static let defaultValue: String = "x2"
             }
             
             @DefaultNotEmptyString<X2ValueStrategy>
