@@ -5,44 +5,47 @@
 //  Created by Maxim Butin on 23.06.2022.
 //
 
-import XCTest
+import Foundation
 import Swissors
+import Testing
 
-// swiftlint:disable nesting
-class ServerDateFormatterTests: XCTestCase {
-    
-    func testDecodingAndEncodingDefaultDateFormmater() throws {
-        struct Fixture: Codable {
-            @OptionalDateValue<ServerDataFormatter> var date: Date?
-        }
-        
-        let json = #"{"date": "2022-06-16T11:33:52.786Z"}"#.data(using: .utf8)!
-        
-        let fixure = try JSONDecoder().decode(Fixture.self, from: json)
-        let date = try ServerDataFormatter.decode("2022-06-16T11:33:52.786Z")
-        
-        XCTAssertEqual(fixure.date, date)
-    }
-    
-    func testDecodingAndEncodingNilDefaultDateFormmater() throws {
-        struct Fixture: Codable {
-            @OptionalDateValue<ServerDataFormatter> var date: Date?
-        }
-        let json = #"{}"#.data(using: .utf8)!
-        
-        let fixure = try JSONDecoder().decode(Fixture.self, from: json)
-        XCTAssertEqual(fixure.date, nil)
-    }
-    
-    func testDecodingAndEncodingNoValidDefaultDateFormmater() throws {
-        struct Fixture: Codable {
-            @OptionalDateValue<ServerDataFormatter> var date: Date?
-        }
-        let json = #"{"date": 123}"#.data(using: .utf8)!
-        
-        let fixure = try JSONDecoder().decode(Fixture.self, from: json)
-        XCTAssertEqual(fixure.date, nil)
-    }
+struct ServerDateFormatterTests {
+	
+	@Test
+	func decodingAndEncodingDefaultDateFormmater() async throws {
+		struct Fixture: Codable {
+			@OptionalDateValue<ServerDataFormatter> var date: Date?
+		}
+		
+		let json = #"{"date": "2022-06-16T11:33:52.786Z"}"#.data(using: .utf8)!
+		
+		let fixure = try JSONDecoder().decode(Fixture.self, from: json)
+		let date = try ServerDataFormatter.decode("2022-06-16T11:33:52.786Z")
+		
+		#expect(fixure.date == date)
+	}
+	
+	@Test
+	func decodingAndEncodingNilDefaultDateFormmater() async throws {
+		struct Fixture: Codable {
+			@OptionalDateValue<ServerDataFormatter> var date: Date?
+		}
+		let json = #"{}"#.data(using: .utf8)!
+		
+		let fixure = try JSONDecoder().decode(Fixture.self, from: json)
+		#expect(fixure.date == nil)
+	}
+	
+	@Test
+	func decodingAndEncodingNoValidDefaultDateFormmater() async throws {
+		struct Fixture: Codable {
+			@OptionalDateValue<ServerDataFormatter> var date: Date?
+		}
+		let json = #"{"date": 123}"#.data(using: .utf8)!
+		
+		let fixure = try JSONDecoder().decode(Fixture.self, from: json)
+		#expect(fixure.date == nil)
+	}
 }
 
 class ServerDataFormatter: DefaultDateFormatter {

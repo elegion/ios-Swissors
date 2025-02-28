@@ -5,14 +5,16 @@
 //  Created by Alexander Rozhdestvenskiy on 03.10.2022.
 //
 
-import XCTest
 import Swissors
+import Foundation
+import Testing
 import BetterCodable
 
 // swiftlint:disable nesting
-class DefaultEmptyStringTests: XCTestCase {
+struct DefaultEmptyStringTests {
     
-    func testDefaultEmptyStringCorrupted() throws {
+	@Test
+    func defaultEmptyStringCorrupted() async throws {
         
         struct Model: Codable {
             
@@ -22,10 +24,11 @@ class DefaultEmptyStringTests: XCTestCase {
         
         let json = #"{}"#.data(using: .utf8)!
         let model = try JSONDecoder().decode(Model.self, from: json)
-        XCTAssertEqual(model.name, "")
+		#expect(model.name == "")
     }
     
-    func testDefaultEmptyString() throws {
+	@Test
+    func defaultEmptyString() async throws {
         
         struct Model: Codable {
             
@@ -35,10 +38,11 @@ class DefaultEmptyStringTests: XCTestCase {
         
         let json = #"{"name": "Alexander"}"#.data(using: .utf8)!
         let model = try JSONDecoder().decode(Model.self, from: json)
-        XCTAssertEqual(model.name, "Alexander")
+		#expect(model.name == "Alexander")
     }
     
-    func testDefaultEmptyStringNil() throws {
+	@Test
+    func defaultEmptyStringNil() async throws {
         
         struct Model: Codable {
             
@@ -48,7 +52,7 @@ class DefaultEmptyStringTests: XCTestCase {
         
         let json = #"{"name": null}"#.data(using: .utf8)!
         let model = try JSONDecoder().decode(Model.self, from: json)
-        XCTAssertEqual(model.name, "")
+		#expect(model.name == "")
     }
     
 }

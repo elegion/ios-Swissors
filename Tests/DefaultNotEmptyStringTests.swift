@@ -5,14 +5,16 @@
 //  Created by viktor.volkov on 25.08.2022.
 //
 
-import XCTest
+import Testing
+import Foundation
 import Swissors
 import BetterCodable
 
 // swiftlint:disable nesting
-class DefaultNotEmptyStringTests: XCTestCase {
+struct DefaultNotEmptyStringTests {
     
-    func testDefaultNotEmptyStringCorrupted() throws {
+	@Test
+    func defaultNotEmptyStringCorrupted() async throws {
         
         struct Model: Codable {
             struct X2ValueStrategy: StringCodableStrategy {
@@ -25,10 +27,11 @@ class DefaultNotEmptyStringTests: XCTestCase {
         
         let json = #"{}"#.data(using: .utf8)!
         let model = try JSONDecoder().decode(Model.self, from: json)
-        XCTAssertEqual(model.name, Model.X2ValueStrategy.defaultValue)
+		#expect(model.name == Model.X2ValueStrategy.defaultValue)
     }
     
-    func testDefaultNotEmptyStringNil() throws {
+	@Test
+    func defaultNotEmptyStringNil() async throws {
         
         struct Model: Codable {
             struct X2ValueStrategy: StringCodableStrategy {
@@ -41,10 +44,11 @@ class DefaultNotEmptyStringTests: XCTestCase {
         
         let json = #"{"name": null}"#.data(using: .utf8)!
         let model = try JSONDecoder().decode(Model.self, from: json)
-        XCTAssertEqual(model.name, Model.X2ValueStrategy.defaultValue)
+		#expect(model.name == Model.X2ValueStrategy.defaultValue)
     }
     
-    func testDefaultNotEmptyStringEmpty() throws {
+	@Test
+    func defaultNotEmptyStringEmpty() async throws {
         
         struct Model: Codable {
             struct X2ValueStrategy: StringCodableStrategy {
@@ -57,10 +61,11 @@ class DefaultNotEmptyStringTests: XCTestCase {
         
         let json = #"{"name": ""}"#.data(using: .utf8)!
         let model = try JSONDecoder().decode(Model.self, from: json)
-        XCTAssertEqual(model.name, Model.X2ValueStrategy.defaultValue)
+		#expect(model.name == Model.X2ValueStrategy.defaultValue)
     }
     
-    func testDefaultNotEmptyStringDefault() throws {
+	@Test
+    func defaultNotEmptyStringDefault() async throws {
         
         struct Model: Codable {
             struct X2ValueStrategy: StringCodableStrategy {
@@ -72,6 +77,6 @@ class DefaultNotEmptyStringTests: XCTestCase {
         }
         let json = #"{"name": "John Frum"}"#.data(using: .utf8)!
         let model = try JSONDecoder().decode(Model.self, from: json)
-        XCTAssertEqual(model.name, "John Frum")
+		#expect(model.name == "John Frum")
     }
 }
