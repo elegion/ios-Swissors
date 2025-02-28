@@ -58,7 +58,7 @@ public extension UIApplication {
     }
     
     @available(*, deprecated, renamed: "openURL")
-    func sw_openURL(_ url: URL, completionHandler completion: ((Bool) -> Void)? = nil) {
+    func sw_openURL(_ url: URL, completionHandler completion: (@MainActor @Sendable (Bool) -> Void)? = nil) {
         openURL(url, completionHandler: completion)
     }
 }

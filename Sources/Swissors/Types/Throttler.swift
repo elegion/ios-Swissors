@@ -6,7 +6,7 @@
 //  Copyright © 2017 e-Legion. All rights reserved.
 //
 
-import Foundation
+@preconcurrency import Foundation
 
 public class Throttler {
     
@@ -33,8 +33,9 @@ public class Throttler {
             }
         } else {
             executionQueue.asyncAfter(deadline: .now() + delay) {
-                if self.currentItem === workItem {
-                    self.currentItem = nil
+				[currentItem] in
+				
+                if currentItem === workItem {
                     workItem.perform()
                 }
             }
