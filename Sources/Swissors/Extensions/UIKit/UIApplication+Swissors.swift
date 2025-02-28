@@ -6,6 +6,7 @@
 //  Copyright © 2016 e-Legion. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 public extension UIApplication {
@@ -62,3 +63,5 @@ public extension UIApplication {
         openURL(url, completionHandler: completion)
     }
 }
+
+#endif

@@ -6,6 +6,7 @@
 //  Copyright © 2017 e-Legion. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 public extension UINib {
@@ -18,3 +19,4 @@ public extension UINib {
         self.init(nibName: name, bundle: bundle)
     }
 }
+#endif

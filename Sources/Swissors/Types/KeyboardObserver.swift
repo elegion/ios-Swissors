@@ -7,6 +7,7 @@
 //
 
 import Foundation
+#if canImport(UIKit)
 import UIKit
 
 @MainActor
@@ -130,3 +131,5 @@ public extension KeyboardObserver {
         }
     }
 }
+
+#endif

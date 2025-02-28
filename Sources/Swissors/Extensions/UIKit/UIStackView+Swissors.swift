@@ -5,6 +5,7 @@
 //  Created by viktor.volkov on 15.04.2022.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 public extension UIStackView {
@@ -52,3 +53,4 @@ public extension UIStackView {
         return removedSubviews
     }
 }
+#endif

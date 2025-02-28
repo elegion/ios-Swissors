@@ -6,6 +6,7 @@
 //  Copyright © 2016 e-Legion. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 public extension UIView {
@@ -208,3 +209,4 @@ public extension UIView {
         descendants(of: targetClass, avoiding: avoidedViews)
     }
 }
+#endif

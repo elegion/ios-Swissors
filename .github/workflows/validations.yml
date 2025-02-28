@@ -27,24 +27,14 @@ jobs:
         env:
           XCODE_PROJECT: "Swissors.xcodeproj"
           XCODE_SCHEME: "Swissors"
-          SIMULATOR_NAME: "iPhone 11"
+          SIMULATOR_NAME: "iPhone 15"
         run: |
           set -o pipefail
           xcodebuild -version
           xcodebuild -showsdks
           env NSUnbufferedIO=YES xcodebuild build \
-          -project "${XCODE_PROJECT}" \
           -scheme "${XCODE_SCHEME}" \
           -configuration Debug \
           -destination "platform=iOS Simulator,name=${SIMULATOR_NAME}" \
           -derivedDataPath "DerivedData" \
-          COMPILER_INDEX_STORE_ENABLE=NO \
-          CODE_SIGN_IDENTITY="" \
-          CODE_SIGNING_REQUIRED=NO \
-          ONLY_ACTIVE_ARCH=YES \
-          ENABLE_TESTABILITY=YES \
-          DEBUG_INFORMATION_FORMAT="dwarf" \
-          GCC_OPTIMIZATION_LEVEL="0" \
-          SWIFT_COMPILATION_MODE="singlefile" \
-          SWIFT_OPTIMIZATION_LEVEL="-Onone" \
           | xcpretty

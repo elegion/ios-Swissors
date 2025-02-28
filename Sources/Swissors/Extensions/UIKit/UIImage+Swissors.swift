@@ -6,6 +6,7 @@
 //  Copyright © 2017 e-Legion. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 public extension UIImage {
@@ -166,3 +167,5 @@ public extension UIImage {
         alphaBlended(with: color)
     }
 }
+
+#endif

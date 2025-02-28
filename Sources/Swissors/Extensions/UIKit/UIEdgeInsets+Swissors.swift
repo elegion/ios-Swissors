@@ -5,6 +5,7 @@
 //  Created by viktor.volkov on 15.04.2022.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 public extension UIEdgeInsets {
@@ -104,3 +105,5 @@ public extension UIEdgeInsets {
         self.init(top: vertical, left: .zero, bottom: vertical, right: right)
     }
 }
+
+#endif

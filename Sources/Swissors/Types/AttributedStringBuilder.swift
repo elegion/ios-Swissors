@@ -6,6 +6,7 @@
 //  Copyright © 2017 SB. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 public enum AttributedStringBuilderError: Swift.Error {
@@ -839,3 +840,5 @@ extension AttributedStringBuilder {
         return resultParagraphStyle
     }
 }
+
+#endif
