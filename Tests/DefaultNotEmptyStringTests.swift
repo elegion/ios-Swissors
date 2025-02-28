@@ -10,7 +10,6 @@ import Foundation
 import Swissors
 import BetterCodable
 
-// swiftlint:disable nesting
 struct DefaultNotEmptyStringTests {
     
 	@Test

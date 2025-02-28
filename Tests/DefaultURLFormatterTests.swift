@@ -9,7 +9,6 @@ import Testing
 import Foundation
 import Swissors
 
-// swiftlint:disable nesting
 struct DefaultURLFormatterTests {
     
 	@Test
