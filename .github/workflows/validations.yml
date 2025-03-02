@@ -32,6 +32,11 @@ jobs:
         with:
           xcode-version: latest-stable
 
+      - uses: futureware-tech/simulator-action@v4
+        with:
+          model: 'iPhone 15'
+          os_version: 18.2
+
       - name: Run xcodebuild
         env:
           XCODE_PROJECT: "Swissors.xcodeproj"
