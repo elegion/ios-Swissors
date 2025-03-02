@@ -35,7 +35,7 @@ jobs:
       - name: Selecting XCode Version
         run: sudo xcode-select -switch /Applications/Xcode_16.2.app
 
-      - name: Install i05 platform
+      - name: Install i0S platform
         run: |
           xcodebuild -downloadPlatform iOS -buildVersion 18.2
 
@@ -53,6 +53,6 @@ jobs:
           env NSUnbufferedIO=YES xcodebuild build \
           -scheme "${XCODE_SCHEME}" \
           -configuration Debug \
-          -destination "platform=iOS Simulator,name=iPhone 15,OS=18.1" \
+          -destination "platform=iOS Simulator,name=iPhone 16,OS=18.2" \
           -derivedDataPath "DerivedData" \
           | xcpretty
