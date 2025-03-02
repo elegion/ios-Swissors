@@ -27,7 +27,7 @@ jobs:
         with:
           fetch-depth: 200
       
-      - name: "Run xcodebuild"
+      - name: Run xcodebuild
         with:
           xcode-version: latest-stable
         env:
