@@ -32,10 +32,8 @@ jobs:
         with:
           xcode-version: latest-stable
 
-      - uses: futureware-tech/simulator-action@v4
-        with:
-          model: 'iPhone 15'
-          os_version: 18.1
+      - name: List available simulators (debug)
+        run: xcrun simctl list devices
 
       - name: Run xcodebuild
         env:
