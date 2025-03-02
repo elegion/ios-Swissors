@@ -30,10 +30,14 @@ jobs:
       - name: Setup XCode
         uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: '16.1'
+          xcode-version: '16.2'
 
       - name: Selecting XCode Version
-        run: sudo xcode-select -switch /Applications/Xcode_16.1.app
+        run: sudo xcode-select -switch /Applications/Xcode_16.2.app
+
+      - name: Install i05 platform
+        run: |
+          xcodebuild -downloadPlatform iOS -buildVersion 18.2
 
       - name: List available simulators (debug)
         run: xcrun simctl list devices
