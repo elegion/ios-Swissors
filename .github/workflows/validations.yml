@@ -39,7 +39,6 @@ jobs:
         env:
           XCODE_PROJECT: "Swissors.xcodeproj"
           XCODE_SCHEME: "Swissors"
-          SIMULATOR_NAME: "iPhone 15"
         run: |
           set -o pipefail
           xcodebuild -version
@@ -47,6 +46,6 @@ jobs:
           env NSUnbufferedIO=YES xcodebuild build \
           -scheme "${XCODE_SCHEME}" \
           -configuration Debug \
-          -destination "platform=iOS Simulator,name=${SIMULATOR_NAME}" \
+          -destination "platform=iOS Simulator,name=iPhone 15,OS=18.1" \
           -derivedDataPath "DerivedData" \
           | xcpretty
