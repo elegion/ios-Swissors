@@ -35,7 +35,7 @@ jobs:
       - name: Selecting XCode Version
         run: sudo xcode-select -switch /Applications/Xcode_16.2.app
 
-      - name: Install i0S platform
+      - name: Install iOS platform
         run: |
           xcodebuild -downloadPlatform iOS -buildVersion 18.2
 
