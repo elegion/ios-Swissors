@@ -28,7 +28,7 @@ jobs:
           fetch-depth: 200
       
       - name: Setup XCode
-        uses: sinoru/actions-setup-xcode@v2
+        uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: '16.1'
 
