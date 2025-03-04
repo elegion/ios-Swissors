@@ -6,6 +6,7 @@
 //  Copyright © 2016 e-Legion. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 public extension UIApplication {
@@ -35,13 +36,8 @@ public extension UIApplication {
         emptyController.present(viewController, animated: animated, completion: nil)
     }
     
-    func openURL(_ url: URL, completionHandler completion: ((Bool) -> Void)? = nil) {
-        if #available(iOS 10.0, *) {
-            self.open(url, options: [:], completionHandler: completion)
-        } else {
-            let result = self.openURL(url)
-            completion?(result)
-        }
+	func openURL(_ url: URL, completionHandler completion: (@MainActor @Sendable (Bool) -> Void)? = nil) {
+		self.open(url, options: [:], completionHandler: completion)
     }
     
     // MARK: Deprecated
@@ -63,7 +59,9 @@ public extension UIApplication {
     }
     
     @available(*, deprecated, renamed: "openURL")
-    func sw_openURL(_ url: URL, completionHandler completion: ((Bool) -> Void)? = nil) {
+    func sw_openURL(_ url: URL, completionHandler completion: (@MainActor @Sendable (Bool) -> Void)? = nil) {
         openURL(url, completionHandler: completion)
     }
 }
+
+#endif

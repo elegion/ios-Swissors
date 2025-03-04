@@ -2,17 +2,11 @@
 
 ## Requirements
 
-Swift 5.0, Xcode 10.2
+Swift 6.0, Xcode 16.2
 
 ## Installation
 
-With CocoaPods:
-
-```
-source 'https://github.com/elegion/ios-podspecs.git'
-
-pod 'Swissors'
-```
+With Swift Package Manager only.
 
 ## Author
 

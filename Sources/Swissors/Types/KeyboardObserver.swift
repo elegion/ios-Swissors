@@ -7,8 +7,10 @@
 //
 
 import Foundation
+#if canImport(UIKit)
 import UIKit
 
+@MainActor
 public class KeyboardObserver {
     
     public typealias ObservationInfo = (beginFrame: CGRect,
@@ -20,8 +22,6 @@ public class KeyboardObserver {
     public typealias ObservationTuple = (owner: Weak<AnyObject>, handler: ObservationClosure)
     
     public static let shared = KeyboardObserver()
-    
-    var keyboardFrame: CGRect = .null
     
     private var observers: [ObservationTuple] = []
     
@@ -58,12 +58,7 @@ public class KeyboardObserver {
                 return
         }
         
-        var isLocal: Bool?
-        if #available(iOS 9.0, *) {
-            isLocal = userInfo[UIResponder.keyboardIsLocalUserInfoKey] as? Bool
-        }
-        
-        keyboardFrame = endFrame
+        let isLocal = userInfo[UIResponder.keyboardIsLocalUserInfoKey] as? Bool
         
         let info: ObservationInfo = (beginFrame, endFrame, animationDuration, curve, isLocal ?? true)
         notify(with: info)
@@ -82,6 +77,7 @@ public class KeyboardObserver {
     }
 }
 
+@MainActor
 public extension KeyboardObserver {
     
     typealias HeightInfo = (height: CGFloat, animationDuration: TimeInterval, curve: UIView.AnimationCurve)
@@ -135,3 +131,5 @@ public extension KeyboardObserver {
         }
     }
 }
+
+#endif

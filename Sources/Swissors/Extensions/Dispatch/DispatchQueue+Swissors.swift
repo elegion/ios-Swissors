@@ -11,7 +11,7 @@ import Foundation
 extension DispatchQueue {
     
     class var currentLabel: String {
-        String(validatingUTF8: __dispatch_queue_get_label(nil)) ?? "unknown"
+		String(cString: __dispatch_queue_get_label(nil))
     }
     
     func safeSerialSync(execute block: @escaping () -> Void) {

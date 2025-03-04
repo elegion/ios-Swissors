@@ -7,6 +7,7 @@
 //
 
 import Foundation
+#if canImport(UIKit)
 import UIKit
 
 public extension UIColor {
@@ -223,3 +224,4 @@ public extension CGColor {
         uiColor
     }
 }
+#endif

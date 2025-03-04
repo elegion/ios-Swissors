@@ -6,6 +6,7 @@
 //  Copyright © 2017 SB. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 public enum AttributedStringBuilderError: Swift.Error {
@@ -409,58 +410,6 @@ extension AttributedStringBuilder {
      
      Don't forget about calling build() function after all attributes are set.
      */
-    @available (iOS, obsoleted: 9.0)
-    public func withParagraphStyle(withLineSpacing lineSpacing: CGFloat? = nil,
-                                   paragraphSpacing: CGFloat? = nil,
-                                   alignment: NSTextAlignment? = nil,
-                                   firstLineHeadIndent: CGFloat? = nil,
-                                   headIndent: CGFloat? = nil,
-                                   tailIndent: CGFloat? = nil,
-                                   lineBreakMode: NSLineBreakMode? = nil,
-                                   minimumLineHeight: CGFloat? = nil,
-                                   maximumLineHeight: CGFloat? = nil,
-                                   baseWritingDirection: NSWritingDirection? = nil,
-                                   lineHeightMultiple: CGFloat? = nil,
-                                   paragraphSpacingBefore: CGFloat? = nil,
-                                   hyphenationFactor: Float? = nil,
-                                   tabStops: [NSTextTab]? = nil,
-                                   defaultTabInterval: CGFloat? = nil,
-                                   range: NSRange? = nil) -> AttributedStringBuilder {
-        
-        let resultParagraphStyle = paragraphStyle(withLineSpacing: lineSpacing,
-                                                  paragraphSpacing: paragraphSpacing,
-                                                  alignment: alignment,
-                                                  firstLineHeadIndent: firstLineHeadIndent,
-                                                  headIndent: headIndent,
-                                                  tailIndent: tailIndent,
-                                                  lineBreakMode: lineBreakMode,
-                                                  minimumLineHeight: minimumLineHeight,
-                                                  maximumLineHeight: maximumLineHeight,
-                                                  baseWritingDirection: baseWritingDirection,
-                                                  lineHeightMultiple: lineHeightMultiple,
-                                                  paragraphSpacingBefore: paragraphSpacing,
-                                                  hyphenationFactor: hyphenationFactor,
-                                                  tabStops: tabStops,
-                                                  defaultTabInterval: defaultTabInterval,
-                                                  range: range)
-        
-        return with(paragraphStyle: resultParagraphStyle)
-    }
-    
-    /**
-     Adds paragraph style with your own properties to attrubutes array of string builder.
-     
-     - returns:
-     Attributed string builder with modified attributes array.
-     
-     - parameters:
-     - all properties of NSMutableParagraphStyle
-     - range: Range on which attribute will be applied. Optional parameter. Defaults to full range.
-     
-     Don't forget about calling build() function after all attributes are set.
-     */
-    
-    @available (iOS 9.0, *)
     public func withParagraphStyle(withLineSpacing lineSpacing: CGFloat? = nil,
                                    paragraphSpacing: CGFloat? = nil,
                                    alignment: NSTextAlignment? = nil,
@@ -832,10 +781,10 @@ extension AttributedStringBuilder {
         resultParagraphStyle.tabStops = tabStops ?? resultParagraphStyle.tabStops
         resultParagraphStyle.defaultTabInterval = defaultTabInterval ?? resultParagraphStyle.defaultTabInterval
         
-        if #available(iOS 9, *) {
-            resultParagraphStyle.allowsDefaultTighteningForTruncation = allowsDefaultTighteningForTruncation ?? resultParagraphStyle.allowsDefaultTighteningForTruncation
-        }
+		resultParagraphStyle.allowsDefaultTighteningForTruncation = allowsDefaultTighteningForTruncation ?? resultParagraphStyle.allowsDefaultTighteningForTruncation
         
         return resultParagraphStyle
     }
 }
+
+#endif
