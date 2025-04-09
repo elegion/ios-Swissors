@@ -8,7 +8,7 @@
 import Foundation
 
 /// The default wrapper for the `DateValue` property, which allows you to encode and decode the URL.
-public class DefaultURLCodableStrategy: URLCodableStrategy {
+public struct DefaultURLCodableStrategy: URLCodableStrategy {
     
     public static func decode(_ value: String?) -> URL? {
         guard let value = value else {

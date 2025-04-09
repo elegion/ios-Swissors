@@ -8,6 +8,7 @@
 import Foundation
 
 /// The default wrapper for the `OptionalDateValue` property, which allows you to encode and decode the date.
+@available(*, deprecated, message: "Will be deleted in the next major version. Use `OptionalDateValueCodableFormatter` instead")
 open class DefaultDateFormatter: OptionalDateValueCodableFormatter {
     
     open class var formatter: DateFormatter {
